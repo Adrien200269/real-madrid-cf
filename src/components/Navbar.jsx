@@ -58,11 +58,19 @@ export default function Navbar() {
             <div className="hidden sm:block h-6 w-[1px] bg-[#E1E5EA]" />
 
             {/* Official 15 UCL Patch */}
-            <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#EDEBFA] border border-[#DEE5FD] text-[#3E31FA] text-xs font-bold">
-              <span>★</span>
+            <Link
+              href="/trophies"
+              className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#EDEBFA] hover:bg-[#DEE5FD] border border-[#DEE5FD] text-[#3E31FA] text-xs font-bold transition shadow-2xs group"
+              title="Real Madrid - 15 UEFA Champions League Titles"
+            >
+              <img
+                src="/images/club/ucl-starball.svg"
+                alt="UEFA Champions League"
+                className="w-4 h-4 object-contain group-hover:scale-110 transition-transform"
+              />
               <span>15</span>
               <span className="text-[10px] uppercase font-semibold text-[#8760F6]">UCL</span>
-            </div>
+            </Link>
           </div>
 
           {/* Right: Main Navigation Links */}
