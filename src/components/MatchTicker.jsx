@@ -24,9 +24,11 @@ export default function MatchTicker() {
             </span>
             <span>{match.awayTeam.name}</span>
           </span>
-          <span className="hidden sm:inline text-[#788398]">
-            • Mbappé (23&apos;, 68&apos;), Bellingham (54&apos;)
-          </span>
+          {match.scorers && match.scorers.length > 0 && (
+            <span className="hidden sm:inline text-[#788398]">
+              • {match.scorers.map(s => `${s.player} (${s.minute})`).join(', ')}
+            </span>
+          )}
         </div>
 
         {/* Next Match */}

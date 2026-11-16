@@ -22,7 +22,7 @@ export default function StandingsSection() {
               Clasificación LaLiga EA Sports
             </h2>
             <p className="text-[#788398] text-xs sm:text-sm mt-1">
-              Official Primera División standings • Season {season} • FotMob Live Data
+              Official Primera División standings • Season {season} • ESPN Official Soccer API
             </p>
           </div>
 
