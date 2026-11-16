@@ -37,17 +37,9 @@ export default function Footer() {
 
         </div>
 
-        {/* Copyright & Legal Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <div>
-            Real Madrid © 2026 All rights reserved
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-[11px] text-slate-400">
-            <span className="hover:text-white cursor-pointer transition">Legal Notice</span>
-            <span className="hover:text-white cursor-pointer transition">Privacy Policy</span>
-            <span className="hover:text-white cursor-pointer transition">Cookies Policy</span>
-            <span className="hover:text-white cursor-pointer transition">Sitemap</span>
-          </div>
+        {/* Copyright Bar */}
+        <div className="pt-6 text-center sm:text-left text-xs text-slate-400">
+          Real Madrid © 2026 All rights reserved
         </div>
 
       </div>
