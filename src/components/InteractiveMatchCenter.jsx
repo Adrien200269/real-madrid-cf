@@ -298,7 +298,7 @@ export default function InteractiveMatchCenter() {
                 <Calendar className="w-5 h-5 text-[#3E31FA]" />
                 Próximos Partidos
               </h3>
-              <span className="text-xs text-[#788398] font-semibold">2024–25 Season</span>
+              <span className="text-xs text-[#788398] font-semibold">2026–27 Season</span>
             </div>
 
             <div className="space-y-3">

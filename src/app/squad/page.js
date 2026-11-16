@@ -19,7 +19,7 @@ export default function SquadPage() {
             Plantilla Primer Equipo
           </h1>
           <p className="text-[#788398] text-xs sm:text-sm max-w-2xl mt-1.5 leading-relaxed">
-            Official roster of Real Madrid Club de Fútbol 2024–25. Browse by position, check career statistics, personal details and honours.
+            Official roster of Real Madrid Club de Fútbol 2026–27. Browse by position, check career statistics, personal details and honours.
           </p>
         </div>
       </div>

@@ -58,7 +58,7 @@ export default function SquadSection({ initialLimit = null }) {
               Plantilla Primer Equipo
             </h2>
             <p className="text-[#788398] text-xs sm:text-sm mt-1">
-              Official roster of Real Madrid Club de Fútbol 2024–25.
+              Official roster of Real Madrid Club de Fútbol 2026–27.
             </p>
           </div>
 

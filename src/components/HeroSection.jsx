@@ -21,7 +21,7 @@ export default function HeroSection() {
               <img src="/images/club/crest.svg" alt="Crest" className="w-4 h-4 object-contain" />
               <span>Official Real Madrid Portal</span>
               <span className="text-[#C7CCD6]">•</span>
-              <span className="text-[#0F2145]">Season 2024–25</span>
+              <span className="text-[#0F2145]">Season 2026–27</span>
             </div>
 
             {/* Display Headline */}

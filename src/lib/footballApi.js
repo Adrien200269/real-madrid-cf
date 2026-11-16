@@ -84,7 +84,7 @@ export async function getStandings() {
         if (totalTable) {
           return {
             source: "live-api",
-            season: data.season?.startDate?.substring(0, 4) || "2024 / 2025",
+            season: data.season?.startDate?.substring(0, 4) || "2026 / 2027",
             competition: data.competition?.name || "La Liga",
             table: totalTable.slice(0, 10).map((row) => ({
               rank: row.position,

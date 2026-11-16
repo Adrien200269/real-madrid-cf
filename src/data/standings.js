@@ -1,5 +1,5 @@
 export const standingsData = {
-  season: "2024 / 2025",
+  season: "2026 / 2027",
   competition: "LaLiga EA Sports",
   matchday: "Matchday 18",
   table: [
