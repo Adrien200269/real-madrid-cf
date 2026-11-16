@@ -181,20 +181,27 @@ export async function getStandings() {
             (team.displayName || team.name || "").toLowerCase().includes(t.team.toLowerCase())
           );
           const form = existingTeam?.form || ["W", "D", "L", "W", "W"];
+          const nextOpponent = existingTeam?.nextOpponent || null;
+          const scoresStr = existingTeam?.scoresStr || `${stats.pointsFor || 0}-${stats.pointsAgainst || 0}`;
+          const zone = existingTeam?.zone || (idx < 4 ? "ucl" : idx === 4 ? "uel" : idx === 5 ? "uecl" : idx >= 17 ? "relegation" : "none");
 
           return {
             rank: idx + 1,
-            team: team.displayName || team.name,
-            logo: team.id ? `https://a.espncdn.com/i/teamlogos/soccer/500/${team.id}.png` : getClubLogo(team.displayName),
-            played: stats.gamesPlayed ?? stats.matchesPlayed ?? 0,
-            won: stats.wins ?? 0,
-            drawn: stats.ties ?? stats.draws ?? 0,
-            lost: stats.losses ?? 0,
+            team: existingTeam?.team || team.displayName || team.name,
+            shortName: existingTeam?.shortName || entry.team.abbreviation,
+            logo: existingTeam?.logo || (team.id ? `https://a.espncdn.com/i/teamlogos/soccer/500/${team.id}.png` : getClubLogo(team.displayName)),
+            played: existingTeam?.played ?? (stats.gamesPlayed ?? stats.matchesPlayed ?? 0),
+            won: existingTeam?.won ?? (stats.wins ?? 0),
+            drawn: existingTeam?.drawn ?? (stats.ties ?? stats.draws ?? 0),
+            lost: existingTeam?.lost ?? (stats.losses ?? 0),
+            scoresStr,
             gf: stats.pointsFor ?? 0,
             ga: stats.pointsAgainst ?? 0,
             gd: gd > 0 ? `+${gd}` : `${gd}`,
-            points: stats.points ?? 0,
+            points: existingTeam?.points ?? (stats.points ?? 0),
             form: form,
+            nextOpponent,
+            zone,
             highlight: (team.displayName || "").includes("Real Madrid") || team.id === "86"
           };
         });

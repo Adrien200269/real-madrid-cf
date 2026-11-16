@@ -2,7 +2,7 @@ export const standingsData = {
   season: "2026 / 2027",
   competition: "LaLiga EA Sports",
   matchday: "Matchday 12",
-  dataSource: "ESPN Official Soccer API",
+  dataSource: "FotMob Verified Dataset",
   table: [
   {
     "rank": 1,
@@ -13,6 +13,7 @@ export const standingsData = {
     "won": 11,
     "drawn": 0,
     "lost": 1,
+    "scoresStr": "48-13",
     "gf": 48,
     "ga": 13,
     "gd": "+35",
@@ -20,10 +21,15 @@ export const standingsData = {
     "form": [
       "W",
       "W",
-      "W",
+      "L",
       "W",
       "W"
     ],
+    "nextOpponent": {
+      "name": "Villarreal",
+      "logo": "/images/clubs/villarreal.png"
+    },
+    "zone": "ucl",
     "highlight": false
   },
   {
@@ -35,17 +41,23 @@ export const standingsData = {
     "won": 10,
     "drawn": 0,
     "lost": 2,
+    "scoresStr": "31-10",
     "gf": 31,
     "ga": 10,
     "gd": "+21",
     "points": 30,
     "form": [
       "W",
-      "L",
+      "W",
       "W",
       "W",
       "W"
     ],
+    "nextOpponent": {
+      "name": "Celta Vigo",
+      "logo": "/images/clubs/celta.png"
+    },
+    "zone": "ucl",
     "highlight": true
   },
   {
@@ -57,17 +69,23 @@ export const standingsData = {
     "won": 9,
     "drawn": 1,
     "lost": 2,
+    "scoresStr": "23-10",
     "gf": 23,
     "ga": 10,
     "gd": "+13",
     "points": 28,
     "form": [
       "W",
-      "L",
       "W",
-      "D",
-      "W"
+      "W",
+      "W",
+      "L"
     ],
+    "nextOpponent": {
+      "name": "Getafe",
+      "logo": "/images/clubs/getafe.png"
+    },
+    "zone": "ucl",
     "highlight": false
   },
   {
@@ -79,17 +97,23 @@ export const standingsData = {
     "won": 8,
     "drawn": 2,
     "lost": 2,
+    "scoresStr": "20-15",
     "gf": 20,
     "ga": 15,
     "gd": "+5",
     "points": 26,
     "form": [
       "W",
-      "W",
       "L",
+      "D",
       "W",
       "W"
     ],
+    "nextOpponent": {
+      "name": "Sevilla",
+      "logo": "/images/clubs/sevilla.png"
+    },
+    "zone": "ucl",
     "highlight": false
   },
   {
@@ -101,17 +125,23 @@ export const standingsData = {
     "won": 7,
     "drawn": 1,
     "lost": 4,
+    "scoresStr": "21-20",
     "gf": 21,
     "ga": 20,
     "gd": "+1",
     "points": 22,
     "form": [
       "W",
-      "D",
+      "W",
       "W",
       "L",
-      "L"
+      "W"
     ],
+    "nextOpponent": {
+      "name": "Osasuna",
+      "logo": "/images/clubs/osasuna.png"
+    },
+    "zone": "uel",
     "highlight": false
   },
   {
@@ -123,17 +153,23 @@ export const standingsData = {
     "won": 5,
     "drawn": 3,
     "lost": 4,
+    "scoresStr": "17-19",
     "gf": 17,
     "ga": 19,
     "gd": "-2",
     "points": 18,
     "form": [
-      "W",
       "D",
       "L",
       "W",
-      "W"
+      "L",
+      "D"
     ],
+    "nextOpponent": {
+      "name": "Real Betis",
+      "logo": "/images/clubs/betis.png"
+    },
+    "zone": "uecl",
     "highlight": false
   },
   {
@@ -145,17 +181,23 @@ export const standingsData = {
     "won": 4,
     "drawn": 4,
     "lost": 3,
+    "scoresStr": "15-11",
     "gf": 15,
     "ga": 11,
     "gd": "+4",
     "points": 16,
     "form": [
       "D",
-      "W",
-      "W",
       "L",
-      "L"
+      "W",
+      "W",
+      "D"
     ],
+    "nextOpponent": {
+      "name": "Espanyol",
+      "logo": "/images/clubs/espanyol.png"
+    },
+    "zone": "none",
     "highlight": false
   },
   {
@@ -167,39 +209,51 @@ export const standingsData = {
     "won": 4,
     "drawn": 3,
     "lost": 5,
+    "scoresStr": "17-15",
     "gf": 17,
     "ga": 15,
     "gd": "+2",
     "points": 15,
     "form": [
       "L",
-      "L",
-      "L",
       "D",
-      "D"
+      "W",
+      "L",
+      "W"
     ],
+    "nextOpponent": {
+      "name": "Barcelona",
+      "logo": "/images/clubs/barcelona.png"
+    },
+    "zone": "none",
     "highlight": false
   },
   {
     "rank": 9,
-    "team": "Deportivo",
+    "team": "Deportivo A Coruña",
     "shortName": "DEP",
     "logo": "/images/clubs/deportivo.png",
     "played": 12,
     "won": 3,
     "drawn": 6,
     "lost": 3,
+    "scoresStr": "15-14",
     "gf": 15,
     "ga": 14,
     "gd": "+1",
     "points": 15,
     "form": [
+      "L",
       "D",
+      "L",
       "W",
-      "W",
-      "D",
       "D"
     ],
+    "nextOpponent": {
+      "name": "Deportivo Alavés",
+      "logo": "/images/clubs/alaves.png"
+    },
+    "zone": "none",
     "highlight": false
   },
   {
@@ -211,17 +265,23 @@ export const standingsData = {
     "won": 4,
     "drawn": 2,
     "lost": 6,
+    "scoresStr": "17-30",
     "gf": 17,
     "ga": 30,
     "gd": "-13",
     "points": 14,
     "form": [
-      "W",
+      "D",
       "L",
       "W",
       "L",
-      "D"
+      "W"
     ],
+    "nextOpponent": {
+      "name": "Real Sociedad",
+      "logo": "/images/clubs/sociedad.png"
+    },
+    "zone": "none",
     "highlight": false
   },
   {
@@ -233,39 +293,51 @@ export const standingsData = {
     "won": 2,
     "drawn": 7,
     "lost": 3,
+    "scoresStr": "10-10",
     "gf": 10,
     "ga": 10,
     "gd": "0",
     "points": 13,
     "form": [
       "D",
+      "W",
       "D",
-      "L",
       "L",
       "D"
     ],
+    "nextOpponent": {
+      "name": "Real Madrid",
+      "logo": "/images/clubs/realmadrid.png"
+    },
+    "zone": "none",
     "highlight": false
   },
   {
     "rank": 12,
-    "team": "Alavés",
+    "team": "Deportivo Alavés",
     "shortName": "ALA",
     "logo": "/images/clubs/alaves.png",
     "played": 12,
     "won": 3,
     "drawn": 4,
     "lost": 5,
+    "scoresStr": "15-17",
     "gf": 15,
     "ga": 17,
     "gd": "-2",
     "points": 13,
     "form": [
       "L",
-      "W",
-      "W",
+      "L",
       "D",
-      "W"
+      "L",
+      "D"
     ],
+    "nextOpponent": {
+      "name": "Deportivo A Coruña",
+      "logo": "/images/clubs/deportivo.png"
+    },
+    "zone": "none",
     "highlight": false
   },
   {
@@ -277,17 +349,23 @@ export const standingsData = {
     "won": 3,
     "drawn": 3,
     "lost": 6,
+    "scoresStr": "13-14",
     "gf": 13,
     "ga": 14,
     "gd": "-1",
     "points": 12,
     "form": [
-      "W",
       "D",
       "L",
       "L",
-      "W"
+      "W",
+      "D"
     ],
+    "nextOpponent": {
+      "name": "Athletic Club",
+      "logo": "/images/clubs/athletic.png"
+    },
+    "zone": "none",
     "highlight": false
   },
   {
@@ -299,17 +377,23 @@ export const standingsData = {
     "won": 3,
     "drawn": 3,
     "lost": 5,
+    "scoresStr": "15-21",
     "gf": 15,
     "ga": 21,
     "gd": "-6",
     "points": 12,
     "form": [
+      "D",
+      "D",
       "L",
       "W",
-      "L",
-      "D",
       "L"
     ],
+    "nextOpponent": {
+      "name": "Valencia",
+      "logo": "/images/clubs/valencia.png"
+    },
+    "zone": "none",
     "highlight": false
   },
   {
@@ -321,17 +405,23 @@ export const standingsData = {
     "won": 3,
     "drawn": 3,
     "lost": 6,
+    "scoresStr": "8-18",
     "gf": 8,
     "ga": 18,
     "gd": "-10",
     "points": 12,
     "form": [
-      "D",
+      "L",
       "D",
       "L",
       "W",
       "L"
     ],
+    "nextOpponent": {
+      "name": "Atlético Madrid",
+      "logo": "/images/clubs/atletico.png"
+    },
+    "zone": "none",
     "highlight": false
   },
   {
@@ -343,17 +433,23 @@ export const standingsData = {
     "won": 3,
     "drawn": 3,
     "lost": 6,
+    "scoresStr": "12-23",
     "gf": 12,
     "ga": 23,
     "gd": "-11",
     "points": 12,
     "form": [
       "L",
+      "W",
       "L",
-      "W",
-      "W",
+      "L",
       "D"
     ],
+    "nextOpponent": {
+      "name": "Málaga",
+      "logo": "/images/clubs/malaga.png"
+    },
+    "zone": "none",
     "highlight": false
   },
   {
@@ -365,17 +461,23 @@ export const standingsData = {
     "won": 2,
     "drawn": 5,
     "lost": 5,
+    "scoresStr": "16-21",
     "gf": 16,
     "ga": 21,
     "gd": "-5",
     "points": 11,
     "form": [
-      "L",
       "D",
       "W",
-      "D",
-      "L"
+      "L",
+      "L",
+      "D"
     ],
+    "nextOpponent": {
+      "name": "Elche",
+      "logo": "/images/clubs/elche.png"
+    },
+    "zone": "none",
     "highlight": false
   },
   {
@@ -387,17 +489,23 @@ export const standingsData = {
     "won": 2,
     "drawn": 4,
     "lost": 6,
+    "scoresStr": "14-20",
     "gf": 14,
     "ga": 20,
     "gd": "-6",
     "points": 10,
     "form": [
       "D",
+      "D",
+      "W",
       "L",
-      "L",
-      "L",
-      "D"
+      "L"
     ],
+    "nextOpponent": {
+      "name": "Rayo Vallecano",
+      "logo": "/images/clubs/rayo.png"
+    },
+    "zone": "relegation",
     "highlight": false
   },
   {
@@ -409,39 +517,51 @@ export const standingsData = {
     "won": 2,
     "drawn": 3,
     "lost": 7,
+    "scoresStr": "8-20",
     "gf": 8,
     "ga": 20,
     "gd": "-12",
     "points": 9,
     "form": [
+      "D",
+      "D",
       "L",
-      "L",
-      "L",
-      "L",
-      "D"
+      "W",
+      "L"
     ],
+    "nextOpponent": {
+      "name": "Rayo Vallecano",
+      "logo": "/images/clubs/rayo.png"
+    },
+    "zone": "relegation",
     "highlight": false
   },
   {
     "rank": 20,
     "team": "Málaga",
-    "shortName": "MCF",
+    "shortName": "MAL",
     "logo": "/images/clubs/malaga.png",
     "played": 12,
     "won": 0,
     "drawn": 5,
     "lost": 7,
+    "scoresStr": "9-23",
     "gf": 9,
     "ga": 23,
     "gd": "-14",
     "points": 5,
     "form": [
       "D",
-      "D",
       "L",
       "D",
+      "L",
       "L"
     ],
+    "nextOpponent": {
+      "name": "Osasuna",
+      "logo": "/images/clubs/osasuna.png"
+    },
+    "zone": "relegation",
     "highlight": false
   }
 ],

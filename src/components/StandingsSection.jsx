@@ -49,92 +49,127 @@ export default function StandingsSection() {
               <table className="w-full text-left text-xs sm:text-sm">
                 <thead className="bg-[#F8F9FA] text-[11px] uppercase tracking-wider text-[#788398] border-b border-[#E1E5EA]">
                   <tr>
-                    <th className="py-3 px-3 sm:px-4">#</th>
+                    <th className="py-3 px-2 sm:px-3 text-center">#</th>
                     <th className="py-3 px-3 sm:px-4">Club</th>
                     <th className="py-3 px-2 sm:px-3 text-center">PL</th>
                     <th className="py-3 px-2 sm:px-3 text-center">W</th>
                     <th className="py-3 px-2 sm:px-3 text-center">D</th>
                     <th className="py-3 px-2 sm:px-3 text-center">L</th>
+                    <th className="py-3 px-2 sm:px-3 text-center hidden md:table-cell">+/-</th>
                     <th className="py-3 px-2 sm:px-3 text-center">GD</th>
                     <th className="py-3 px-2 sm:px-3 text-center font-bold">PTS</th>
                     <th className="py-3 px-3 sm:px-4 text-center hidden sm:table-cell">Form</th>
+                    <th className="py-3 px-2 sm:px-3 text-center hidden lg:table-cell">Next</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[#E1E5EA] font-medium text-[#43526E]">
-                  {table.map((row) => (
-                    <tr
-                      key={row.rank}
-                      className={`transition-colors ${
-                        row.highlight
-                          ? "bg-[#EEF2FD] font-bold text-[#0F2145] border-l-4 border-[#3E31FA]"
-                          : "hover:bg-[#F8F9FA]"
-                      }`}
-                    >
-                      <td className="py-3.5 px-3 sm:px-4 text-[#788398]">
-                        <span className={`w-6 h-6 rounded-md flex items-center justify-center font-bold text-xs ${
-                          row.rank <= 4 ? "bg-[#3E31FA]/10 text-[#3E31FA]" : ""
-                        }`}>
-                          {row.rank}
-                        </span>
-                      </td>
-                      <td className="py-3.5 px-3 sm:px-4">
-                        <div className="flex items-center gap-2.5">
-                          {row.logo ? (
+                  {table.map((row) => {
+                    const zoneBorder = 
+                      row.rank <= 4 
+                        ? "border-l-4 border-cyan-500" 
+                        : row.rank === 5 
+                        ? "border-l-4 border-amber-500" 
+                        : row.rank === 6 
+                        ? "border-l-4 border-emerald-500" 
+                        : row.rank >= 18 
+                        ? "border-l-4 border-rose-500" 
+                        : "border-l-4 border-transparent";
+
+                    return (
+                      <tr
+                        key={row.rank}
+                        className={`transition-colors ${zoneBorder} ${
+                          row.highlight
+                            ? "bg-[#EEF2FD] font-bold text-[#0F2145]"
+                            : "hover:bg-[#F8F9FA]"
+                        }`}
+                      >
+                        <td className="py-3 px-2 sm:px-3 text-center text-[#788398]">
+                          <span className={`w-5 h-5 mx-auto rounded flex items-center justify-center font-bold text-xs ${
+                            row.rank <= 4 ? "bg-[#3E31FA]/10 text-[#3E31FA]" : ""
+                          }`}>
+                            {row.rank}
+                          </span>
+                        </td>
+                        <td className="py-3 px-3 sm:px-4">
+                          <div className="flex items-center gap-2.5">
+                            {row.logo ? (
+                              <img
+                                src={row.logo}
+                                alt={row.team}
+                                className="w-5 h-5 object-contain shrink-0"
+                                loading="lazy"
+                              />
+                            ) : null}
+                            <span className={row.highlight ? "text-[#3E31FA] font-extrabold" : "text-[#0F2145]"}>
+                              {row.team}
+                            </span>
+                          </div>
+                        </td>
+                        <td className="py-3 px-2 sm:px-3 text-center">{row.played}</td>
+                        <td className="py-3 px-2 sm:px-3 text-center">{row.won}</td>
+                        <td className="py-3 px-2 sm:px-3 text-center">{row.drawn}</td>
+                        <td className="py-3 px-2 sm:px-3 text-center">{row.lost}</td>
+                        <td className="py-3 px-2 sm:px-3 text-center text-[#788398] font-mono text-[11px] hidden md:table-cell">
+                          {row.scoresStr || `${row.gf}-${row.ga}`}
+                        </td>
+                        <td className="py-3 px-2 sm:px-3 text-center">{row.gd}</td>
+                        <td className="py-3 px-2 sm:px-3 text-center font-black text-[#0F2145] text-sm">
+                          {row.points}
+                        </td>
+                        <td className="py-3 px-3 sm:px-4 text-center hidden sm:table-cell">
+                          <div className="flex items-center justify-center gap-1">
+                            {row.form.map((res, i) => (
+                              <span
+                                key={i}
+                                className={`w-5 h-5 rounded flex items-center justify-center text-[10px] font-black text-white shadow-2xs ${
+                                  res === "W"
+                                    ? "bg-[#10B981]"
+                                    : res === "D"
+                                    ? "bg-[#64748B]"
+                                    : "bg-[#EF4444]"
+                                }`}
+                              >
+                                {res}
+                              </span>
+                            ))}
+                          </div>
+                        </td>
+                        <td className="py-3 px-2 sm:px-3 text-center hidden lg:table-cell">
+                          {row.nextOpponent?.logo ? (
                             <img
-                              src={row.logo}
-                              alt={row.team}
-                              className="w-5 h-5 object-contain shrink-0"
+                              src={row.nextOpponent.logo}
+                              alt={row.nextOpponent.name || "Next Opponent"}
+                              title={`Next: ${row.nextOpponent.name}`}
+                              className="w-5 h-5 object-contain mx-auto opacity-80 hover:opacity-100 transition-opacity"
                               loading="lazy"
                             />
-                          ) : null}
-                          <span className={row.highlight ? "text-[#3E31FA] font-extrabold" : "text-[#0F2145]"}>
-                            {row.team}
-                          </span>
-                        </div>
-                      </td>
-                      <td className="py-3.5 px-2 sm:px-3 text-center">{row.played}</td>
-                      <td className="py-3.5 px-2 sm:px-3 text-center">{row.won}</td>
-                      <td className="py-3.5 px-2 sm:px-3 text-center">{row.drawn}</td>
-                      <td className="py-3.5 px-2 sm:px-3 text-center">{row.lost}</td>
-                      <td className="py-3.5 px-2 sm:px-3 text-center">{row.gd}</td>
-                      <td className="py-3.5 px-2 sm:px-3 text-center font-black text-[#0F2145] text-sm">
-                        {row.points}
-                      </td>
-                      <td className="py-3.5 px-3 sm:px-4 text-center hidden sm:table-cell">
-                        <div className="flex items-center justify-center gap-1">
-                          {row.form.map((res, i) => (
-                            <span
-                              key={i}
-                              className={`w-5 h-5 rounded flex items-center justify-center text-[10px] font-bold ${
-                                res === "W"
-                                  ? "bg-emerald-100 text-emerald-800"
-                                  : res === "D"
-                                  ? "bg-amber-100 text-amber-800"
-                                  : "bg-red-100 text-red-800"
-                              }`}
-                            >
-                              {res}
-                            </span>
-                          ))}
-                        </div>
-                      </td>
-                    </tr>
-                  ))}
+                          ) : (
+                            <span className="text-[10px] text-slate-400">-</span>
+                          )}
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
 
             <div className="p-3 bg-[#F8F9FA] border-t border-[#E1E5EA] flex flex-wrap items-center gap-4 text-[11px] text-[#788398]">
               <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#3E31FA] inline-block" />
+                <span className="w-2.5 h-2.5 rounded-full bg-cyan-500 inline-block" />
                 Positions 1–4: UEFA Champions League
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block" />
+                <span className="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block" />
                 Position 5: UEFA Europa League
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block" />
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block" />
+                Position 6: UEFA Conference League
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block" />
                 Positions 18–20: Relegation
               </span>
             </div>
