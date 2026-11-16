@@ -29,7 +29,7 @@ export default function MatchTicker() {
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-2 text-[#788398]">
             <Calendar className="w-3.5 h-3.5 text-[#3E31FA]" />
-            <span>Next: <strong className="text-[#0F2145]">Girona vs Real Madrid</strong> (Nov 24)</span>
+            <span>Next: <strong className="text-[#0F2145]">Real Madrid vs Sevilla FC</strong> (Santiago Bernabéu)</span>
           </div>
           <Link
             href="/matches"

@@ -82,8 +82,12 @@ export default function InteractiveMatchCenter() {
                     First Team · Male
                   </p>
                 </div>
-                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-3xl">
-                  {liveMatch.homeTeam.logo}
+                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center p-2.5 shadow-inner">
+                  <img
+                    src={liveMatch.homeTeam.logo}
+                    alt={liveMatch.homeTeam.name}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
 
@@ -106,8 +110,12 @@ export default function InteractiveMatchCenter() {
 
               {/* Away Team */}
               <div className="md:col-span-5 flex items-center justify-center md:justify-start gap-4 text-center md:text-left">
-                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-3xl">
-                  {liveMatch.awayTeam.logo}
+                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center p-2.5 shadow-inner">
+                  <img
+                    src={liveMatch.awayTeam.logo}
+                    alt={liveMatch.awayTeam.name}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
@@ -307,11 +315,29 @@ export default function InteractiveMatchCenter() {
 
                   {/* Bottom details block */}
                   <div className="p-4 flex items-center justify-between gap-4">
-                    <div className="space-y-1">
-                      <div className="text-sm font-bold text-[#0F2145] flex items-center gap-2">
-                        <span>{fixture.homeTeam.name}</span>
-                        <span className="text-[#C7CCD6] font-normal">vs</span>
-                        <span>{fixture.awayTeam.name}</span>
+                    <div className="space-y-1.5">
+                      <div className="text-sm font-bold text-[#0F2145] flex items-center gap-2 flex-wrap">
+                        <div className="flex items-center gap-1.5">
+                          {fixture.homeTeam.logo && (
+                            <img
+                              src={fixture.homeTeam.logo}
+                              alt={fixture.homeTeam.name}
+                              className="w-5 h-5 object-contain shrink-0"
+                            />
+                          )}
+                          <span>{fixture.homeTeam.name}</span>
+                        </div>
+                        <span className="text-[#C7CCD6] font-normal text-xs">vs</span>
+                        <div className="flex items-center gap-1.5">
+                          {fixture.awayTeam.logo && (
+                            <img
+                              src={fixture.awayTeam.logo}
+                              alt={fixture.awayTeam.name}
+                              className="w-5 h-5 object-contain shrink-0"
+                            />
+                          )}
+                          <span>{fixture.awayTeam.name}</span>
+                        </div>
                       </div>
                       <div className="flex items-center gap-1.5 text-xs text-[#788398]">
                         <MapPin className="w-3.5 h-3.5" />
@@ -351,16 +377,34 @@ export default function InteractiveMatchCenter() {
                     <span>{result.date}</span>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-sm text-[#0F2145]">
-                      {result.homeTeam.name}
-                    </span>
-                    <div className="px-3.5 py-1 rounded-lg bg-[#EEF2FD] text-[#3E31FA] font-black text-sm">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2 min-w-0">
+                      {result.homeTeam.logo && (
+                        <img
+                          src={result.homeTeam.logo}
+                          alt={result.homeTeam.name}
+                          className="w-5 h-5 object-contain shrink-0"
+                        />
+                      )}
+                      <span className="font-bold text-sm text-[#0F2145] truncate">
+                        {result.homeTeam.name}
+                      </span>
+                    </div>
+                    <div className="px-3.5 py-1 rounded-lg bg-[#EEF2FD] text-[#3E31FA] font-black text-sm shrink-0">
                       {result.homeTeam.score} - {result.awayTeam.score}
                     </div>
-                    <span className="font-bold text-sm text-[#43526E]">
-                      {result.awayTeam.name}
-                    </span>
+                    <div className="flex items-center gap-2 min-w-0 justify-end">
+                      <span className="font-bold text-sm text-[#43526E] truncate">
+                        {result.awayTeam.name}
+                      </span>
+                      {result.awayTeam.logo && (
+                        <img
+                          src={result.awayTeam.logo}
+                          alt={result.awayTeam.name}
+                          className="w-5 h-5 object-contain shrink-0"
+                        />
+                      )}
+                    </div>
                   </div>
 
                   <div className="text-xs text-[#788398] pt-2 border-t border-[#E1E5EA] flex items-center justify-between">

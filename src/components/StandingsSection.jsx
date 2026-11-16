@@ -25,7 +25,7 @@ export default function StandingsSection() {
           </div>
 
           <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-[#EEF2FD] text-[#3E31FA] border border-[#DEE5FD]">
-            1st Position: Real Madrid (32 pts)
+            1st Position: {table[0]?.team} ({table[0]?.points} pts)
           </span>
         </div>
 
@@ -35,7 +35,7 @@ export default function StandingsSection() {
           <div className="lg:col-span-8 rm-card overflow-hidden">
             <div className="p-4 sm:p-5 border-b border-[#E1E5EA] flex items-center justify-between bg-white">
               <h3 className="font-extrabold text-base text-[#0F2145]">{competition}</h3>
-              <span className="text-xs text-[#788398]">Matchday 13</span>
+              <span className="text-xs font-semibold text-[#788398]">{standingsData.matchday || "Matchday 18"}</span>
             </div>
 
             <div className="overflow-x-auto">
@@ -72,7 +72,14 @@ export default function StandingsSection() {
                       </td>
                       <td className="py-3.5 px-3 sm:px-4">
                         <div className="flex items-center gap-2.5">
-                          <span className="text-base">{row.logo}</span>
+                          {row.logo ? (
+                            <img
+                              src={row.logo}
+                              alt={row.team}
+                              className="w-5 h-5 object-contain shrink-0"
+                              loading="lazy"
+                            />
+                          ) : null}
                           <span className={row.highlight ? "text-[#3E31FA] font-extrabold" : "text-[#0F2145]"}>
                             {row.team}
                           </span>
@@ -139,6 +146,14 @@ export default function StandingsSection() {
                       <span className="text-xs font-black text-[#3E31FA] w-4 text-center">
                         {idx + 1}
                       </span>
+                      {scorer.logo && (
+                        <img
+                          src={scorer.logo}
+                          alt={scorer.team}
+                          className="w-5 h-5 object-contain shrink-0"
+                          loading="lazy"
+                        />
+                      )}
                       <div>
                         <div className="text-xs font-bold text-[#0F2145]">{scorer.player}</div>
                         <div className="text-[10px] text-[#788398]">{scorer.team}</div>
@@ -160,7 +175,7 @@ export default function StandingsSection() {
                 Defensive Record
               </div>
               <p className="text-xs text-[#0F2145] leading-relaxed">
-                Real Madrid holds the top defensive record with only 11 goals conceded in 13 matches and a league-best goal difference of +21.
+                Real Madrid leads LaLiga with 43 points, 41 goals scored and only 13 conceded in 18 matches with a league-best goal difference of +28.
               </p>
             </div>
           </div>

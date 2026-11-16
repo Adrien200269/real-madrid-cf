@@ -342,9 +342,9 @@ export const squadData = [
     joinedYear: 2018,
     avatar: "/images/players/vinicius.jpg",
     stats: {
-      appearances: 275,
-      goals: 88,
-      assists: 78,
+      appearances: 285,
+      goals: 98,
+      assists: 82,
       trophies: 13
     },
     quote: "Baila Vini! Football is joy, boldness, and conquering the impossible.",

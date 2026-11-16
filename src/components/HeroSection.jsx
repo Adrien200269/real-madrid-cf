@@ -145,7 +145,7 @@ export default function HeroSection() {
                   <div className="text-xs font-bold text-[#0F2145]">Vini Jr.</div>
                   <div className="text-[10px] text-[#788398] uppercase">#7 · Forward</div>
                   <div className="mt-2 text-[10px] font-bold text-[#3E31FA] bg-[#EEF2FD] rounded py-0.5">
-                    88 Goals
+                    98 Goals
                   </div>
                 </div>
 
