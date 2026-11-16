@@ -32,7 +32,7 @@ export default function HeroSection() {
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-[#43526E] max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0">
-              Welcome to the official digital portal of Real Madrid C.F. Relive 122 years of football glory, follow the first team squad, live match statistics, and the record 15 European crowns.
+              Welcome to the official digital portal of Real Madrid C.F. Relive 124 years of football glory, follow the first team squad, live match statistics, and the record 15 European crowns.
             </p>
 
             {/* Stats Summary Pills */}
@@ -113,7 +113,7 @@ export default function HeroSection() {
                   <div className="text-xs font-bold text-[#0F2145]">Bellingham</div>
                   <div className="text-[10px] text-[#788398] uppercase">#5 · Midfield</div>
                   <div className="mt-2 text-[10px] font-bold text-[#3E31FA] bg-[#EEF2FD] rounded py-0.5">
-                    28 Goals
+                    48 Goals
                   </div>
                 </div>
 
@@ -129,7 +129,7 @@ export default function HeroSection() {
                   <div className="text-xs font-bold text-[#0F2145]">Mbappé</div>
                   <div className="text-[10px] text-[#788398] uppercase">#9 · Forward</div>
                   <div className="mt-2 text-[10px] font-bold text-[#3E31FA] bg-white rounded py-0.5 shadow-2xs">
-                    17 Goals
+                    84 Goals
                   </div>
                 </div>
 
@@ -145,7 +145,7 @@ export default function HeroSection() {
                   <div className="text-xs font-bold text-[#0F2145]">Vini Jr.</div>
                   <div className="text-[10px] text-[#788398] uppercase">#7 · Forward</div>
                   <div className="mt-2 text-[10px] font-bold text-[#3E31FA] bg-[#EEF2FD] rounded py-0.5">
-                    98 Goals
+                    114 Goals
                   </div>
                 </div>
 

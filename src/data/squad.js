@@ -9,18 +9,18 @@ export const squadData = [
     category: "goalkeepers",
     nationality: "Belgium",
     flag: "🇧🇪",
-    age: 32,
+    age: 34,
     height: "2.00 m",
     joinedYear: 2018,
     avatar: "/images/players/courtois.jpg",
     stats: {
-      appearances: 245,
-      cleanSheets: 98,
-      saves: 680,
-      trophies: 12
+      appearances: 312,
+      cleanSheets: 132,
+      saves: 890,
+      trophies: 14
     },
     quote: "Playing for Real Madrid means expecting to win every trophy every year.",
-    highlights: ["2022 Champions League Final MVP", "Yashin Trophy Winner", "3x La Liga Champion"],
+    highlights: ["2022 Champions League Final MVP", "Yashin Trophy Winner", "4x La Liga Champion"],
     gradient: "from-blue-600 to-indigo-900"
   },
   {
@@ -32,15 +32,15 @@ export const squadData = [
     category: "goalkeepers",
     nationality: "Ukraine",
     flag: "🇺🇦",
-    age: 25,
+    age: 27,
     height: "1.91 m",
     joinedYear: 2018,
     avatar: "/images/players/lunin.jpg",
     stats: {
-      appearances: 48,
-      cleanSheets: 19,
-      saves: 145,
-      trophies: 8
+      appearances: 74,
+      cleanSheets: 31,
+      saves: 215,
+      trophies: 10
     },
     quote: "Hard work pays off when you stand in front of 80,000 Madridistas.",
     highlights: ["Heroic 2024 UCL Quarter-Final vs Man City", "2x Champions League Winner"],
@@ -57,15 +57,15 @@ export const squadData = [
     category: "defenders",
     nationality: "Spain",
     flag: "🇪🇸",
-    age: 32,
+    age: 34,
     height: "1.73 m",
     joinedYear: 2013,
     avatar: "/images/players/carvajal.jpg",
     stats: {
-      appearances: 420,
-      goals: 13,
-      assists: 64,
-      trophies: 26
+      appearances: 452,
+      goals: 15,
+      assists: 70,
+      trophies: 28
     },
     quote: "I laid the first stone at Valdebebas. Real Madrid is my life.",
     highlights: ["6x UEFA Champions League Winner", "2024 UCL Final Goalscorer & MVP", "Club Captain"],
@@ -80,15 +80,15 @@ export const squadData = [
     category: "defenders",
     nationality: "Brazil",
     flag: "🇧🇷",
-    age: 26,
+    age: 28,
     height: "1.86 m",
     joinedYear: 2019,
     avatar: "/images/players/militao.jpg",
     stats: {
-      appearances: 165,
-      goals: 12,
-      assists: 5,
-      trophies: 11
+      appearances: 185,
+      goals: 14,
+      assists: 7,
+      trophies: 13
     },
     quote: "In defense, you fight for every millimeter of this shirt.",
     highlights: ["2x UEFA Champions League Winner", "3x La Liga Champion", "Copa América Winner"],
@@ -103,18 +103,18 @@ export const squadData = [
     category: "defenders",
     nationality: "Austria",
     flag: "🇦🇹",
-    age: 32,
+    age: 34,
     height: "1.80 m",
     joinedYear: 2021,
     avatar: "/images/players/alaba.jpg",
     stats: {
-      appearances: 102,
-      goals: 5,
-      assists: 9,
-      trophies: 6
+      appearances: 130,
+      goals: 6,
+      assists: 11,
+      trophies: 8
     },
     quote: "The chair celebration showed that we never give up at the Bernabéu.",
-    highlights: ["4x UEFA Champions League Winner", "2x La Liga Champion", "Austrian Footballer of the Year 10x"],
+    highlights: ["4x UEFA Champions League Winner", "3x La Liga Champion", "Austrian Footballer of the Year 10x"],
     gradient: "from-red-600 to-blue-900"
   },
   {
@@ -126,15 +126,15 @@ export const squadData = [
     category: "defenders",
     nationality: "Germany",
     flag: "🇩🇪",
-    age: 31,
+    age: 33,
     height: "1.90 m",
     joinedYear: 2022,
     avatar: "/images/players/rudiger.jpg",
     stats: {
-      appearances: 115,
-      goals: 6,
-      assists: 3,
-      trophies: 7
+      appearances: 148,
+      goals: 8,
+      assists: 4,
+      trophies: 9
     },
     quote: "You have to match madness with passion when defending this crest.",
     highlights: ["2024 UEFA Champions League Winner", "2024 La Liga Champion", "UCL Team of the Season"],
@@ -149,15 +149,15 @@ export const squadData = [
     category: "defenders",
     nationality: "France",
     flag: "🇫🇷",
-    age: 29,
+    age: 31,
     height: "1.80 m",
     joinedYear: 2019,
     avatar: "/images/players/mendy.jpg",
     stats: {
-      appearances: 178,
-      goals: 6,
-      assists: 10,
-      trophies: 10
+      appearances: 210,
+      goals: 7,
+      assists: 12,
+      trophies: 12
     },
     quote: "Nobody gets past our flank easily in European nights.",
     highlights: ["2x UEFA Champions League Winner", "3x La Liga Champion", "Defensive Masterclass Specialist"],
@@ -174,15 +174,15 @@ export const squadData = [
     category: "midfielders",
     nationality: "England",
     flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-    age: 21,
+    age: 23,
     height: "1.86 m",
     joinedYear: 2023,
     avatar: "/images/players/bellingham.jpg",
     stats: {
-      appearances: 58,
-      goals: 28,
-      assists: 18,
-      trophies: 4
+      appearances: 124,
+      goals: 48,
+      assists: 31,
+      trophies: 6
     },
     quote: "Walking out at the Bernabéu and hearing 'Hey Jude' gives me goosebumps every time.",
     highlights: ["2024 La Liga Player of the Season", "Golden Boy & Kopa Trophy Winner", "2024 Champions League Winner"],
@@ -197,15 +197,15 @@ export const squadData = [
     category: "midfielders",
     nationality: "Uruguay",
     flag: "🇺🇾",
-    age: 26,
+    age: 28,
     height: "1.82 m",
     joinedYear: 2018,
     avatar: "/images/players/valverde.jpg",
     stats: {
-      appearances: 268,
-      goals: 24,
-      assists: 26,
-      trophies: 13
+      appearances: 320,
+      goals: 32,
+      assists: 38,
+      trophies: 15
     },
     quote: "I run until my legs stop, and then I run with my heart for Madrid.",
     highlights: ["Inheritor of Toni Kroos' Number 8", "2x Champions League Winner", "3x La Liga Champion"],
@@ -220,18 +220,18 @@ export const squadData = [
     category: "midfielders",
     nationality: "Croatia",
     flag: "🇭🇷",
-    age: 39,
+    age: 41,
     height: "1.72 m",
     joinedYear: 2012,
     avatar: "/images/players/modric.jpg",
     stats: {
-      appearances: 546,
-      goals: 39,
-      assists: 88,
-      trophies: 27
+      appearances: 565,
+      goals: 42,
+      assists: 91,
+      trophies: 28
     },
     quote: "Age is just a number. My passion for football and Real Madrid is infinite.",
-    highlights: ["2018 Ballon d'Or Winner", "Most decorated player in Real Madrid history (27 titles)", "6x UEFA Champions League Winner"],
+    highlights: ["2018 Ballon d'Or Winner", "Most decorated player in Real Madrid history (28 titles)", "6x UEFA Champions League Winner"],
     gradient: "from-amber-400 via-rose-600 to-blue-950"
   },
   {
@@ -243,15 +243,15 @@ export const squadData = [
     category: "midfielders",
     nationality: "France",
     flag: "🇫🇷",
-    age: 22,
+    age: 24,
     height: "1.82 m",
     joinedYear: 2021,
     avatar: "/images/players/camavinga.jpg",
     stats: {
-      appearances: 154,
-      goals: 4,
-      assists: 9,
-      trophies: 8
+      appearances: 195,
+      goals: 6,
+      assists: 14,
+      trophies: 11
     },
     quote: "Wherever the coach needs me, I will give 200%.",
     highlights: ["Won every club trophy available by age 20", "2x Champions League Winner"],
@@ -266,15 +266,15 @@ export const squadData = [
     category: "midfielders",
     nationality: "France",
     flag: "🇫🇷",
-    age: 24,
+    age: 26,
     height: "1.87 m",
     joinedYear: 2022,
     avatar: "/images/players/tchouameni.jpg",
     stats: {
-      appearances: 98,
-      goals: 4,
-      assists: 6,
-      trophies: 6
+      appearances: 152,
+      goals: 7,
+      assists: 11,
+      trophies: 8
     },
     quote: "Real Madrid is the pinnacle of football. We control the game from the middle.",
     highlights: ["2024 Champions League Winner", "2024 La Liga Champion", "France National Team Anchor"],
@@ -289,15 +289,15 @@ export const squadData = [
     category: "midfielders",
     nationality: "Turkey",
     flag: "🇹🇷",
-    age: 19,
+    age: 21,
     height: "1.75 m",
     joinedYear: 2023,
     avatar: "/images/players/guler.jpg",
     stats: {
-      appearances: 26,
-      goals: 7,
-      assists: 3,
-      trophies: 4
+      appearances: 65,
+      goals: 18,
+      assists: 14,
+      trophies: 5
     },
     quote: "I came here to create history with the best club in the world.",
     highlights: ["Highest minutes-per-goal ratio in debut La Liga season", "2024 Champions League Winner"],
@@ -314,15 +314,15 @@ export const squadData = [
     category: "forwards",
     nationality: "France",
     flag: "🇫🇷",
-    age: 25,
+    age: 27,
     height: "1.78 m",
     joinedYear: 2024,
     avatar: "/images/players/mbappe.jpg",
     stats: {
-      appearances: 24,
-      goals: 17,
-      assists: 6,
-      trophies: 1
+      appearances: 115,
+      goals: 84,
+      assists: 26,
+      trophies: 5
     },
     quote: "A dream come true. For years I dreamed of wearing this shirt and today I am here.",
     highlights: ["UEFA Super Cup Goalscorer on Debut", "2018 World Cup Winner", "7x Ligue 1 Top Scorer"],
@@ -337,15 +337,15 @@ export const squadData = [
     category: "forwards",
     nationality: "Brazil",
     flag: "🇧🇷",
-    age: 24,
+    age: 26,
     height: "1.76 m",
     joinedYear: 2018,
     avatar: "/images/players/vinicius.jpg",
     stats: {
-      appearances: 285,
-      goals: 98,
-      assists: 82,
-      trophies: 13
+      appearances: 335,
+      goals: 114,
+      assists: 92,
+      trophies: 15
     },
     quote: "Baila Vini! Football is joy, boldness, and conquering the impossible.",
     highlights: ["Scorer in two Champions League Finals (2022 & 2024)", "2024 UCL Player of the Season", "Socrates Award Winner"],
@@ -360,15 +360,15 @@ export const squadData = [
     category: "forwards",
     nationality: "Brazil",
     flag: "🇧🇷",
-    age: 23,
+    age: 25,
     height: "1.74 m",
     joinedYear: 2019,
     avatar: "/images/players/rodrygo.jpg",
     stats: {
-      appearances: 228,
-      goals: 58,
-      assists: 43,
-      trophies: 12
+      appearances: 270,
+      goals: 72,
+      assists: 54,
+      trophies: 14
     },
     quote: "When the Champions League anthem plays, something magical takes over us.",
     highlights: ["Iconic 2-goal comeback vs Man City (2022)", "2x UEFA Champions League Winner", "3x La Liga Champion"],
@@ -383,15 +383,15 @@ export const squadData = [
     category: "forwards",
     nationality: "Brazil",
     flag: "🇧🇷",
-    age: 18,
+    age: 20,
     height: "1.73 m",
     joinedYear: 2024,
     avatar: "/images/players/endrick.jpg",
     stats: {
-      appearances: 16,
-      goals: 4,
-      assists: 1,
-      trophies: 1
+      appearances: 68,
+      goals: 22,
+      assists: 9,
+      trophies: 4
     },
     quote: "I want to be part of the greatest history of the biggest club in the world.",
     highlights: ["Youngest Real Madrid scorer in UCL history", "Debut goalscorer in La Liga and UCL"],
@@ -406,15 +406,15 @@ export const squadData = [
     category: "forwards",
     nationality: "Morocco / Spain",
     flag: "🇲🇦",
-    age: 25,
+    age: 27,
     height: "1.71 m",
     joinedYear: 2019,
     avatar: "/images/players/brahim.jpg",
     stats: {
-      appearances: 72,
-      goals: 16,
-      assists: 12,
-      trophies: 6
+      appearances: 112,
+      goals: 24,
+      assists: 19,
+      trophies: 8
     },
     quote: "Every second with this badge on my chest is a privilege.",
     highlights: ["2024 Champions League Winner", "Solo stunner vs RB Leipzig", "La Liga Champion"],

@@ -175,7 +175,7 @@ export default function StandingsSection() {
                 Defensive Record
               </div>
               <p className="text-xs text-[#0F2145] leading-relaxed">
-                Real Madrid leads LaLiga with 43 points, 41 goals scored and only 13 conceded in 18 matches with a league-best goal difference of +28.
+                Real Madrid leads LaLiga with 33 points, 32 goals scored and only 8 conceded in 13 matches with an unbeaten record and a league-best goal difference of +24.
               </p>
             </div>
           </div>
