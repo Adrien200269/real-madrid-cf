@@ -176,6 +176,12 @@ export async function getStandings() {
 
           const team = entry.team || {};
           const gd = stats.pointDifferential ?? (stats.pointsFor - stats.pointsAgainst) ?? 0;
+          const existingTeam = standingsData.table.find((t) => 
+            t.team.toLowerCase().includes((team.displayName || team.name || "").toLowerCase()) ||
+            (team.displayName || team.name || "").toLowerCase().includes(t.team.toLowerCase())
+          );
+          const form = existingTeam?.form || ["W", "D", "L", "W", "W"];
+
           return {
             rank: idx + 1,
             team: team.displayName || team.name,
@@ -188,7 +194,7 @@ export async function getStandings() {
             ga: stats.pointsAgainst ?? 0,
             gd: gd > 0 ? `+${gd}` : `${gd}`,
             points: stats.points ?? 0,
-            form: ["W", "W", "W", "W", "W"],
+            form: form,
             highlight: (team.displayName || "").includes("Real Madrid") || team.id === "86"
           };
         });

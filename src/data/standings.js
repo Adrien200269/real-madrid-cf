@@ -41,7 +41,7 @@ export const standingsData = {
     "points": 30,
     "form": [
       "W",
-      "W",
+      "L",
       "W",
       "W",
       "W"
@@ -63,9 +63,9 @@ export const standingsData = {
     "points": 28,
     "form": [
       "W",
+      "L",
       "W",
-      "W",
-      "W",
+      "D",
       "W"
     ],
     "highlight": false
@@ -86,7 +86,7 @@ export const standingsData = {
     "form": [
       "W",
       "W",
-      "W",
+      "L",
       "W",
       "W"
     ],
@@ -107,10 +107,10 @@ export const standingsData = {
     "points": 22,
     "form": [
       "W",
+      "D",
       "W",
-      "W",
-      "W",
-      "W"
+      "L",
+      "L"
     ],
     "highlight": false
   },
@@ -129,8 +129,8 @@ export const standingsData = {
     "points": 18,
     "form": [
       "W",
-      "W",
-      "W",
+      "D",
+      "L",
       "W",
       "W"
     ],
@@ -150,11 +150,11 @@ export const standingsData = {
     "gd": "+4",
     "points": 16,
     "form": [
+      "D",
       "W",
       "W",
-      "W",
-      "W",
-      "W"
+      "L",
+      "L"
     ],
     "highlight": false
   },
@@ -172,11 +172,11 @@ export const standingsData = {
     "gd": "+2",
     "points": 15,
     "form": [
-      "W",
-      "W",
-      "W",
-      "W",
-      "W"
+      "L",
+      "L",
+      "L",
+      "D",
+      "D"
     ],
     "highlight": false
   },
@@ -194,11 +194,11 @@ export const standingsData = {
     "gd": "+1",
     "points": 15,
     "form": [
+      "D",
       "W",
       "W",
-      "W",
-      "W",
-      "W"
+      "D",
+      "D"
     ],
     "highlight": false
   },
@@ -217,10 +217,10 @@ export const standingsData = {
     "points": 14,
     "form": [
       "W",
+      "L",
       "W",
-      "W",
-      "W",
-      "W"
+      "L",
+      "D"
     ],
     "highlight": false
   },
@@ -238,11 +238,11 @@ export const standingsData = {
     "gd": "0",
     "points": 13,
     "form": [
-      "W",
-      "W",
-      "W",
-      "W",
-      "W"
+      "D",
+      "D",
+      "L",
+      "L",
+      "D"
     ],
     "highlight": false
   },
@@ -260,10 +260,10 @@ export const standingsData = {
     "gd": "-2",
     "points": 13,
     "form": [
+      "L",
       "W",
       "W",
-      "W",
-      "W",
+      "D",
       "W"
     ],
     "highlight": false
@@ -283,9 +283,9 @@ export const standingsData = {
     "points": 12,
     "form": [
       "W",
-      "W",
-      "W",
-      "W",
+      "D",
+      "L",
+      "L",
       "W"
     ],
     "highlight": false
@@ -304,11 +304,11 @@ export const standingsData = {
     "gd": "-6",
     "points": 12,
     "form": [
+      "L",
       "W",
-      "W",
-      "W",
-      "W",
-      "W"
+      "L",
+      "D",
+      "L"
     ],
     "highlight": false
   },
@@ -326,11 +326,11 @@ export const standingsData = {
     "gd": "-10",
     "points": 12,
     "form": [
+      "D",
+      "D",
+      "L",
       "W",
-      "W",
-      "W",
-      "W",
-      "W"
+      "L"
     ],
     "highlight": false
   },
@@ -348,11 +348,11 @@ export const standingsData = {
     "gd": "-11",
     "points": 12,
     "form": [
+      "L",
+      "L",
       "W",
       "W",
-      "W",
-      "W",
-      "W"
+      "D"
     ],
     "highlight": false
   },
@@ -370,11 +370,11 @@ export const standingsData = {
     "gd": "-5",
     "points": 11,
     "form": [
+      "L",
+      "D",
       "W",
-      "W",
-      "W",
-      "W",
-      "W"
+      "D",
+      "L"
     ],
     "highlight": false
   },
@@ -392,11 +392,11 @@ export const standingsData = {
     "gd": "-6",
     "points": 10,
     "form": [
-      "W",
-      "W",
-      "W",
-      "W",
-      "W"
+      "D",
+      "L",
+      "L",
+      "L",
+      "D"
     ],
     "highlight": false
   },
@@ -414,11 +414,11 @@ export const standingsData = {
     "gd": "-12",
     "points": 9,
     "form": [
-      "W",
-      "W",
-      "W",
-      "W",
-      "W"
+      "L",
+      "L",
+      "L",
+      "L",
+      "D"
     ],
     "highlight": false
   },
@@ -436,11 +436,11 @@ export const standingsData = {
     "gd": "-14",
     "points": 5,
     "form": [
-      "W",
-      "W",
-      "W",
-      "W",
-      "W"
+      "D",
+      "D",
+      "L",
+      "D",
+      "L"
     ],
     "highlight": false
   }
