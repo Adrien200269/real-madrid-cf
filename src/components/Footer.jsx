@@ -1,45 +1,6 @@
 export default function Footer() {
   return (
     <footer className="bg-[#0F2145] text-white border-t border-[#E1E5EA]">
-      
-      {/* Tier 1 Main Sponsors Bar */}
-      <div className="bg-[#14142B] border-b border-white/10 py-7 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <span className="text-[11px] font-bold uppercase tracking-widest text-slate-400">
-            Main Global Partners
-          </span>
-          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 font-black tracking-widest text-sm text-slate-200">
-            <span className="hover:text-white transition">FLY EMIRATES</span>
-            <span className="hover:text-white transition">ADIDAS</span>
-            <span className="hover:text-white transition">HP</span>
-          </div>
-          <span className="text-xs text-[#8FA0F5] hover:underline cursor-pointer">
-            See all partners &gt;
-          </span>
-        </div>
-      </div>
-
-      {/* Tier 2 Global Sponsors */}
-      <div className="border-b border-white/5 py-4 px-4 bg-[#0F2145]">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
-          <span className="hover:text-white transition">Mahou</span>
-          <span>•</span>
-          <span className="hover:text-white transition">BMW</span>
-          <span>•</span>
-          <span className="hover:text-white transition">EA Sports</span>
-          <span>•</span>
-          <span className="hover:text-white transition">Louis Vuitton</span>
-          <span>•</span>
-          <span className="hover:text-white transition">Adobe</span>
-          <span>•</span>
-          <span className="hover:text-white transition">Cisco</span>
-          <span>•</span>
-          <span className="hover:text-white transition">Nivea Men</span>
-          <span>•</span>
-          <span className="hover:text-white transition">Abbott</span>
-        </div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/10">
