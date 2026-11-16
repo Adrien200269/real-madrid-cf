@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#F3F5F8] text-[#0F2145] antialiased transition-colors duration-200">
+      <body className="min-h-screen flex flex-col bg-[#F3F5F8] dark:bg-[#090E1A] text-[#0F2145] dark:text-white antialiased transition-colors duration-200">
         <ThemeLanguageProvider>
           <MatchTicker />
           <Navbar />

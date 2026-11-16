@@ -35,13 +35,13 @@ export default function NewsSection({ initialLimit = null }) {
             </p>
           </div>
 
-          {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center gap-2">
+          {/* Category Filter Pills - Mobile scrollable */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:pb-0 sm:flex-wrap no-scrollbar">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all ${
+                className={`whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-bold transition-all shrink-0 ${
                   selectedCategory === cat
                     ? "bg-[#3E31FA] text-white shadow-xs"
                     : "bg-white dark:bg-[#111A2E] text-[#43526E] dark:text-slate-300 hover:text-[#0F2145] dark:hover:text-white border border-[#E1E5EA] dark:border-[#1E2B45]"
@@ -58,7 +58,7 @@ export default function NewsSection({ initialLimit = null }) {
           {displayedNews.map((item) => (
             <article
               key={item.id}
-              className="rm-card overflow-hidden group flex flex-col justify-between hover:-translate-y-1 transition-all duration-300"
+              className="bg-white dark:bg-[#111A2E] rounded-2xl border border-[#E1E5EA] dark:border-[#1E2B45] shadow-xs overflow-hidden group flex flex-col justify-between hover:-translate-y-1 transition-all duration-300"
             >
               <div>
                 <div className="relative aspect-[16/9] overflow-hidden bg-slate-900">

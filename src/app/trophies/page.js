@@ -8,17 +8,17 @@ export const metadata = {
 
 export default function TrophiesPage() {
   return (
-    <div className="pt-6 pb-16 bg-[#F3F5F8]">
+    <div className="pt-6 pb-16 bg-[#F3F5F8] dark:bg-[#090E1A] transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
-        <div className="rm-card p-6 sm:p-8 bg-white">
-          <div className="flex items-center gap-2 text-xs font-bold text-[#8760F6] uppercase tracking-wider mb-2">
+        <div className="bg-white dark:bg-[#111A2E] rounded-2xl border border-[#E1E5EA] dark:border-[#1E2B45] p-6 sm:p-8 shadow-xs">
+          <div className="flex items-center gap-2 text-xs font-bold text-[#8760F6] dark:text-[#A78BFA] uppercase tracking-wider mb-2">
             <Trophy className="w-4 h-4" />
             The Club · Honors & History
           </div>
-          <h1 className="text-2xl sm:text-4xl font-extrabold text-[#0F2145]">
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-[#0F2145] dark:text-white">
             Palmarés & 15 European Cups
           </h1>
-          <p className="text-[#788398] text-xs sm:text-sm max-w-2xl mt-1.5 leading-relaxed">
+          <p className="text-[#788398] dark:text-slate-400 text-xs sm:text-sm max-w-2xl mt-1.5 leading-relaxed">
             From the inaugural European Cup in Paris in 1956 to La Decimoquinta at Wembley in 2024. Explore all 15 final triumphs and historic milestones.
           </p>
         </div>

@@ -93,7 +93,7 @@ export default function HeroSection() {
 
           {/* Right Column: Featured Trio Card with Real Player Photos */}
           <div className="lg:col-span-5">
-            <div className="rm-card p-6 sm:p-7 space-y-6">
+            <div className="bg-white dark:bg-[#111A2E] rounded-2xl border border-[#E1E5EA] dark:border-[#1E2B45] shadow-xs p-6 sm:p-7 space-y-6">
               
               {/* Card Header */}
               <div className="flex items-center justify-between pb-4 border-b border-[#E1E5EA] dark:border-[#1E2B45]">
