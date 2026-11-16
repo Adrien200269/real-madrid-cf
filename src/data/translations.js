@@ -1,0 +1,237 @@
+export const translations = {
+  en: {
+    // Navigation
+    firstTeam: "First Team",
+    matchesTable: "Matches & Table",
+    trophyRoom: "Trophy Room",
+    newsMedia: "News & Media",
+    madridistas: "Madridistas",
+    toggleMenu: "Toggle Navigation Menu",
+    lightMode: "Light Mode",
+    darkMode: "Dark Mode",
+    langEn: "English",
+    langEs: "Spanish",
+    
+    // Match Ticker
+    latestFT: "LATEST · FT",
+    nextMatch: "Next:",
+    matchCenter: "Match Center",
+    
+    // Hero Section
+    officialSeason: "2026–27 Official Season",
+    heroTitle1: "THE KINGS",
+    heroTitle2: "OF EUROPE",
+    heroSub: "Official digital portal of the 15-time Champions of Europe. Follow live results, authentic squad data, and club milestones.",
+    trophy15Ucl: "15 European Cups",
+    trophy36LaLiga: "36 La Liga Titles",
+    trophyFifaClub: "FIFA Club of the Century",
+    exploreSquad: "Explore Squad",
+    
+    // Match Center
+    matchCenterTag: "Match Center · Real Madrid C.F.",
+    matchCenterHeading: "Próximos Partidos & Últimos Resultados",
+    matchCenterSub: "Official schedule, authentic match results and matchday squad · Season 2026–27",
+    timelineTab: "Timeline",
+    statsTab: "Match Stats",
+    lineupTab: "Starting XI",
+    attendance: "Attendance",
+    possession: "Possession",
+    totalShots: "Total Shots",
+    shotsOnTarget: "Shots on Target",
+    corners: "Corners",
+    fouls: "Fouls",
+    yellowCards: "Yellow Cards",
+    expectedGoals: "Expected Goals (xG)",
+    startingXI: "Starting XI",
+    benchSubstitutes: "Substitutes Bench",
+    upcomingFixtures: "Upcoming Fixtures",
+    recentResults: "Recent Results",
+    allCompetitions: "LaLiga & UEFA Champions League",
+    consecutiveWins: "5 Consecutive Wins",
+    
+    // Standings
+    standingsTag: "Competitions · Domestic League",
+    standingsHeading: "Clasificación LaLiga EA Sports",
+    standingsSub: "Official Primera División standings • Season 2026 / 2027 • FotMob Verified Dataset",
+    firstPlace: "1st",
+    secondPlace: "2nd",
+    pts: "pts",
+    rank: "#",
+    club: "Club",
+    played: "PL",
+    won: "W",
+    drawn: "D",
+    lost: "L",
+    goalsDiff: "+/-",
+    goalDiff: "GD",
+    points: "PTS",
+    form: "Form",
+    next: "Next",
+    uclZone: "Positions 1–4: UEFA Champions League",
+    uelZone: "Position 5: UEFA Europa League",
+    ueclZone: "Position 6: UEFA Conference League",
+    relegationZone: "Positions 18–20: Relegation",
+    pichichiTitle: "Pichichi · Top Scorers",
+    assistsTitle: "Top Assists",
+    viewAllStats: "View Full Leaderboard",
+    
+    // Squad
+    squadTag: "Real Madrid C.F. · 2026-27 Roster",
+    squadHeading: "Primer Equipo",
+    squadSub: "Official first team squad with authentic player portraits and career statistics",
+    allPositions: "All Positions",
+    goalkeepers: "Goalkeepers",
+    defenders: "Defenders",
+    midfielders: "Midfielders",
+    forwards: "Forwards",
+    age: "Age",
+    nationality: "Nationality",
+    joined: "Joined",
+    caps: "Caps",
+    goals: "Goals",
+    
+    // Trophies
+    trophiesTag: "Palmarés & Historic Honors",
+    trophiesHeading: "Real Madrid Trophy Cabinet",
+    trophiesSub: "FIFA Best Club of the 20th Century • 15 European Cups",
+    totalEuropeanCrowns: "Total European Crowns: 15",
+    the15Finals: "The 15 UEFA Champions League Finals",
+    laDecimoquinta: "La Decimoquinta & Continental Reign",
+    searchFinals: "Search year or opponent...",
+    legendaryEras: "Legendary Eras of Dominance",
+    
+    // Bernabeu
+    bernabeuTag: "The Temple of World Football",
+    bernabeuHeading: "Estadio Santiago Bernabéu",
+    bernabeuSub: "A modern architectural masterpiece featuring retractable pitch technology, 360° halo screens, and 85,000 passionate Madridistas.",
+    
+    // News
+    newsTag: "Latest Club Updates",
+    newsHeading: "Noticias & Multimedia",
+    newsSub: "Breaking club news, press conferences, training reports, and official announcements",
+    readArticle: "Read Full Story",
+    
+    // Footer
+    portalDesc: "Official digital portal of Real Madrid Club de Fútbol • Recipient of the FIFA Trophy for Best Club of the 20th Century • 15 European Cups.",
+    halaMadrid: "¡Hala Madrid! ...y nada más",
+    allRightsReserved: "Real Madrid © 2026 All rights reserved"
+  },
+  
+  es: {
+    // Navigation
+    firstTeam: "Primer Equipo",
+    matchesTable: "Partidos y Tabla",
+    trophyRoom: "Sala de Trofeos",
+    newsMedia: "Noticias y Medios",
+    madridistas: "Madridistas",
+    toggleMenu: "Alternar menú de navegación",
+    lightMode: "Modo Claro",
+    darkMode: "Modo Oscuro",
+    langEn: "Inglés",
+    langEs: "Español",
+    
+    // Match Ticker
+    latestFT: "ÚLTIMO · FINAL",
+    nextMatch: "Siguiente:",
+    matchCenter: "Centro de Partidos",
+    
+    // Hero Section
+    officialSeason: "Temporada Oficial 2026–27",
+    heroTitle1: "LOS REYES",
+    heroTitle2: "DE EUROPA",
+    heroSub: "Portal digital oficial del 15 veces Campeón de Europa. Sigue resultados en directo, datos reales de la plantilla y hitos del club.",
+    trophy15Ucl: "15 Copas de Europa",
+    trophy36LaLiga: "36 Títulos de Liga",
+    trophyFifaClub: "Mejor Club del Siglo XX",
+    exploreSquad: "Explorar Plantilla",
+    
+    // Match Center
+    matchCenterTag: "Centro de Partidos · Real Madrid C.F.",
+    matchCenterHeading: "Próximos Partidos & Últimos Resultados",
+    matchCenterSub: "Calendario oficial, resultados auténticos y convocatoria · Temporada 2026–27",
+    timelineTab: "Cronología",
+    statsTab: "Estadísticas",
+    lineupTab: "Alineación",
+    attendance: "Asistencia",
+    possession: "Posesión",
+    totalShots: "Tiros Totales",
+    shotsOnTarget: "Tiros a Puerta",
+    corners: "Córners",
+    fouls: "Faltas",
+    yellowCards: "Tarjetas Amarillas",
+    expectedGoals: "Goles Esperados (xG)",
+    startingXI: "Once Inicial",
+    benchSubstitutes: "Banquillo de Suplentes",
+    upcomingFixtures: "Próximos Partidos",
+    recentResults: "Últimos Resultados",
+    allCompetitions: "LaLiga & UEFA Champions League",
+    consecutiveWins: "5 Victorias Consecutivas",
+    
+    // Standings
+    standingsTag: "Competiciones · Liga Nacional",
+    standingsHeading: "Clasificación LaLiga EA Sports",
+    standingsSub: "Clasificación oficial de Primera División • Temporada 2026 / 2027 • Datos Verificados FotMob",
+    firstPlace: "1º",
+    secondPlace: "2º",
+    pts: "pts",
+    rank: "#",
+    club: "Club",
+    played: "PJ",
+    won: "G",
+    drawn: "E",
+    lost: "P",
+    goalsDiff: "+/-",
+    goalDiff: "DG",
+    points: "PTS",
+    form: "Forma",
+    next: "Próx.",
+    uclZone: "Puestos 1–4: UEFA Champions League",
+    uelZone: "Puesto 5: UEFA Europa League",
+    ueclZone: "Puesto 6: UEFA Conference League",
+    relegationZone: "Puestos 18–20: Descenso",
+    pichichiTitle: "Pichichi · Máximos Goleadores",
+    assistsTitle: "Máximos Asistentes",
+    viewAllStats: "Ver Clasificación Completa",
+    
+    // Squad
+    squadTag: "Real Madrid C.F. · Plantilla 2026-27",
+    squadHeading: "Primer Equipo",
+    squadSub: "Plantilla oficial del primer equipo con retratos auténticos y estadísticas",
+    allPositions: "Todas las Posiciones",
+    goalkeepers: "Porteros",
+    defenders: "Defensas",
+    midfielders: "Centrocampistas",
+    forwards: "Delanteros",
+    age: "Edad",
+    nationality: "Nacionalidad",
+    joined: "Fichaje",
+    caps: "Partidos",
+    goals: "Goles",
+    
+    // Trophies
+    trophiesTag: "Palmarés & Honores Históricos",
+    trophiesHeading: "Vitrina de Trofeos del Real Madrid",
+    trophiesSub: "Mejor Club del Siglo XX FIFA • 15 Copas de Europa",
+    totalEuropeanCrowns: "Coronas Europeas: 15",
+    the15Finals: "Las 15 Finales de UEFA Champions League",
+    laDecimoquinta: "La Decimoquinta & Reinado Continental",
+    searchFinals: "Buscar año o rival...",
+    legendaryEras: "Épocas Legendarias de Dominio",
+    
+    // Bernabeu
+    bernabeuTag: "El Templo del Fútbol Mundial",
+    bernabeuHeading: "Estadio Santiago Bernabéu",
+    bernabeuSub: "Una obra maestra de la arquitectura moderna con césped retráctil, videomarcador 360° y 85.000 madridistas apasionados.",
+    
+    // News
+    newsTag: "Últimas Novedades del Club",
+    newsHeading: "Noticias & Multimedia",
+    newsSub: "Última hora, ruedas de prensa, entrenamientos y comunicados oficiales",
+    readArticle: "Leer Noticia Completa",
+    
+    // Footer
+    portalDesc: "Portal digital oficial del Real Madrid Club de Fútbol • Galardonado con el Trofeo FIFA al Mejor Club del Siglo XX • 15 Copas de Europa.",
+    halaMadrid: "¡Hala Madrid! ...y nada más",
+    allRightsReserved: "Real Madrid © 2026 Todos los derechos reservados"
+  }
+};

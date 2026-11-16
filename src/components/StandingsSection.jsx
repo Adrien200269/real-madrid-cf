@@ -3,8 +3,10 @@
 import { useState } from "react";
 import { standingsData } from "@/data/standings";
 import { Flame, ShieldCheck, Sparkles, Award } from "lucide-react";
+import { useThemeLanguage } from "@/context/ThemeLanguageContext";
 
 export default function StandingsSection() {
+  const { t, language } = useThemeLanguage();
   const [statsTab, setStatsTab] = useState("scorers"); // "scorers" | "assists" | "advanced"
   const { competition, season, table, topScorers, topAssists, advancedStats } = standingsData;
 
@@ -15,23 +17,23 @@ export default function StandingsSection() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#3E31FA]">
-              Competitions · Domestic League
+            <span className="text-xs font-bold uppercase tracking-wider text-[#3E31FA] dark:text-[#8FA0F5]">
+              {t("standingsTag")}
             </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#0F2145] mt-1">
-              Clasificación LaLiga EA Sports
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#0F2145] dark:text-white mt-1">
+              {t("standingsHeading")}
             </h2>
-            <p className="text-[#788398] text-xs sm:text-sm mt-1">
-              Official Primera División standings • Season {season} • ESPN Official Soccer API
+            <p className="text-[#788398] dark:text-slate-400 text-xs sm:text-sm mt-1">
+              {t("standingsSub")}
             </p>
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-white text-[#43526E] border border-[#E1E5EA]">
-              1st: {table[0]?.team} ({table[0]?.points} pts)
+            <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-white dark:bg-[#111A2E] text-[#43526E] dark:text-slate-200 border border-[#E1E5EA] dark:border-[#1E2B45]">
+              {t("firstPlace")}: {table[0]?.team} ({table[0]?.points} {t("pts")})
             </span>
-            <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-[#EEF2FD] text-[#3E31FA] border border-[#DEE5FD]">
-              2nd: {table[1]?.team} ({table[1]?.points} pts)
+            <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-[#EEF2FD] dark:bg-[#1B294B] text-[#3E31FA] dark:text-[#8FA0F5] border border-[#DEE5FD] dark:border-[#23356A]">
+              {t("secondPlace")}: {table[1]?.team} ({table[1]?.points} {t("pts")})
             </span>
           </div>
         </div>
@@ -49,17 +51,17 @@ export default function StandingsSection() {
               <table className="w-full text-left text-xs sm:text-sm">
                 <thead className="bg-[#F8F9FA] text-[11px] uppercase tracking-wider text-[#788398] border-b border-[#E1E5EA]">
                   <tr>
-                    <th className="py-3 px-2 sm:px-3 text-center">#</th>
-                    <th className="py-3 px-3 sm:px-4">Club</th>
-                    <th className="py-3 px-2 sm:px-3 text-center">PL</th>
-                    <th className="py-3 px-2 sm:px-3 text-center">W</th>
-                    <th className="py-3 px-2 sm:px-3 text-center">D</th>
-                    <th className="py-3 px-2 sm:px-3 text-center">L</th>
-                    <th className="py-3 px-2 sm:px-3 text-center hidden md:table-cell">+/-</th>
-                    <th className="py-3 px-2 sm:px-3 text-center">GD</th>
-                    <th className="py-3 px-2 sm:px-3 text-center font-bold">PTS</th>
-                    <th className="py-3 px-3 sm:px-4 text-center hidden sm:table-cell">Form</th>
-                    <th className="py-3 px-2 sm:px-3 text-center hidden lg:table-cell">Next</th>
+                    <th className="py-3 px-2 sm:px-3 text-center">{t("rank")}</th>
+                    <th className="py-3 px-3 sm:px-4">{t("club")}</th>
+                    <th className="py-3 px-2 sm:px-3 text-center">{t("played")}</th>
+                    <th className="py-3 px-2 sm:px-3 text-center">{t("won")}</th>
+                    <th className="py-3 px-2 sm:px-3 text-center">{t("drawn")}</th>
+                    <th className="py-3 px-2 sm:px-3 text-center">{t("lost")}</th>
+                    <th className="py-3 px-2 sm:px-3 text-center hidden md:table-cell">{t("goalsDiff")}</th>
+                    <th className="py-3 px-2 sm:px-3 text-center">{t("goalDiff")}</th>
+                    <th className="py-3 px-2 sm:px-3 text-center font-bold">{t("points")}</th>
+                    <th className="py-3 px-3 sm:px-4 text-center hidden sm:table-cell">{t("form")}</th>
+                    <th className="py-3 px-2 sm:px-3 text-center hidden lg:table-cell">{t("next")}</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[#E1E5EA] font-medium text-[#43526E]">
@@ -155,22 +157,22 @@ export default function StandingsSection() {
               </table>
             </div>
 
-            <div className="p-3 bg-[#F8F9FA] border-t border-[#E1E5EA] flex flex-wrap items-center gap-4 text-[11px] text-[#788398]">
+            <div className="p-3 bg-[#F8F9FA] dark:bg-[#0E1626] border-t border-[#E1E5EA] dark:border-[#1E2B45] flex flex-wrap items-center gap-4 text-[11px] text-[#788398] dark:text-slate-400">
               <span className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-cyan-500 inline-block" />
-                Positions 1–4: UEFA Champions League
+                {t("uclZone")}
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block" />
-                Position 5: UEFA Europa League
+                {t("uelZone")}
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block" />
-                Position 6: UEFA Conference League
+                {t("ueclZone")}
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block" />
-                Positions 18–20: Relegation
+                {t("relegationZone")}
               </span>
             </div>
           </div>

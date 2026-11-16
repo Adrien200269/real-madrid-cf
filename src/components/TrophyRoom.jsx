@@ -3,8 +3,10 @@
 import { useState } from "react";
 import { trophiesData } from "@/data/trophies";
 import { Trophy, History, Award, Search, Sparkles } from "lucide-react";
+import { useThemeLanguage } from "@/context/ThemeLanguageContext";
 
 export default function TrophyRoom() {
+  const { t, language } = useThemeLanguage();
   const { summary, championsLeagues, eras } = trophiesData;
   const [selectedUcl, setSelectedUcl] = useState(championsLeagues[0]);
   const [uclFilterYear, setUclFilterYear] = useState("");
@@ -14,27 +16,27 @@ export default function TrophyRoom() {
   );
 
   return (
-    <section className="py-14 lg:py-20 bg-[#F3F5F8] text-[#0F2145] border-b border-[#E1E5EA]">
+    <section className="py-14 lg:py-20 bg-[#F3F5F8] dark:bg-[#090E1A] text-[#0F2145] dark:text-white border-b border-[#E1E5EA] dark:border-[#1E2B45] transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EDEBFA] text-[#8760F6] text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EDEBFA] dark:bg-[#231B40] text-[#8760F6] dark:text-[#A5B4FC] text-xs font-bold uppercase tracking-wider mb-2">
               <Trophy className="w-3.5 h-3.5" />
-              Palmarés & Historic Honors
+              {t("trophiesTag")}
             </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#0F2145]">
-              Real Madrid Trophy Cabinet
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#0F2145] dark:text-white">
+              {t("trophiesHeading")}
             </h2>
-            <p className="text-[#788398] text-xs sm:text-sm mt-1">
-              FIFA Best Club of the 20th Century • 15 European Cups
+            <p className="text-[#788398] dark:text-slate-400 text-xs sm:text-sm mt-1">
+              {t("trophiesSub")}
             </p>
           </div>
 
           <div className="text-right">
-            <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-white border border-[#E1E5EA] text-[#0F2145] shadow-2xs">
-              Total European Crowns: 15
+            <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-white dark:bg-[#111A2E] border border-[#E1E5EA] dark:border-[#1E2B45] text-[#0F2145] dark:text-slate-200 shadow-2xs">
+              {t("totalEuropeanCrowns")}
             </span>
           </div>
         </div>

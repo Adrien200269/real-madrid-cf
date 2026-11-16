@@ -31,12 +31,37 @@
   --foreground: var(--rm-navy);
 }
 
+/* Dark Mode Theme Tokens */
+.dark, html.dark {
+  --rm-canvas: #090E1A;
+  --rm-white: #111A2E;
+  --rm-off-white: #162038;
+  --rm-line: #1E2B45;
+  --rm-line-light: #2A3B5E;
+  
+  --rm-navy: #F8FAFC;
+  --rm-body: #CBD5E1;
+  --rm-hint: #94A3B8;
+  
+  --rm-primary-bg: #1B294B;
+  --rm-primary-light: #23356A;
+  --rm-secondary-bg: #2A1F4C;
+  
+  --background: #090E1A;
+  --foreground: #F8FAFC;
+}
+
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   letter-spacing: -0.015em;
   overflow-x: hidden;
+}
+
+.dark body {
+  background-color: #090E1A;
+  color: #F8FAFC;
 }
 
 /* Official Real Madrid Card Styling */
@@ -51,6 +76,62 @@ body {
 .rm-card:hover {
   box-shadow: 0 16px 40px -8px rgba(84, 77, 183, 0.14);
   border-color: rgba(62, 49, 250, 0.25);
+}
+
+.dark .rm-card {
+  background-color: #111A2E;
+  border-color: #1E2B45;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.45);
+}
+
+.dark .rm-card:hover {
+  border-color: rgba(62, 49, 250, 0.45);
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.7);
+}
+
+/* Dark Mode Overrides for Core Palette */
+.dark .bg-white {
+  background-color: #111A2E !important;
+}
+
+.dark .bg-\[\#F3F5F8\] {
+  background-color: #090E1A !important;
+}
+
+.dark .bg-\[\#F8F9FA\] {
+  background-color: #0E1626 !important;
+}
+
+.dark .bg-\[\#EEF2FD\] {
+  background-color: #182544 !important;
+}
+
+.dark .bg-\[\#EDEBFA\] {
+  background-color: #231B40 !important;
+}
+
+.dark .text-\[\#0F2145\] {
+  color: #F8FAFC !important;
+}
+
+.dark .text-\[\#43526E\] {
+  color: #CBD5E1 !important;
+}
+
+.dark .text-\[\#788398\] {
+  color: #94A3B8 !important;
+}
+
+.dark .border-\[\#E1E5EA\] {
+  border-color: #1E2B45 !important;
+}
+
+.dark .border-\[\#DEE5FD\] {
+  border-color: #23356A !important;
+}
+
+.dark .divide-\[\#E1E5EA\] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #1E2B45 !important;
 }
 
 /* Primary Real Madrid Gradient */
@@ -94,4 +175,15 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #8FA0F5;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #090E1A;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #1E2B45;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3E31FA;
 }

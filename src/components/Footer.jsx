@@ -1,6 +1,12 @@
+"use client";
+
+import { useThemeLanguage } from "@/context/ThemeLanguageContext";
+
 export default function Footer() {
+  const { t } = useThemeLanguage();
+
   return (
-    <footer className="bg-[#0F2145] text-white border-t border-[#E1E5EA]">
+    <footer className="bg-[#0F2145] dark:bg-[#070B14] text-white border-t border-[#E1E5EA] dark:border-[#1E2B45] transition-colors duration-200">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/10">
@@ -24,14 +30,14 @@ export default function Footer() {
                 </span>
               </div>
               <p className="text-xs text-slate-300 max-w-md leading-relaxed">
-                Official digital portal of Real Madrid Club de Fútbol • Recipient of the FIFA Trophy for Best Club of the 20th Century • 15 European Cups.
+                {t("portalDesc")}
               </p>
             </div>
           </div>
 
           <div className="shrink-0">
             <div className="inline-block px-4 py-2 rounded-full bg-[#3E31FA]/20 border border-[#3E31FA]/40 text-[#8FA0F5] text-xs font-bold uppercase tracking-wider">
-              ¡Hala Madrid! ...y nada más
+              {t("halaMadrid")}
             </div>
           </div>
 
@@ -39,7 +45,7 @@ export default function Footer() {
 
         {/* Copyright Bar */}
         <div className="pt-6 text-center sm:text-left text-xs text-slate-400">
-          Real Madrid © 2026 All rights reserved
+          {t("allRightsReserved")}
         </div>
 
       </div>

@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import MatchTicker from "@/components/MatchTicker";
 import Footer from "@/components/Footer";
+import { ThemeLanguageProvider } from "@/context/ThemeLanguageContext";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,12 +19,37 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased scroll-smooth`}>
-      <body className="min-h-screen flex flex-col bg-[#F3F5F8] text-[#0F2145] antialiased">
-        <MatchTicker />
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+    <html lang="en" className={`${inter.variable} h-full antialiased scroll-smooth`} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                var savedTheme = localStorage.getItem('rm_theme');
+                var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                  document.documentElement.classList.add('dark');
+                  document.documentElement.setAttribute('data-theme', 'dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                  document.documentElement.setAttribute('data-theme', 'light');
+                }
+                var savedLang = localStorage.getItem('rm_lang');
+                if (savedLang) {
+                  document.documentElement.setAttribute('lang', savedLang);
+                }
+              } catch (e) {}
+            `
+          }}
+        />
+      </head>
+      <body className="min-h-screen flex flex-col bg-[#F3F5F8] text-[#0F2145] antialiased transition-colors duration-200">
+        <ThemeLanguageProvider>
+          <MatchTicker />
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </ThemeLanguageProvider>
       </body>
     </html>
   );

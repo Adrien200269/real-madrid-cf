@@ -12,38 +12,40 @@ import {
   MapPin,
   CheckCircle2
 } from "lucide-react";
+import { useThemeLanguage } from "@/context/ThemeLanguageContext";
 
 export default function InteractiveMatchCenter() {
+  const { t, language } = useThemeLanguage();
   const [activeTab, setActiveTab] = useState("timeline"); // "timeline" | "stats" | "lineup"
   const { upcomingFixtures, recentResults } = matchCenterData;
   const match = matchCenterData.featuredMatch || matchCenterData.liveMatch;
 
   return (
-    <section className="py-14 lg:py-20 bg-[#F3F5F8] text-[#0F2145] border-b border-[#E1E5EA]">
+    <section className="py-14 lg:py-20 bg-[#F3F5F8] dark:bg-[#090E1A] text-[#0F2145] dark:text-white border-b border-[#E1E5EA] dark:border-[#1E2B45] transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EEF2FD] text-[#3E31FA] text-xs font-bold uppercase tracking-wider mb-2">
-              <Trophy className="w-3.5 h-3.5 text-[#3E31FA]" />
-              Match Center · Real Madrid C.F.
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EEF2FD] dark:bg-[#182544] text-[#3E31FA] dark:text-[#8FA0F5] text-xs font-bold uppercase tracking-wider mb-2">
+              <Trophy className="w-3.5 h-3.5 text-[#3E31FA] dark:text-[#8FA0F5]" />
+              {t("matchCenterTag")}
             </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#0F2145]">
-              Próximos Partidos & Últimos Resultados
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#0F2145] dark:text-white">
+              {t("matchCenterHeading")}
             </h2>
-            <p className="text-[#788398] text-xs sm:text-sm mt-1">
-              Official schedule, authentic match results and matchday squad · Season 2026–27
+            <p className="text-[#788398] dark:text-slate-400 text-xs sm:text-sm mt-1">
+              {t("matchCenterSub")}
             </p>
           </div>
 
           {/* Quick Info Badges */}
           <div className="flex items-center gap-2">
-            <span className="px-3 py-1.5 rounded-full bg-white border border-[#E1E5EA] text-[#43526E] text-xs font-semibold shadow-2xs">
-              LaLiga & UEFA Champions League
+            <span className="px-3 py-1.5 rounded-full bg-white dark:bg-[#111A2E] border border-[#E1E5EA] dark:border-[#1E2B45] text-[#43526E] dark:text-slate-300 text-xs font-semibold shadow-2xs">
+              {t("allCompetitions")}
             </span>
-            <span className="px-3 py-1.5 rounded-full bg-[#EEF2FD] text-[#3E31FA] text-xs font-bold border border-[#DEE5FD]">
-              5 Consecutive Wins
+            <span className="px-3 py-1.5 rounded-full bg-[#EEF2FD] dark:bg-[#182544] text-[#3E31FA] dark:text-[#8FA0F5] text-xs font-bold border border-[#DEE5FD] dark:border-[#23356A]">
+              {t("consecutiveWins")}
             </span>
           </div>
         </div>
@@ -150,11 +152,11 @@ export default function InteractiveMatchCenter() {
                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold transition-all ${
                   activeTab === "timeline"
                     ? "bg-[#3E31FA] text-white shadow-xs"
-                    : "bg-[#F3F5F8] text-[#43526E] hover:text-[#0F2145]"
+                    : "bg-[#F3F5F8] dark:bg-[#1E2B45] text-[#43526E] dark:text-slate-300 hover:text-[#0F2145] dark:hover:text-white"
                 }`}
               >
                 <Activity className="w-3.5 h-3.5" />
-                Match Timeline
+                {t("timelineTab")}
               </button>
 
               <button
@@ -162,11 +164,11 @@ export default function InteractiveMatchCenter() {
                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold transition-all ${
                   activeTab === "stats"
                     ? "bg-[#3E31FA] text-white shadow-xs"
-                    : "bg-[#F3F5F8] text-[#43526E] hover:text-[#0F2145]"
+                    : "bg-[#F3F5F8] dark:bg-[#1E2B45] text-[#43526E] dark:text-slate-300 hover:text-[#0F2145] dark:hover:text-white"
                 }`}
               >
                 <BarChart2 className="w-3.5 h-3.5" />
-                Match Statistics
+                {t("statsTab")}
               </button>
 
               <button
@@ -174,11 +176,11 @@ export default function InteractiveMatchCenter() {
                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold transition-all ${
                   activeTab === "lineup"
                     ? "bg-[#3E31FA] text-white shadow-xs"
-                    : "bg-[#F3F5F8] text-[#43526E] hover:text-[#0F2145]"
+                    : "bg-[#F3F5F8] dark:bg-[#1E2B45] text-[#43526E] dark:text-slate-300 hover:text-[#0F2145] dark:hover:text-white"
                 }`}
               >
                 <Users className="w-3.5 h-3.5" />
-                Real Madrid Lineup
+                {t("lineupTab")}
               </button>
             </div>
 

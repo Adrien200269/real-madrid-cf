@@ -10,18 +10,20 @@ import {
   Quote,
   Users
 } from "lucide-react";
+import { useThemeLanguage } from "@/context/ThemeLanguageContext";
 
 export default function SquadSection({ initialLimit = null }) {
+  const { t, language } = useThemeLanguage();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [activePlayer, setActivePlayer] = useState(null);
 
   const categories = [
-    { id: "all", label: "All Players" },
-    { id: "forwards", label: "Forwards" },
-    { id: "midfielders", label: "Midfielders" },
-    { id: "defenders", label: "Defenders" },
-    { id: "goalkeepers", label: "Goalkeepers" }
+    { id: "all", label: language === "es" ? "Todos" : "All Players" },
+    { id: "forwards", label: language === "es" ? "Delanteros" : "Forwards" },
+    { id: "midfielders", label: language === "es" ? "Centrocampistas" : "Midfielders" },
+    { id: "defenders", label: language === "es" ? "Defensas" : "Defenders" },
+    { id: "goalkeepers", label: language === "es" ? "Porteros" : "Goalkeepers" }
   ];
 
   const filteredPlayers = useMemo(() => {
@@ -45,32 +47,32 @@ export default function SquadSection({ initialLimit = null }) {
     : filteredPlayers;
 
   return (
-    <section id="squad-section" className="py-14 lg:py-20 bg-[#F3F5F8] text-[#0F2145] border-b border-[#E1E5EA]">
+    <section id="squad-section" className="py-14 lg:py-20 bg-[#F3F5F8] dark:bg-[#090E1A] text-[#0F2145] dark:text-white border-b border-[#E1E5EA] dark:border-[#1E2B45] transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#3E31FA]">
-              Football · First Team
+            <span className="text-xs font-bold uppercase tracking-wider text-[#3E31FA] dark:text-[#8FA0F5]">
+              {t("squadTag")}
             </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#0F2145] mt-1">
-              Plantilla Primer Equipo
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#0F2145] dark:text-white mt-1">
+              {t("squadHeading")}
             </h2>
-            <p className="text-[#788398] text-xs sm:text-sm mt-1">
-              Official roster of Real Madrid Club de Fútbol 2026–27.
+            <p className="text-[#788398] dark:text-slate-400 text-xs sm:text-sm mt-1">
+              {t("squadSub")}
             </p>
           </div>
 
           {/* Search Box */}
           <div className="relative w-full md:w-72">
-            <Search className="w-4 h-4 text-[#788398] absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-[#788398] dark:text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              placeholder="Search by player or country..."
+              placeholder={language === "es" ? "Buscar por jugador o país..." : "Search by player or country..."}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 bg-white border border-[#E1E5EA] focus:border-[#3E31FA] rounded-full text-xs text-[#0F2145] placeholder-[#788398] focus:outline-none transition shadow-2xs"
+              className="w-full pl-10 pr-4 py-2 bg-white dark:bg-[#111A2E] border border-[#E1E5EA] dark:border-[#1E2B45] focus:border-[#3E31FA] rounded-full text-xs text-[#0F2145] dark:text-white placeholder-[#788398] dark:placeholder-slate-400 focus:outline-none transition shadow-2xs"
             />
             {searchQuery && (
               <button
