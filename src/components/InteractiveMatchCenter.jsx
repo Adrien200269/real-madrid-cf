@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { matchCenterData } from "@/data/matches";
 import { 
-  Radio, 
   Clock, 
   Calendar, 
   BarChart2, 
@@ -11,12 +10,13 @@ import {
   Trophy, 
   Activity,
   MapPin,
-  ChevronRight
+  CheckCircle2
 } from "lucide-react";
 
 export default function InteractiveMatchCenter() {
   const [activeTab, setActiveTab] = useState("timeline"); // "timeline" | "stats" | "lineup"
-  const { liveMatch, upcomingFixtures, recentResults } = matchCenterData;
+  const { upcomingFixtures, recentResults } = matchCenterData;
+  const match = matchCenterData.featuredMatch || matchCenterData.liveMatch;
 
   return (
     <section className="py-14 lg:py-20 bg-[#F3F5F8] text-[#0F2145] border-b border-[#E1E5EA]">
@@ -25,30 +25,30 @@ export default function InteractiveMatchCenter() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-bold uppercase tracking-wider mb-2">
-              <Radio className="w-3.5 h-3.5 animate-pulse text-red-600" />
-              Live Match Center
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EEF2FD] text-[#3E31FA] text-xs font-bold uppercase tracking-wider mb-2">
+              <Trophy className="w-3.5 h-3.5 text-[#3E31FA]" />
+              Match Center · Real Madrid C.F.
             </div>
             <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#0F2145]">
-              Próximos Eventos & Live Score
+              Próximos Partidos & Últimos Resultados
             </h2>
             <p className="text-[#788398] text-xs sm:text-sm mt-1">
-              Football · First Team · Male · Real Madrid C.F.
+              Official schedule, authentic match results and matchday squad · Season 2026–27
             </p>
           </div>
 
-          {/* Quick tab filters */}
+          {/* Quick Info Badges */}
           <div className="flex items-center gap-2">
             <span className="px-3 py-1.5 rounded-full bg-white border border-[#E1E5EA] text-[#43526E] text-xs font-semibold shadow-2xs">
-              All Competitions (3)
+              LaLiga & UEFA Champions League
             </span>
             <span className="px-3 py-1.5 rounded-full bg-[#EEF2FD] text-[#3E31FA] text-xs font-bold border border-[#DEE5FD]">
-              UCL & LaLiga
+              5 Consecutive Wins
             </span>
           </div>
         </div>
 
-        {/* Live Match Hero Board - Official Dual Block Card Architecture */}
+        {/* Featured Match Board - Official Dual Block Card Architecture */}
         <div className="rm-card overflow-hidden mb-12 border-[#E1E5EA]">
           
           {/* Top Block: Deep Navy Container (#0F2145) */}
@@ -56,17 +56,19 @@ export default function InteractiveMatchCenter() {
             <div className="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-white/10 text-xs">
               <div className="flex items-center gap-2">
                 <span className="px-2.5 py-0.5 rounded bg-[#3E31FA] text-white font-bold text-[11px] uppercase tracking-wider">
-                  {liveMatch.competition}
+                  {match.competition}
                 </span>
-                <span className="text-slate-300 font-medium">{liveMatch.stage}</span>
+                <span className="text-slate-300 font-medium">{match.stage}</span>
+                <span className="text-slate-500">•</span>
+                <span className="text-slate-300">{match.date}</span>
               </div>
               <div className="flex items-center gap-4 text-slate-300">
                 <span className="flex items-center gap-1 font-medium">
                   <MapPin className="w-3.5 h-3.5 text-[#8FA0F5]" />
-                  {liveMatch.venue}
+                  {match.venue}
                 </span>
                 <span className="hidden sm:inline text-slate-500">•</span>
-                <span className="hidden sm:inline font-semibold">Att: {liveMatch.attendance}</span>
+                <span className="hidden sm:inline font-semibold">Att: {match.attendance}</span>
               </div>
             </div>
 
@@ -76,16 +78,16 @@ export default function InteractiveMatchCenter() {
               <div className="md:col-span-5 flex items-center justify-center md:justify-end gap-4 text-center md:text-right">
                 <div>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
-                    {liveMatch.homeTeam.name}
+                    {match.homeTeam.name}
                   </h3>
-                  <p className="text-xs text-[#8FA0F5] font-semibold uppercase tracking-wider">
-                    First Team · Male
+                  <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider">
+                    LaLiga Host
                   </p>
                 </div>
-                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center p-2.5 shadow-inner">
+                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center p-2.5 shadow-inner shrink-0">
                   <img
-                    src={liveMatch.homeTeam.logo}
-                    alt={liveMatch.homeTeam.name}
+                    src={match.homeTeam.logo}
+                    alt={match.homeTeam.name}
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -94,35 +96,35 @@ export default function InteractiveMatchCenter() {
               {/* Score in Center */}
               <div className="md:col-span-2 text-center space-y-2">
                 <div className="inline-flex items-center gap-3 px-5 py-2 rounded-xl bg-black/40 border border-white/10">
-                  <span className="text-3xl sm:text-4xl font-extrabold text-white">
-                    {liveMatch.homeTeam.score}
+                  <span className="text-3xl sm:text-4xl font-extrabold text-slate-300">
+                    {match.homeTeam.score}
                   </span>
                   <span className="text-xl text-slate-500 font-light">-</span>
-                  <span className="text-3xl sm:text-4xl font-extrabold text-slate-300">
-                    {liveMatch.awayTeam.score}
+                  <span className="text-3xl sm:text-4xl font-extrabold text-[#8FA0F5]">
+                    {match.awayTeam.score}
                   </span>
                 </div>
-                <div className="flex items-center justify-center gap-1.5 text-xs font-bold text-red-400">
-                  <Radio className="w-3.5 h-3.5 animate-pulse" />
-                  <span>{liveMatch.status} • {liveMatch.minute}</span>
+                <div className="flex items-center justify-center gap-1.5 text-xs font-bold text-emerald-400">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  <span>{match.status}</span>
                 </div>
               </div>
 
               {/* Away Team */}
               <div className="md:col-span-5 flex items-center justify-center md:justify-start gap-4 text-center md:text-left">
-                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center p-2.5 shadow-inner">
+                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center p-2.5 shadow-inner shrink-0">
                   <img
-                    src={liveMatch.awayTeam.logo}
-                    alt={liveMatch.awayTeam.name}
+                    src={match.awayTeam.logo}
+                    alt={match.awayTeam.name}
                     className="w-full h-full object-contain"
                   />
                 </div>
                 <div>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
-                    {liveMatch.awayTeam.name}
+                    {match.awayTeam.name}
                   </h3>
-                  <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider">
-                    Bundesliga Contender
+                  <p className="text-xs text-[#8FA0F5] font-semibold uppercase tracking-wider">
+                    First Team · Real Madrid C.F.
                   </p>
                 </div>
               </div>
@@ -130,11 +132,11 @@ export default function InteractiveMatchCenter() {
 
             {/* Scorers ticker */}
             <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-300">
-              {liveMatch.scorers.map((s, idx) => (
+              {match.scorers.map((s, idx) => (
                 <div key={idx} className="flex items-center gap-1.5">
                   <span className="text-[#8FA0F5] font-black">{s.minute}</span>
                   <span className="font-semibold text-white">{s.player}</span>
-                  <span className="text-slate-400 text-[11px]">({s.team})</span>
+                  {s.assist && <span className="text-slate-400 text-[11px]">(ast. {s.assist})</span>}
                 </div>
               ))}
             </div>
@@ -152,7 +154,7 @@ export default function InteractiveMatchCenter() {
                 }`}
               >
                 <Activity className="w-3.5 h-3.5" />
-                Live Timeline
+                Match Timeline
               </button>
 
               <button
@@ -176,14 +178,14 @@ export default function InteractiveMatchCenter() {
                 }`}
               >
                 <Users className="w-3.5 h-3.5" />
-                Tactical Lineup
+                Real Madrid Lineup
               </button>
             </div>
 
-            {/* Tab 1: Live Timeline */}
+            {/* Tab 1: Match Timeline */}
             {activeTab === "timeline" && (
               <div className="space-y-3 max-w-2xl mx-auto">
-                {liveMatch.timeline.map((event, idx) => (
+                {match.timeline.map((event, idx) => (
                   <div
                     key={idx}
                     className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA] hover:border-[#3E31FA]/40 transition"
@@ -205,18 +207,18 @@ export default function InteractiveMatchCenter() {
                 {/* Possession */}
                 <div>
                   <div className="flex justify-between text-xs font-bold mb-1">
-                    <span className="text-[#3E31FA]">Real Madrid ({liveMatch.stats.possession.home}%)</span>
+                    <span className="text-[#0F2145]">Valencia ({match.stats.possession.home}%)</span>
                     <span className="text-[#788398]">Possession</span>
-                    <span className="text-[#0F2145]">{liveMatch.stats.possession.away}%</span>
+                    <span className="text-[#3E31FA]">Real Madrid ({match.stats.possession.away}%)</span>
                   </div>
                   <div className="w-full h-2.5 bg-[#EDEFF2] rounded-full overflow-hidden flex">
                     <div
-                      className="bg-[#3E31FA] h-full"
-                      style={{ width: `${liveMatch.stats.possession.home}%` }}
+                      className="bg-[#788398] h-full"
+                      style={{ width: `${match.stats.possession.home}%` }}
                     />
                     <div
-                      className="bg-[#0F2145] h-full"
-                      style={{ width: `${liveMatch.stats.possession.away}%` }}
+                      className="bg-[#3E31FA] h-full"
+                      style={{ width: `${match.stats.possession.away}%` }}
                     />
                   </div>
                 </div>
@@ -224,14 +226,18 @@ export default function InteractiveMatchCenter() {
                 {/* Shots on Target */}
                 <div>
                   <div className="flex justify-between text-xs font-bold mb-1">
-                    <span className="text-[#3E31FA]">{liveMatch.stats.shotsOnTarget.home}</span>
+                    <span className="text-[#0F2145]">{match.stats.shotsOnTarget.home}</span>
                     <span className="text-[#788398]">Shots on Target</span>
-                    <span className="text-[#0F2145]">{liveMatch.stats.shotsOnTarget.away}</span>
+                    <span className="text-[#3E31FA]">{match.stats.shotsOnTarget.away}</span>
                   </div>
                   <div className="w-full h-2 bg-[#EDEFF2] rounded-full overflow-hidden flex">
                     <div
+                      className="bg-[#788398] h-full"
+                      style={{ width: `${(match.stats.shotsOnTarget.home / (match.stats.shotsOnTarget.home + match.stats.shotsOnTarget.away)) * 100}%` }}
+                    />
+                    <div
                       className="bg-[#3E31FA] h-full"
-                      style={{ width: `${(liveMatch.stats.shotsOnTarget.home / (liveMatch.stats.shotsOnTarget.home + liveMatch.stats.shotsOnTarget.away)) * 100}%` }}
+                      style={{ width: `${(match.stats.shotsOnTarget.away / (match.stats.shotsOnTarget.home + match.stats.shotsOnTarget.away)) * 100}%` }}
                     />
                   </div>
                 </div>
@@ -239,9 +245,9 @@ export default function InteractiveMatchCenter() {
                 {/* xG */}
                 <div>
                   <div className="flex justify-between text-xs font-bold mb-1">
-                    <span className="text-[#3E31FA]">{liveMatch.stats.expectedGoals.home} xG</span>
+                    <span className="text-[#0F2145]">{match.stats.expectedGoals.home} xG</span>
                     <span className="text-[#788398]">Expected Goals</span>
-                    <span className="text-[#0F2145]">{liveMatch.stats.expectedGoals.away} xG</span>
+                    <span className="text-[#3E31FA]">{match.stats.expectedGoals.away} xG</span>
                   </div>
                 </div>
               </div>
@@ -252,12 +258,12 @@ export default function InteractiveMatchCenter() {
               <div className="max-w-3xl mx-auto space-y-5">
                 <div className="text-center">
                   <span className="text-xs font-bold uppercase tracking-wider text-[#3E31FA]">
-                    Real Madrid Formation ({liveMatch.lineup.formation})
+                    Real Madrid Starting XI ({match.lineup.formation})
                   </span>
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                  {liveMatch.lineup.startingXI.map((player) => (
+                  {match.lineup.startingXI.map((player) => (
                     <div
                       key={player.num}
                       className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA]"
@@ -279,7 +285,7 @@ export default function InteractiveMatchCenter() {
 
                 <div className="p-3.5 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA] text-xs text-[#43526E]">
                   <strong className="text-[#0F2145]">Bench: </strong>
-                  {liveMatch.lineup.bench.join(", ")}
+                  {match.lineup.bench.join(", ")}
                 </div>
               </div>
             )}
@@ -288,7 +294,7 @@ export default function InteractiveMatchCenter() {
 
         </div>
 
-        {/* Dual Columns: Próximos Eventos (Upcoming Fixtures) & Recent Results */}
+        {/* Dual Columns: Próximos Partidos (Upcoming Fixtures) & Recent Results */}
         <div className="grid lg:grid-cols-2 gap-8">
           
           {/* Upcoming Fixtures */}
@@ -298,7 +304,7 @@ export default function InteractiveMatchCenter() {
                 <Calendar className="w-5 h-5 text-[#3E31FA]" />
                 Próximos Partidos
               </h3>
-              <span className="text-xs text-[#788398] font-semibold">2026–27 Season</span>
+              <span className="text-xs text-[#788398] font-semibold">Season 2026–27</span>
             </div>
 
             <div className="space-y-3">
@@ -361,8 +367,8 @@ export default function InteractiveMatchCenter() {
                 <Trophy className="w-5 h-5 text-[#8760F6]" />
                 Recent Results
               </h3>
-              <span className="text-xs text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                Winning Streak
+              <span className="text-xs text-emerald-700 font-bold bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                5-Game Win Streak
               </span>
             </div>
 

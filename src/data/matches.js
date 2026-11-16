@@ -1,38 +1,38 @@
 export const matchCenterData = {
-  liveMatch: {
-    isLive: true,
-    competition: "UEFA Champions League",
-    stage: "League Phase · Matchday 5",
-    venue: "Estadio Santiago Bernabéu, Madrid",
-    attendance: "81,044",
+  featuredMatch: {
+    isLive: false,
+    status: "FULL TIME · FINAL RESULT",
+    statusBadge: "Latest Result",
+    competition: "LaLiga EA Sports",
+    stage: "Matchday 12",
+    date: "Sun, Nov 8, 2026",
+    venue: "Estadio de Mestalla, Valencia",
+    attendance: "47,215",
     homeTeam: {
+      name: "Valencia CF",
+      shortName: "VAL",
+      logo: "/images/clubs/valencia.png",
+      score: 0
+    },
+    awayTeam: {
       name: "Real Madrid",
       shortName: "RMA",
       logo: "/images/clubs/realmadrid.png",
       score: 3
     },
-    awayTeam: {
-      name: "PSV Eindhoven",
-      shortName: "PSV",
-      logo: "/images/clubs/psv.png",
-      score: 1
-    },
-    minute: "78'",
-    status: "LIVE · Second Half",
     scorers: [
-      { minute: "24'", player: "Kylian Mbappé", team: "RMA", assist: "Trent Alexander-Arnold" },
-      { minute: "41'", player: "Luuk de Jong", team: "PSV", assist: "Joey Veerman" },
-      { minute: "62'", player: "Vinícius Júnior", team: "RMA", assist: "Jude Bellingham" },
-      { minute: "75'", player: "Arda Güler", team: "RMA", assist: "Kylian Mbappé" }
+      { minute: "23'", player: "Kylian Mbappé", team: "RMA", assist: "Vinícius Júnior" },
+      { minute: "54'", player: "Jude Bellingham", team: "RMA", assist: "Arda Güler" },
+      { minute: "68'", player: "Kylian Mbappé", team: "RMA", assist: "Trent Alexander-Arnold" }
     ],
     stats: {
-      possession: { home: 64, away: 36 },
-      shots: { home: 19, away: 6 },
-      shotsOnTarget: { home: 10, away: 2 },
-      corners: { home: 8, away: 2 },
-      fouls: { home: 7, away: 12 },
-      yellowCards: { home: 1, away: 3 },
-      expectedGoals: { home: 3.12, away: 0.74 }
+      possession: { home: 42, away: 58 },
+      shots: { home: 8, away: 17 },
+      shotsOnTarget: { home: 2, away: 9 },
+      corners: { home: 3, away: 7 },
+      fouls: { home: 14, away: 9 },
+      yellowCards: { home: 3, away: 1 },
+      expectedGoals: { home: 0.62, away: 2.85 }
     },
     lineup: {
       formation: "4-3-3",
@@ -52,13 +52,12 @@ export const matchCenterData = {
       bench: ["Lunin", "Asencio", "Huijsen", "Camavinga", "Güler", "Bernardo", "Endrick", "Brahim", "Mendy"]
     },
     timeline: [
-      { min: "75'", type: "goal", text: "⚽ GOAAAAL! Arda Güler curls a magical left-footed strike into the top corner! (3-1)" },
-      { min: "70'", type: "substitution", text: "🔄 Substitution: Arda Güler and Endrick replace Rodrygo and Tchouaméni." },
-      { min: "62'", type: "goal", text: "⚽ GOAAAAL! Vinícius Jr. cuts inside from the left wing and slots home! (2-1)" },
-      { min: "55'", type: "yellow", text: "🟨 Yellow Card: Boscagli (PSV) booked for pulling down Bellingham." },
-      { min: "41'", type: "goal", text: "⚽ Goal PSV: Luuk de Jong heads in from a corner kick. (1-1)" },
-      { min: "45+2'", type: "whistle", text: "⏱️ Half Time at the Santiago Bernabéu. Real Madrid 1 - 1 PSV." },
-      { min: "24'", type: "goal", text: "⚽ GOAAAAL! Kylian Mbappé fires in after a pinpoint cross from Trent Alexander-Arnold! (1-0)" }
+      { min: "90+3'", type: "whistle", text: "⏱️ Full Time: Real Madrid secure an emphatic 3-0 away win at Mestalla to extend their winning streak to 5 matches." },
+      { min: "76'", type: "substitution", text: "🔄 Substitution: Endrick and Arda Güler replace Mbappé and Rodrygo." },
+      { min: "68'", type: "goal", text: "⚽ GOAAAAL! Kylian Mbappé completes his brace with a thunderous strike from Trent's exquisite pass! (0-3)" },
+      { min: "54'", type: "goal", text: "⚽ GOAAAAL! Jude Bellingham storms into the penalty box and fires into the corner! (0-2)" },
+      { min: "45+2'", type: "whistle", text: "⏱️ Half Time at Mestalla: Valencia 0 - 1 Real Madrid." },
+      { min: "23'", type: "goal", text: "⚽ GOAAAAL! Kylian Mbappé opens the scoring with a clinical finish assisted by Vini Jr.! (0-1)" }
     ]
   },
 
@@ -147,7 +146,7 @@ export const matchCenterData = {
       competition: "UEFA Champions League · MD 4",
       date: "Wed, Nov 04, 2026",
       venue: "OPAP Arena, Athens",
-      homeTeam: { name: "AEK Athens", logo: "/images/clubs/realmadrid.png", score: 2 },
+      homeTeam: { name: "AEK Athens", logo: "/images/clubs/aek.png", score: 2 },
       awayTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png", score: 3 },
       scorers: "Mbappé (12', 77'), Endrick (85')",
       highlight: "Endrick strikes late in Athens to secure all three points for Los Blancos."
@@ -178,7 +177,7 @@ export const matchCenterData = {
       date: "Thu, Oct 22, 2026",
       venue: "Santiago Bernabéu, Madrid",
       homeTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png", score: 4 },
-      awayTeam: { name: "RB Leipzig", logo: "/images/clubs/realmadrid.png", score: 1 },
+      awayTeam: { name: "RB Leipzig", logo: "/images/clubs/leipzig.png", score: 1 },
       scorers: "Vini Jr. (18', 65'), Mbappé (51'), Rodrygo (88')",
       highlight: "Four-star European performance led by Vinícius Júnior and Kylian Mbappé."
     },
