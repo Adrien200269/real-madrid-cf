@@ -44,17 +44,26 @@ export default function TrophyRoom() {
           {summary.map((item, idx) => (
             <div
               key={idx}
-              className="rm-card p-4 text-center space-y-1.5"
+              className="rm-card p-4 text-center space-y-2 flex flex-col items-center justify-between group hover:border-[#3E31FA]/40 transition shadow-2xs"
             >
-              <div className="text-2xl">{item.icon}</div>
-              <div className="text-3xl font-black text-[#0F2145]">
-                {item.count}
+              <div className="w-14 h-16 flex items-center justify-center p-1 group-hover:scale-110 transition-transform">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-full object-contain drop-shadow-sm"
+                  loading="lazy"
+                />
               </div>
-              <div className="text-xs font-bold text-[#0F2145] line-clamp-1">
-                {item.name}
-              </div>
-              <div className="text-[10px] text-[#788398]">
-                {item.tag}
+              <div className="space-y-0.5">
+                <div className="text-3xl font-black text-[#0F2145]">
+                  {item.count}
+                </div>
+                <div className="text-xs font-bold text-[#0F2145] line-clamp-1">
+                  {item.name}
+                </div>
+                <div className="text-[10px] text-[#788398]">
+                  {item.tag}
+                </div>
               </div>
             </div>
           ))}

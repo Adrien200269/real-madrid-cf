@@ -1,11 +1,11 @@
 export const trophiesData = {
   summary: [
-    { name: "European Cups / UEFA Champions League", count: 15, tag: "Record 15x Kings of Europe", icon: "🏆", badgeColor: "from-amber-400 to-yellow-600" },
-    { name: "La Liga Titles", count: 36, tag: "Record Spanish League Champions", icon: "🥇", badgeColor: "from-blue-600 to-indigo-900" },
-    { name: "Copa del Rey", count: 20, tag: "Spanish Cup Kings", icon: "🍷", badgeColor: "from-red-600 to-rose-900" },
-    { name: "FIFA Club World Cups", count: 5, tag: "Record Champions of the World", icon: "🌍", badgeColor: "from-amber-500 to-amber-700" },
-    { name: "UEFA Super Cups", count: 6, tag: "Record European Super Cup Winners", icon: "⭐", badgeColor: "from-sky-500 to-blue-800" },
-    { name: "Spanish Super Cups", count: 13, tag: "Supercopa de España", icon: "🛡️", badgeColor: "from-purple-600 to-slate-900" }
+    { name: "European Cups / UEFA Champions League", count: 15, tag: "Record 15x Kings of Europe", image: "/images/trophies/ucl.svg", badgeColor: "from-amber-400 to-yellow-600" },
+    { name: "La Liga Titles", count: 36, tag: "Record Spanish League Champions", image: "/images/trophies/laliga.svg", badgeColor: "from-blue-600 to-indigo-900" },
+    { name: "Copa del Rey", count: 20, tag: "Spanish Cup Kings", image: "/images/trophies/copa-del-rey.png", badgeColor: "from-red-600 to-rose-900" },
+    { name: "FIFA Club World Cups", count: 5, tag: "Record Champions of the World", image: "/images/trophies/club-world-cup.png", badgeColor: "from-amber-500 to-amber-700" },
+    { name: "UEFA Super Cups", count: 6, tag: "Record European Super Cup Winners", image: "/images/trophies/uefa-super-cup.svg", badgeColor: "from-sky-500 to-blue-800" },
+    { name: "Spanish Super Cups", count: 13, tag: "Supercopa de España", image: "/images/trophies/supercopa.svg", badgeColor: "from-purple-600 to-slate-900" }
   ],
 
   championsLeagues: [
