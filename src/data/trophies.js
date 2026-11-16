@@ -31,31 +31,36 @@ export const trophiesData = {
       era: "1955 - 1960",
       title: "The Di Stéfano & Puskás Dynasty",
       description: "Under Santiago Bernabéu's vision, Alfredo Di Stéfano, Ferenc Puskás, and Paco Gento won the first 5 European Cups consecutively.",
-      keyFigure: "Alfredo Di Stéfano & Paco Gento"
+      keyFigure: "Alfredo Di Stéfano & Paco Gento",
+      image: "/images/club/di-stefano.png"
     },
     {
       era: "1980 - 1990",
       title: "La Quinta del Buitre",
       description: "Emilio Butragueño, Míchel, Sanchís, Martín Vázquez, and Pardeza dominated Spanish football, winning 5 consecutive La Liga titles.",
-      keyFigure: "Emilio Butragueño & Hugo Sánchez"
+      keyFigure: "Emilio Butragueño & Hugo Sánchez",
+      image: "/images/club/bernabeu.jpg"
     },
     {
       era: "2000 - 2006",
       title: "Los Galácticos",
       description: "Florentino Pérez united the world's greatest stars: Zidane, Figo, Ronaldo Nazário, Beckham, Roberto Carlos, and Raúl, winning the 9th European Cup in Glasgow.",
-      keyFigure: "Zinedine Zidane & Raúl González"
+      keyFigure: "Zinedine Zidane & Raúl González",
+      image: "/images/club/galacticos.jpg"
     },
     {
       era: "2013 - 2018",
       title: "The Three-Peat & La Décima",
       description: "Led by Cristiano Ronaldo, Sergio Ramos, and coach Zinedine Zidane, Madrid achieved La Décima and an unprecedented modern 3-in-a-row UEFA Champions Leagues.",
-      keyFigure: "Cristiano Ronaldo & Zinedine Zidane"
+      keyFigure: "Cristiano Ronaldo & Zinedine Zidane",
+      image: "/images/club/cristiano.jpg"
     },
     {
       era: "2021 - Present",
       title: "The New Golden Era: 15 & Beyond",
       description: "Carlo Ancelotti orchestrates a golden generation with Vinícius Jr., Jude Bellingham, Kylian Mbappé, Rodrygo, and Valverde lifting Madrid's 14th and 15th European crowns.",
-      keyFigure: "Kylian Mbappé, Vini Jr. & Jude Bellingham"
+      keyFigure: "Kylian Mbappé, Vini Jr. & Jude Bellingham",
+      image: "/images/players/mbappe.jpg"
     }
   ]
 };

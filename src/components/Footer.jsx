@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Crown } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -47,11 +46,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           
-          {/* Brand Column */}
+          {/* Brand Column with Official Real Madrid Crest */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#3E31FA] flex items-center justify-center shadow-md">
-                <Crown className="w-5 h-5 text-[#FFD48F]" />
+              <div className="w-12 h-12 flex items-center justify-center shrink-0">
+                <img
+                  src="/images/club/crest.svg"
+                  alt="Real Madrid Crest"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <span className="text-lg font-extrabold tracking-tight text-white block">

@@ -2,15 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { 
   Menu, 
   X, 
-  Crown, 
   Radio, 
   Sparkles,
-  User,
-  MoreVertical
+  User
 } from "lucide-react";
 
 export default function Navbar() {
@@ -29,7 +28,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[72px]">
           
-          {/* Left: Hamburger, Crest, Divider, 15 UCL Badge */}
+          {/* Left: Hamburger, Real Madrid Crest, Divider, 15 UCL Badge */}
           <div className="flex items-center gap-3 sm:gap-4">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -40,15 +39,19 @@ export default function Navbar() {
             </button>
 
             {/* Official Real Madrid Logo Crest */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-full bg-[#0F2145] flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform">
-                <Crown className="w-5 h-5 text-[#FFD48F]" />
+            <Link href="/" className="flex items-center gap-2.5 group">
+              <div className="relative w-10 h-10 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <img
+                  src="/images/club/crest.svg"
+                  alt="Real Madrid C.F. Crest"
+                  className="w-full h-full object-contain drop-shadow-xs"
+                />
               </div>
               <div className="hidden sm:block">
-                <span className="font-bold text-base tracking-tight text-[#0F2145]">
+                <span className="font-extrabold text-base tracking-tight text-[#0F2145] block leading-none">
                   Real Madrid
                 </span>
-                <span className="block text-[10px] text-[#788398] font-medium leading-none">
+                <span className="text-[10px] text-[#788398] font-semibold uppercase tracking-wider">
                   Club de Fútbol
                 </span>
               </div>

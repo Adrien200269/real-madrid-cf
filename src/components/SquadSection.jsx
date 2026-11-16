@@ -6,12 +6,9 @@ import {
   Search, 
   X, 
   ChevronRight, 
-  Award, 
-  Quote, 
-  Users,
-  Calendar,
-  MapPin,
-  Trophy
+  Trophy,
+  Quote,
+  Users
 } from "lucide-react";
 
 export default function SquadSection({ initialLimit = null }) {
@@ -103,7 +100,7 @@ export default function SquadSection({ initialLimit = null }) {
           ))}
         </div>
 
-        {/* Squad Grid */}
+        {/* Squad Grid with Real Player Images */}
         {displayedPlayers.length === 0 ? (
           <div className="text-center py-16 bg-white rounded-2xl border border-[#E1E5EA]">
             <p className="text-[#788398] text-sm">No players found matching your criteria.</p>
@@ -123,54 +120,73 @@ export default function SquadSection({ initialLimit = null }) {
               <div
                 key={player.id}
                 onClick={() => setActivePlayer(player)}
-                className="rm-card p-5 cursor-pointer flex flex-col justify-between group overflow-hidden"
+                className="rm-card cursor-pointer flex flex-col justify-between group overflow-hidden"
               >
-                {/* Card Top: Number & Nationality */}
-                <div className="flex items-center justify-between">
-                  <div className="w-9 h-9 rounded-xl bg-[#EEF2FD] text-[#3E31FA] flex items-center justify-center font-black text-sm">
+                {/* Real Player Image Canvas */}
+                <div className="relative h-64 w-full bg-gradient-to-b from-[#EEF2FD] via-[#F8F9FA] to-white flex items-end justify-center overflow-hidden border-b border-[#E1E5EA]">
+                  
+                  {/* Jersey number watermark */}
+                  <span className="absolute top-2 left-4 text-6xl font-black text-[#0F2145]/8 select-none pointer-events-none">
                     {player.number}
-                  </div>
-                  <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#F3F5F8] text-[11px] font-medium text-[#43526E]">
+                  </span>
+
+                  {/* Top badges */}
+                  <div className="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-xs text-[11px] font-semibold text-[#43526E] border border-[#E1E5EA] shadow-2xs">
                     <span>{player.flag}</span>
                     <span>{player.nationality}</span>
                   </div>
+
+                  {/* Real Player Portrait Photo */}
+                  <img
+                    src={player.avatar}
+                    alt={player.name}
+                    className="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
                 </div>
 
-                {/* Identity */}
-                <div className="my-5">
-                  <span className="text-[11px] font-semibold text-[#788398] uppercase">
-                    {player.position}
-                  </span>
-                  <h3 className="text-lg font-extrabold text-[#0F2145] group-hover:text-[#3E31FA] transition-colors mt-0.5">
-                    {player.name}
-                  </h3>
-                  <p className="text-xs text-[#788398] italic mt-0.5">
-                    &quot;{player.nickname}&quot;
-                  </p>
-                </div>
-
-                {/* Bottom Stats & Link */}
-                <div className="pt-3.5 border-t border-[#E1E5EA]">
-                  <div className="grid grid-cols-3 gap-2 text-center text-xs">
-                    <div className="bg-[#F8F9FA] rounded-lg py-1.5">
-                      <div className="font-bold text-[#0F2145]">{player.stats.appearances}</div>
-                      <div className="text-[9px] text-[#788398] uppercase">Matches</div>
+                {/* Card Content Details */}
+                <div className="p-4 space-y-3">
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-bold text-[#3E31FA] uppercase tracking-wider">
+                        {player.position}
+                      </span>
+                      <span className="text-xs font-black text-[#0F2145]">
+                        #{player.number}
+                      </span>
                     </div>
-                    <div className="bg-[#EEF2FD] rounded-lg py-1.5 text-[#3E31FA]">
-                      <div className="font-bold">
+
+                    <h3 className="text-base font-extrabold text-[#0F2145] group-hover:text-[#3E31FA] transition-colors mt-0.5 truncate">
+                      {player.name}
+                    </h3>
+
+                    <p className="text-[11px] text-[#788398] italic">
+                      &quot;{player.nickname}&quot;
+                    </p>
+                  </div>
+
+                  {/* Mini Stats Grid */}
+                  <div className="pt-2 border-t border-[#E1E5EA] grid grid-cols-3 gap-1.5 text-center text-xs">
+                    <div className="bg-[#F8F9FA] rounded-md py-1">
+                      <div className="font-bold text-[#0F2145] text-xs">{player.stats.appearances}</div>
+                      <div className="text-[8px] text-[#788398] uppercase">Matches</div>
+                    </div>
+                    <div className="bg-[#EEF2FD] rounded-md py-1 text-[#3E31FA]">
+                      <div className="font-bold text-xs">
                         {player.stats.goals !== undefined ? player.stats.goals : player.stats.cleanSheets}
                       </div>
-                      <div className="text-[9px] uppercase">
+                      <div className="text-[8px] uppercase">
                         {player.stats.goals !== undefined ? "Goals" : "Cleans"}
                       </div>
                     </div>
-                    <div className="bg-[#F8F9FA] rounded-lg py-1.5">
-                      <div className="font-bold text-[#0F2145]">{player.stats.trophies}</div>
-                      <div className="text-[9px] text-[#788398] uppercase">Titles</div>
+                    <div className="bg-[#F8F9FA] rounded-md py-1">
+                      <div className="font-bold text-[#0F2145] text-xs">{player.stats.trophies}</div>
+                      <div className="text-[8px] text-[#788398] uppercase">Titles</div>
                     </div>
                   </div>
 
-                  <div className="mt-3.5 flex items-center justify-between text-xs font-bold text-[#3E31FA]">
+                  <div className="pt-1 flex items-center justify-between text-xs font-bold text-[#3E31FA]">
                     <span>View Profile</span>
                     <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -180,7 +196,7 @@ export default function SquadSection({ initialLimit = null }) {
           </div>
         )}
 
-        {/* Player Modal - Official Personal Info & Career Statistics Layout */}
+        {/* Player Modal with Real Photo */}
         {activePlayer && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fadeIn">
             <div className="relative w-full max-w-2xl rounded-2xl bg-white border border-[#E1E5EA] p-6 sm:p-8 shadow-2xl text-[#0F2145] max-h-[90vh] overflow-y-auto">
@@ -193,10 +209,14 @@ export default function SquadSection({ initialLimit = null }) {
                 <X className="w-5 h-5" />
               </button>
 
-              {/* Modal Top Header */}
-              <div className="flex items-start gap-4 pb-6 border-b border-[#E1E5EA]">
-                <div className="w-16 h-16 rounded-2xl bg-[#3E31FA] flex items-center justify-center text-3xl font-black text-white shrink-0 shadow-md">
-                  {activePlayer.number}
+              {/* Modal Top Header with Real Portrait Photo */}
+              <div className="flex items-center gap-5 pb-6 border-b border-[#E1E5EA]">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-[#3E31FA] shrink-0 shadow-md bg-[#EEF2FD]">
+                  <img
+                    src={activePlayer.avatar}
+                    alt={activePlayer.name}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
@@ -212,7 +232,7 @@ export default function SquadSection({ initialLimit = null }) {
                     {activePlayer.name}
                   </h3>
                   <p className="text-xs text-[#788398] italic">
-                    &quot;{activePlayer.nickname}&quot; • Real Madrid C.F.
+                    #{activePlayer.number} • Known as &quot;{activePlayer.nickname}&quot; • Real Madrid C.F.
                   </p>
                 </div>
               </div>

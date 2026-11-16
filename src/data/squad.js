@@ -12,6 +12,7 @@ export const squadData = [
     age: 32,
     height: "2.00 m",
     joinedYear: 2018,
+    avatar: "/images/players/courtois.jpg",
     stats: {
       appearances: 245,
       cleanSheets: 98,
@@ -20,7 +21,6 @@ export const squadData = [
     },
     quote: "Playing for Real Madrid means expecting to win every trophy every year.",
     highlights: ["2022 Champions League Final MVP", "Yashin Trophy Winner", "3x La Liga Champion"],
-    avatar: "https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&w=600&q=80",
     gradient: "from-blue-600 to-indigo-900"
   },
   {
@@ -35,6 +35,7 @@ export const squadData = [
     age: 25,
     height: "1.91 m",
     joinedYear: 2018,
+    avatar: "/images/players/lunin.jpg",
     stats: {
       appearances: 48,
       cleanSheets: 19,
@@ -43,7 +44,6 @@ export const squadData = [
     },
     quote: "Hard work pays off when you stand in front of 80,000 Madridistas.",
     highlights: ["Heroic 2024 UCL Quarter-Final vs Man City", "2x Champions League Winner"],
-    avatar: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80",
     gradient: "from-blue-500 to-slate-800"
   },
 
@@ -60,6 +60,7 @@ export const squadData = [
     age: 32,
     height: "1.73 m",
     joinedYear: 2013,
+    avatar: "/images/players/carvajal.jpg",
     stats: {
       appearances: 420,
       goals: 13,
@@ -68,7 +69,6 @@ export const squadData = [
     },
     quote: "I laid the first stone at Valdebebas. Real Madrid is my life.",
     highlights: ["6x UEFA Champions League Winner", "2024 UCL Final Goalscorer & MVP", "Club Captain"],
-    avatar: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=600&q=80",
     gradient: "from-amber-600 to-slate-900"
   },
   {
@@ -83,6 +83,7 @@ export const squadData = [
     age: 26,
     height: "1.86 m",
     joinedYear: 2019,
+    avatar: "/images/players/militao.jpg",
     stats: {
       appearances: 165,
       goals: 12,
@@ -91,7 +92,6 @@ export const squadData = [
     },
     quote: "In defense, you fight for every millimeter of this shirt.",
     highlights: ["2x UEFA Champions League Winner", "3x La Liga Champion", "Copa América Winner"],
-    avatar: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=600&q=80",
     gradient: "from-blue-700 to-slate-950"
   },
   {
@@ -106,6 +106,7 @@ export const squadData = [
     age: 32,
     height: "1.80 m",
     joinedYear: 2021,
+    avatar: "/images/players/alaba.jpg",
     stats: {
       appearances: 102,
       goals: 5,
@@ -114,7 +115,6 @@ export const squadData = [
     },
     quote: "The chair celebration showed that we never give up at the Bernabéu.",
     highlights: ["4x UEFA Champions League Winner", "2x La Liga Champion", "Austrian Footballer of the Year 10x"],
-    avatar: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=600&q=80",
     gradient: "from-red-600 to-blue-900"
   },
   {
@@ -129,6 +129,7 @@ export const squadData = [
     age: 31,
     height: "1.90 m",
     joinedYear: 2022,
+    avatar: "/images/players/rudiger.jpg",
     stats: {
       appearances: 115,
       goals: 6,
@@ -137,7 +138,6 @@ export const squadData = [
     },
     quote: "You have to match madness with passion when defending this crest.",
     highlights: ["2024 UEFA Champions League Winner", "2024 La Liga Champion", "UCL Team of the Season"],
-    avatar: "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=600&q=80",
     gradient: "from-amber-700 to-slate-900"
   },
   {
@@ -152,6 +152,7 @@ export const squadData = [
     age: 29,
     height: "1.80 m",
     joinedYear: 2019,
+    avatar: "/images/players/mendy.jpg",
     stats: {
       appearances: 178,
       goals: 6,
@@ -160,7 +161,6 @@ export const squadData = [
     },
     quote: "Nobody gets past our flank easily in European nights.",
     highlights: ["2x UEFA Champions League Winner", "3x La Liga Champion", "Defensive Masterclass Specialist"],
-    avatar: "https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?auto=format&fit=crop&w=600&q=80",
     gradient: "from-blue-600 to-indigo-950"
   },
 
@@ -177,6 +177,7 @@ export const squadData = [
     age: 21,
     height: "1.86 m",
     joinedYear: 2023,
+    avatar: "/images/players/bellingham.jpg",
     stats: {
       appearances: 58,
       goals: 28,
@@ -185,7 +186,6 @@ export const squadData = [
     },
     quote: "Walking out at the Bernabéu and hearing 'Hey Jude' gives me goosebumps every time.",
     highlights: ["2024 La Liga Player of the Season", "Golden Boy & Kopa Trophy Winner", "2024 Champions League Winner"],
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
     gradient: "from-amber-500 via-purple-600 to-blue-900"
   },
   {
@@ -200,6 +200,7 @@ export const squadData = [
     age: 26,
     height: "1.82 m",
     joinedYear: 2018,
+    avatar: "/images/players/valverde.jpg",
     stats: {
       appearances: 268,
       goals: 24,
@@ -208,7 +209,6 @@ export const squadData = [
     },
     quote: "I run until my legs stop, and then I run with my heart for Madrid.",
     highlights: ["Inheritor of Toni Kroos' Number 8", "2x Champions League Winner", "3x La Liga Champion"],
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
     gradient: "from-sky-500 to-blue-900"
   },
   {
@@ -223,6 +223,7 @@ export const squadData = [
     age: 39,
     height: "1.72 m",
     joinedYear: 2012,
+    avatar: "/images/players/modric.jpg",
     stats: {
       appearances: 546,
       goals: 39,
@@ -231,7 +232,6 @@ export const squadData = [
     },
     quote: "Age is just a number. My passion for football and Real Madrid is infinite.",
     highlights: ["2018 Ballon d'Or Winner", "Most decorated player in Real Madrid history (27 titles)", "6x UEFA Champions League Winner"],
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
     gradient: "from-amber-400 via-rose-600 to-blue-950"
   },
   {
@@ -239,13 +239,14 @@ export const squadData = [
     number: 6,
     name: "Eduardo Camavinga",
     nickname: "The Swiss Army Knife",
-    position: "Central Midfielder / Utility",
+    position: "Central Midfielder",
     category: "midfielders",
     nationality: "France",
     flag: "🇫🇷",
     age: 22,
     height: "1.82 m",
     joinedYear: 2021,
+    avatar: "/images/players/camavinga.jpg",
     stats: {
       appearances: 154,
       goals: 4,
@@ -254,7 +255,6 @@ export const squadData = [
     },
     quote: "Wherever the coach needs me, I will give 200%.",
     highlights: ["Won every club trophy available by age 20", "2x Champions League Winner"],
-    avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=600&q=80",
     gradient: "from-emerald-500 to-blue-900"
   },
   {
@@ -269,6 +269,7 @@ export const squadData = [
     age: 24,
     height: "1.87 m",
     joinedYear: 2022,
+    avatar: "/images/players/tchouameni.jpg",
     stats: {
       appearances: 98,
       goals: 4,
@@ -277,7 +278,6 @@ export const squadData = [
     },
     quote: "Real Madrid is the pinnacle of football. We control the game from the middle.",
     highlights: ["2024 Champions League Winner", "2024 La Liga Champion", "France National Team Anchor"],
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80",
     gradient: "from-blue-600 to-slate-900"
   },
   {
@@ -285,13 +285,14 @@ export const squadData = [
     number: 15,
     name: "Arda Güler",
     nickname: "The Turkish Diamond",
-    position: "Attacking Midfielder / Winger",
+    position: "Attacking Midfielder",
     category: "midfielders",
     nationality: "Turkey",
     flag: "🇹🇷",
     age: 19,
     height: "1.75 m",
     joinedYear: 2023,
+    avatar: "/images/players/guler.jpg",
     stats: {
       appearances: 26,
       goals: 7,
@@ -300,7 +301,6 @@ export const squadData = [
     },
     quote: "I came here to create history with the best club in the world.",
     highlights: ["Highest minutes-per-goal ratio in debut La Liga season", "2024 Champions League Winner"],
-    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80",
     gradient: "from-red-500 via-amber-500 to-blue-900"
   },
 
@@ -310,13 +310,14 @@ export const squadData = [
     number: 9,
     name: "Kylian Mbappé",
     nickname: "Kyks / Donatello",
-    position: "Centre Forward / Left Winger",
+    position: "Centre Forward",
     category: "forwards",
     nationality: "France",
     flag: "🇫🇷",
     age: 25,
     height: "1.78 m",
     joinedYear: 2024,
+    avatar: "/images/players/mbappe.jpg",
     stats: {
       appearances: 24,
       goals: 17,
@@ -325,7 +326,6 @@ export const squadData = [
     },
     quote: "A dream come true. For years I dreamed of wearing this shirt and today I am here.",
     highlights: ["UEFA Super Cup Goalscorer on Debut", "2018 World Cup Winner", "7x Ligue 1 Top Scorer"],
-    avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80",
     gradient: "from-amber-400 via-indigo-600 to-slate-950"
   },
   {
@@ -340,6 +340,7 @@ export const squadData = [
     age: 24,
     height: "1.76 m",
     joinedYear: 2018,
+    avatar: "/images/players/vinicius.jpg",
     stats: {
       appearances: 275,
       goals: 88,
@@ -348,7 +349,6 @@ export const squadData = [
     },
     quote: "Baila Vini! Football is joy, boldness, and conquering the impossible.",
     highlights: ["Scorer in two Champions League Finals (2022 & 2024)", "2024 UCL Player of the Season", "Socrates Award Winner"],
-    avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80",
     gradient: "from-yellow-500 via-amber-600 to-blue-900"
   },
   {
@@ -356,13 +356,14 @@ export const squadData = [
     number: 11,
     name: "Rodrygo Goes",
     nickname: "Mr. Champions",
-    position: "Right Winger / Forward",
+    position: "Right Winger",
     category: "forwards",
     nationality: "Brazil",
     flag: "🇧🇷",
     age: 23,
     height: "1.74 m",
     joinedYear: 2019,
+    avatar: "/images/players/rodrygo.jpg",
     stats: {
       appearances: 228,
       goals: 58,
@@ -371,7 +372,6 @@ export const squadData = [
     },
     quote: "When the Champions League anthem plays, something magical takes over us.",
     highlights: ["Iconic 2-goal comeback vs Man City (2022)", "2x UEFA Champions League Winner", "3x La Liga Champion"],
-    avatar: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=600&q=80",
     gradient: "from-amber-500 to-indigo-950"
   },
   {
@@ -386,6 +386,7 @@ export const squadData = [
     age: 18,
     height: "1.73 m",
     joinedYear: 2024,
+    avatar: "/images/players/endrick.jpg",
     stats: {
       appearances: 16,
       goals: 4,
@@ -394,7 +395,6 @@ export const squadData = [
     },
     quote: "I want to be part of the greatest history of the biggest club in the world.",
     highlights: ["Youngest Real Madrid scorer in UCL history", "Debut goalscorer in La Liga and UCL"],
-    avatar: "https://images.unsplash.com/photo-1519764622345-23439dd774f7?auto=format&fit=crop&w=600&q=80",
     gradient: "from-emerald-600 via-blue-700 to-slate-950"
   },
   {
@@ -402,13 +402,14 @@ export const squadData = [
     number: 21,
     name: "Brahim Díaz",
     nickname: "The Magician",
-    position: "Attacking Midfielder / Winger",
+    position: "Attacking Midfielder",
     category: "forwards",
     nationality: "Morocco / Spain",
     flag: "🇲🇦",
     age: 25,
     height: "1.71 m",
     joinedYear: 2019,
+    avatar: "/images/players/brahim.jpg",
     stats: {
       appearances: 72,
       goals: 16,
@@ -417,7 +418,6 @@ export const squadData = [
     },
     quote: "Every second with this badge on my chest is a privilege.",
     highlights: ["2024 Champions League Winner", "Solo stunner vs RB Leipzig", "La Liga Champion"],
-    avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=600&q=80",
     gradient: "from-rose-600 via-amber-600 to-blue-900"
   }
 ];

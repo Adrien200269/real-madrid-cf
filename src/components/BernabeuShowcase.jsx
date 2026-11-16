@@ -30,55 +30,73 @@ export default function BernabeuShowcase() {
     <section className="py-14 lg:py-20 bg-[#F3F5F8] text-[#0F2145] border-b border-[#E1E5EA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="rm-card p-8 sm:p-12">
-          <div className="grid lg:grid-cols-12 gap-8 items-center">
+        <div className="rm-card overflow-hidden">
+          
+          {/* Real Bernabéu Stadium Hero Image Banner */}
+          <div className="relative h-64 sm:h-96 w-full overflow-hidden">
+            <img
+              src="/images/club/bernabeu.jpg"
+              alt="Estadio Santiago Bernabéu"
+              className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0F2145] via-[#0F2145]/40 to-transparent" />
             
-            <div className="lg:col-span-6 space-y-4">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EDEBFA] text-[#8760F6] text-xs font-bold uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5" />
+            <div className="absolute bottom-6 left-6 right-6 text-white max-w-2xl">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider mb-2 border border-white/20">
+                <Sparkles className="w-3.5 h-3.5 text-[#FFD48F]" />
                 Estadio Santiago Bernabéu
-              </div>
-
-              <h2 className="text-3xl sm:text-5xl font-black text-[#0F2145] leading-tight">
-                An Architectural <br />
-                <span className="rm-text-gradient">Icon of the World</span>
+              </span>
+              <h2 className="text-3xl sm:text-5xl font-black text-white leading-tight">
+                The World&apos;s Most Advanced Stadium
               </h2>
+            </div>
+          </div>
 
-              <p className="text-[#43526E] text-sm sm:text-base leading-relaxed">
-                The most avant-garde football stadium on the planet. Transformed into a 365-day multi-purpose temple of sport and entertainment in the heart of Madrid along Paseo de la Castellana.
-              </p>
+          <div className="p-8 sm:p-12">
+            <div className="grid lg:grid-cols-12 gap-8 items-center">
+              
+              <div className="lg:col-span-5 space-y-4">
+                <h3 className="text-2xl font-bold text-[#0F2145]">
+                  Paseo de la Castellana, Madrid
+                </h3>
 
-              <div className="grid grid-cols-2 gap-4 pt-2">
-                <div className="p-4 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA]">
-                  <div className="text-2xl sm:text-3xl font-black text-[#3E31FA]">85,000</div>
-                  <div className="text-xs text-[#788398] font-medium">Capacity</div>
-                </div>
-                <div className="p-4 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA]">
-                  <div className="text-2xl sm:text-3xl font-black text-[#0F2145]">15 min</div>
-                  <div className="text-xs text-[#788398] font-medium">Roof Retraction</div>
+                <p className="text-[#43526E] text-sm leading-relaxed">
+                  The home fortress of Real Madrid transformed into a 365-day multi-purpose temple of sport, music, and entertainment in the heart of Spain.
+                </p>
+
+                <div className="grid grid-cols-2 gap-3 pt-2">
+                  <div className="p-4 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA]">
+                    <div className="text-2xl sm:text-3xl font-black text-[#3E31FA]">85,000</div>
+                    <div className="text-xs text-[#788398] font-medium">Seating Capacity</div>
+                  </div>
+                  <div className="p-4 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA]">
+                    <div className="text-2xl sm:text-3xl font-black text-[#0F2145]">15 min</div>
+                    <div className="text-xs text-[#788398] font-medium">Roof Closure</div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="lg:col-span-6 grid sm:grid-cols-2 gap-3.5">
-              {highlights.map((item, idx) => {
-                const Icon = item.icon;
-                return (
-                  <div
-                    key={idx}
-                    className="p-5 rounded-2xl bg-[#F8F9FA] border border-[#E1E5EA] hover:border-[#3E31FA]/40 transition space-y-2 shadow-2xs"
-                  >
-                    <Icon className="w-6 h-6 text-[#3E31FA]" />
-                    <h4 className="text-sm font-bold text-[#0F2145]">{item.title}</h4>
-                    <p className="text-xs text-[#788398] leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
+              <div className="lg:col-span-7 grid sm:grid-cols-2 gap-3.5">
+                {highlights.map((item, idx) => {
+                  const Icon = item.icon;
+                  return (
+                    <div
+                      key={idx}
+                      className="p-5 rounded-2xl bg-[#F8F9FA] border border-[#E1E5EA] hover:border-[#3E31FA]/40 transition space-y-2 shadow-2xs"
+                    >
+                      <Icon className="w-6 h-6 text-[#3E31FA]" />
+                      <h4 className="text-sm font-bold text-[#0F2145]">{item.title}</h4>
+                      <p className="text-xs text-[#788398] leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
 
+            </div>
           </div>
+
         </div>
 
       </div>

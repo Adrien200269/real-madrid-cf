@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { trophiesData } from "@/data/trophies";
-import { Trophy, History, Award, Search, Crown, Sparkles } from "lucide-react";
+import { Trophy, History, Award, Search, Sparkles } from "lucide-react";
 
 export default function TrophyRoom() {
   const { summary, championsLeagues, eras } = trophiesData;
@@ -120,30 +120,38 @@ export default function TrophyRoom() {
               ))}
             </div>
 
-            {/* Spotlight Card */}
+            {/* Spotlight Card with Real Trophy Image */}
             {selectedUcl && (
               <div className="lg:col-span-7 rounded-2xl bg-[#F8F9FA] border border-[#E1E5EA] p-6 space-y-5">
+                
+                {/* Header with real UCL trophy photo preview */}
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="text-2xl font-black text-[#3E31FA]">
-                      ★ {selectedUcl.year}
-                    </span>
-                    <span className="text-xs uppercase font-bold px-2 py-0.5 rounded bg-white border border-[#E1E5EA] text-[#0F2145]">
-                      Edition #{selectedUcl.edition}
-                    </span>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl overflow-hidden border border-[#E1E5EA] bg-white shrink-0">
+                      <img
+                        src="/images/trophies/ucl-trophy.jpg"
+                        alt="UEFA Champions League Trophy"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-2xl font-black text-[#3E31FA]">
+                          ★ {selectedUcl.year}
+                        </span>
+                        <span className="text-xs uppercase font-bold px-2 py-0.5 rounded bg-white border border-[#E1E5EA] text-[#0F2145]">
+                          Edition #{selectedUcl.edition}
+                        </span>
+                      </div>
+                      <h4 className="text-base font-bold text-[#0F2145] mt-0.5">
+                        Real Madrid vs {selectedUcl.opponent}
+                      </h4>
+                    </div>
                   </div>
-                  <div className="text-xl font-black text-[#0F2145] px-3.5 py-1 rounded-xl bg-white border border-[#E1E5EA]">
+
+                  <div className="text-xl font-black text-[#0F2145] px-3.5 py-1 rounded-xl bg-white border border-[#E1E5EA] shrink-0">
                     {selectedUcl.score}
                   </div>
-                </div>
-
-                <div>
-                  <h4 className="text-lg font-bold text-[#0F2145]">
-                    Real Madrid vs {selectedUcl.opponent}
-                  </h4>
-                  <p className="text-xs text-[#788398] mt-0.5">
-                    Venue: {selectedUcl.venue}
-                  </p>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-white border border-[#E1E5EA] space-y-1.5 text-xs">
@@ -165,7 +173,7 @@ export default function TrophyRoom() {
 
                 <div className="p-3.5 rounded-xl bg-[#EEF2FD] border border-[#DEE5FD]">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[#3E31FA]">
-                    Match Summary
+                    Historical Context
                   </span>
                   <p className="text-xs italic text-[#0F2145] mt-1 leading-relaxed">
                     &quot;{selectedUcl.note}&quot;
@@ -177,7 +185,7 @@ export default function TrophyRoom() {
           </div>
         </div>
 
-        {/* Historical Eras */}
+        {/* Historical Eras with Real Legend Photos */}
         <div>
           <div className="flex items-center gap-2 mb-6">
             <History className="w-5 h-5 text-[#3E31FA]" />
@@ -190,18 +198,32 @@ export default function TrophyRoom() {
             {eras.map((era, idx) => (
               <div
                 key={idx}
-                className="rm-card p-5 space-y-2.5"
+                className="rm-card overflow-hidden flex flex-col justify-between group"
               >
-                <div className="flex items-center justify-between text-xs font-bold text-[#3E31FA]">
-                  <span>{era.era}</span>
-                  <Award className="w-4 h-4 text-[#8760F6]" />
+                {/* Era Image */}
+                <div className="relative h-44 w-full bg-[#0F2145] overflow-hidden">
+                  <img
+                    src={era.image}
+                    alt={era.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <span className="absolute bottom-2.5 left-3.5 text-xs font-bold text-white bg-black/40 backdrop-blur-xs px-2.5 py-0.5 rounded-full border border-white/20">
+                    {era.era}
+                  </span>
                 </div>
-                <h4 className="text-base font-bold text-[#0F2145]">{era.title}</h4>
-                <p className="text-xs text-[#43526E] leading-relaxed">
-                  {era.description}
-                </p>
-                <div className="pt-2 border-t border-[#E1E5EA] text-[11px] text-[#788398]">
-                  Key Legends: <strong className="text-[#0F2145]">{era.keyFigure}</strong>
+
+                <div className="p-5 space-y-2 flex-1 flex flex-col justify-between">
+                  <div className="space-y-1">
+                    <h4 className="text-base font-bold text-[#0F2145]">{era.title}</h4>
+                    <p className="text-xs text-[#43526E] leading-relaxed">
+                      {era.description}
+                    </p>
+                  </div>
+
+                  <div className="pt-2 border-t border-[#E1E5EA] text-[11px] text-[#788398]">
+                    Key Figures: <strong className="text-[#0F2145]">{era.keyFigure}</strong>
+                  </div>
                 </div>
               </div>
             ))}

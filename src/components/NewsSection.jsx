@@ -51,20 +51,24 @@ export default function NewsSection({ initialLimit = null }) {
           </div>
         </div>
 
-        {/* News Grid */}
+        {/* News Grid with Real Photography */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayedNews.map((news) => (
             <article
               key={news.id}
               className="rm-card overflow-hidden flex flex-col justify-between group"
             >
-              {/* Media banner area */}
-              <div className="relative h-48 w-full bg-gradient-to-tr from-[#EEF2FD] to-[#EDEBFA] overflow-hidden flex items-center justify-center border-b border-[#E1E5EA]">
-                <div className="text-5xl opacity-40 group-hover:scale-105 transition-transform duration-500">
-                  ⚽
-                </div>
+              {/* Real Media banner image */}
+              <div className="relative h-48 w-full bg-[#0F2145] overflow-hidden border-b border-[#E1E5EA]">
+                <img
+                  src={news.image}
+                  alt={news.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                 <div className="absolute top-3.5 left-3.5 z-10">
-                  <span className="px-2.5 py-1 rounded-md bg-white border border-[#E1E5EA] text-[#3E31FA] font-bold text-[10px] uppercase tracking-wider shadow-2xs">
+                  <span className="px-2.5 py-1 rounded-md bg-white/95 backdrop-blur-xs text-[#3E31FA] font-bold text-[10px] uppercase tracking-wider shadow-2xs">
                     {news.category}
                   </span>
                 </div>

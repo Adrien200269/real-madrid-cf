@@ -16,9 +16,9 @@ export default function HeroSection() {
           {/* Left Column: Heading & Official CTAs */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            {/* Pill Tag */}
+            {/* Pill Tag with Crest Icon */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E1E5EA] text-[#3E31FA] text-xs font-bold tracking-wide shadow-2xs">
-              <span className="w-2 h-2 rounded-full bg-[#3E31FA]" />
+              <img src="/images/club/crest.svg" alt="Crest" className="w-4 h-4 object-contain" />
               <span>Official Real Madrid Portal</span>
               <span className="text-[#C7CCD6]">•</span>
               <span className="text-[#0F2145]">Season 2024–25</span>
@@ -79,7 +79,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column: Featured Trio Card */}
+          {/* Right Column: Featured Trio Card with Real Player Photos */}
           <div className="lg:col-span-5">
             <div className="rm-card p-6 sm:p-7 space-y-6">
               
@@ -98,43 +98,57 @@ export default function HeroSection() {
                 </span>
               </div>
 
-              {/* Trio Grid */}
+              {/* Trio Grid with Real Player Photos */}
               <div className="grid grid-cols-3 gap-3">
+                
                 {/* Bellingham */}
-                <div className="group text-center p-3.5 rounded-xl bg-[#F8F9FA] hover:bg-white border border-[#E1E5EA] hover:border-[#3E31FA]/40 transition shadow-2xs">
-                  <div className="text-2xl font-black text-[#0F2145] group-hover:text-[#3E31FA] transition-colors">
-                    5
+                <div className="group text-center p-3 rounded-2xl bg-[#F8F9FA] hover:bg-white border border-[#E1E5EA] hover:border-[#3E31FA]/40 transition shadow-2xs overflow-hidden">
+                  <div className="w-16 h-16 mx-auto rounded-full overflow-hidden border-2 border-white shadow-xs bg-[#EEF2FD] mb-2">
+                    <img
+                      src="/images/players/bellingham.jpg"
+                      alt="Jude Bellingham"
+                      className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
-                  <div className="text-xs font-bold text-[#0F2145] mt-1">Bellingham</div>
-                  <div className="text-[10px] text-[#788398] uppercase">Midfielder</div>
-                  <div className="mt-2 text-[11px] font-bold text-[#3E31FA] bg-[#EEF2FD] rounded py-0.5">
+                  <div className="text-xs font-bold text-[#0F2145]">Bellingham</div>
+                  <div className="text-[10px] text-[#788398] uppercase">#5 · Midfield</div>
+                  <div className="mt-2 text-[10px] font-bold text-[#3E31FA] bg-[#EEF2FD] rounded py-0.5">
                     28 Goals
                   </div>
                 </div>
 
                 {/* Mbappé */}
-                <div className="group text-center p-3.5 rounded-xl bg-[#EEF2FD] border border-[#DEE5FD] shadow-2xs">
-                  <div className="text-2xl font-black text-[#3E31FA] group-hover:scale-105 transition-transform">
-                    9
+                <div className="group text-center p-3 rounded-2xl bg-[#EEF2FD] border border-[#DEE5FD] shadow-2xs overflow-hidden">
+                  <div className="w-16 h-16 mx-auto rounded-full overflow-hidden border-2 border-white shadow-xs bg-white mb-2">
+                    <img
+                      src="/images/players/mbappe.jpg"
+                      alt="Kylian Mbappé"
+                      className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
-                  <div className="text-xs font-bold text-[#0F2145] mt-1">Mbappé</div>
-                  <div className="text-[10px] text-[#788398] uppercase">Forward</div>
-                  <div className="mt-2 text-[11px] font-bold text-[#3E31FA] bg-white rounded py-0.5 shadow-2xs">
+                  <div className="text-xs font-bold text-[#0F2145]">Mbappé</div>
+                  <div className="text-[10px] text-[#788398] uppercase">#9 · Forward</div>
+                  <div className="mt-2 text-[10px] font-bold text-[#3E31FA] bg-white rounded py-0.5 shadow-2xs">
                     17 Goals
                   </div>
                 </div>
 
                 {/* Vinícius */}
-                <div className="group text-center p-3.5 rounded-xl bg-[#F8F9FA] hover:bg-white border border-[#E1E5EA] hover:border-[#3E31FA]/40 transition shadow-2xs">
-                  <div className="text-2xl font-black text-[#0F2145] group-hover:text-[#3E31FA] transition-colors">
-                    7
+                <div className="group text-center p-3 rounded-2xl bg-[#F8F9FA] hover:bg-white border border-[#E1E5EA] hover:border-[#3E31FA]/40 transition shadow-2xs overflow-hidden">
+                  <div className="w-16 h-16 mx-auto rounded-full overflow-hidden border-2 border-white shadow-xs bg-[#EEF2FD] mb-2">
+                    <img
+                      src="/images/players/vinicius.jpg"
+                      alt="Vinícius Júnior"
+                      className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
-                  <div className="text-xs font-bold text-[#0F2145] mt-1">Vini Jr.</div>
-                  <div className="text-[10px] text-[#788398] uppercase">Forward</div>
-                  <div className="mt-2 text-[11px] font-bold text-[#3E31FA] bg-[#EEF2FD] rounded py-0.5">
+                  <div className="text-xs font-bold text-[#0F2145]">Vini Jr.</div>
+                  <div className="text-[10px] text-[#788398] uppercase">#7 · Forward</div>
+                  <div className="mt-2 text-[10px] font-bold text-[#3E31FA] bg-[#EEF2FD] rounded py-0.5">
                     88 Goals
                   </div>
                 </div>
+
               </div>
 
               {/* Quote Block */}
