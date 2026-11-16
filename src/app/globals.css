@@ -2,60 +2,91 @@
 
 :root {
   --madrid-white: #ffffff;
-  --madrid-gold: #d4af37;
-  --madrid-gold-bright: #f59e0b;
-  --madrid-navy-deep: #060a17;
-  --madrid-navy: #0b152d;
-  --madrid-navy-card: #111e3f;
-  --madrid-navy-border: #1d2e5b;
-  --madrid-royal: #133887;
-  --madrid-purple: #4c2a85;
-  --foreground: #f8fafc;
-  --background: #060a17;
+  --madrid-cream: #faf8f5;
+  --madrid-pearl: #f3f4f8;
+  --madrid-gold: #c5a059;
+  --madrid-gold-dark: #997328;
+  --madrid-gold-light: #f7eed8;
+  --madrid-navy: #0a1428;
+  --madrid-navy-muted: #1e293b;
+  --madrid-slate: #64748b;
+  --madrid-border: rgba(197, 160, 89, 0.25);
+  
+  --background: #ffffff;
+  --foreground: #0a1428;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
 }
 
-/* Custom Madrid styling utilities */
+/* Classic Royal Typography */
+.font-royal {
+  font-family: var(--font-cinzel), "Playfair Display", "Times New Roman", Georgia, serif;
+}
+
 .gold-gradient-text {
-  background: linear-gradient(135deg, #fff 10%, #f6cf66 50%, #d4af37 100%);
+  background: linear-gradient(135deg, #997328 0%, #c5a059 50%, #73531b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gold-border-glow {
-  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.25);
+.gold-gradient-text-light {
+  background: linear-gradient(135deg, #ffffff 0%, #fae8b2 60%, #c5a059 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.glass-panel {
-  background: rgba(11, 21, 45, 0.75);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Classic Royal Cards */
+.classic-card {
+  background: #ffffff;
+  border: 1px solid rgba(197, 160, 89, 0.28);
+  box-shadow: 0 4px 20px -2px rgba(10, 20, 40, 0.05);
+  transition: all 0.3s ease;
 }
 
-.glass-panel-gold {
-  background: linear-gradient(135deg, rgba(17, 30, 63, 0.8) 0%, rgba(11, 21, 45, 0.9) 100%);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+.classic-card:hover {
+  border-color: rgba(197, 160, 89, 0.6);
+  box-shadow: 0 12px 30px -4px rgba(197, 160, 89, 0.15);
 }
 
-/* Custom scrollbar */
+.gold-foil-badge {
+  background: linear-gradient(135deg, #fffdf8 0%, #faecd0 50%, #f3dbab 100%);
+  border: 1px solid rgba(197, 160, 89, 0.5);
+  color: #7a5813;
+  box-shadow: 0 2px 6px -1px rgba(197, 160, 89, 0.2);
+}
+
+/* Watermark crest background */
+.crest-watermark {
+  background-image: radial-gradient(circle at center, rgba(197, 160, 89, 0.04) 0%, transparent 70%);
+}
+
+/* Black & White to Gold/Color hover effect */
+.bw-to-color {
+  filter: grayscale(100%) contrast(105%);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.group:hover .bw-to-color {
+  filter: grayscale(0%) contrast(100%);
+}
+
+/* Custom classic scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #060a17;
+  background: #f8f9fa;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #d6d9e0;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4af37;
+  background: #c5a059;
 }
