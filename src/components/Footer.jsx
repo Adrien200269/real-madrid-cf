@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function Footer() {
   return (
     <footer className="bg-[#0F2145] text-white border-t border-[#E1E5EA]">
@@ -42,83 +40,48 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Main Footer Links */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/10">
           
-          {/* Brand Column with Official Real Madrid Crest */}
-          <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 flex items-center justify-center shrink-0">
-                <img
-                  src="/images/club/crest.svg"
-                  alt="Real Madrid Crest"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div>
-                <span className="text-lg font-extrabold tracking-tight text-white block">
+          {/* Brand Block with Official Real Madrid Crest */}
+          <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
+            <div className="w-14 h-14 flex items-center justify-center shrink-0">
+              <img
+                src="/images/club/crest.svg"
+                alt="Real Madrid Crest"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="space-y-1">
+              <div className="flex items-center justify-center sm:justify-start gap-2">
+                <span className="text-lg font-extrabold tracking-tight text-white">
                   REAL MADRID C.F.
                 </span>
-                <span className="text-[10px] text-slate-400 uppercase tracking-wider">
-                  Club de Fútbol • 1902
+                <span className="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 uppercase tracking-wider font-semibold">
+                  1902
                 </span>
               </div>
-            </div>
-            <p className="text-xs text-slate-300 max-w-sm leading-relaxed">
-              Official digital portal of Real Madrid Club de Fútbol, recipient of the FIFA Trophy for Best Club of the 20th Century and holder of 15 European Cups.
-            </p>
-            <div className="pt-2">
-              <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#3E31FA]/20 border border-[#3E31FA]/40 text-[#8FA0F5] text-xs font-bold uppercase tracking-wider">
-                ¡Hala Madrid! ...y nada más
-              </div>
+              <p className="text-xs text-slate-300 max-w-md leading-relaxed">
+                Official digital portal of Real Madrid Club de Fútbol • Recipient of the FIFA Trophy for Best Club of the 20th Century • 15 European Cups.
+              </p>
             </div>
           </div>
 
-          {/* Links Column 1 */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Sections</h4>
-            <ul className="space-y-2 text-xs text-slate-400">
-              <li><Link href="/" className="hover:text-white transition">Home</Link></li>
-              <li><Link href="/squad" className="hover:text-white transition">First Team</Link></li>
-              <li><Link href="/matches" className="hover:text-white transition">Matches & Table</Link></li>
-              <li><Link href="/trophies" className="hover:text-white transition">Trophy Room</Link></li>
-              <li><Link href="/news" className="hover:text-white transition">News & Media</Link></li>
-            </ul>
-          </div>
-
-          {/* Links Column 2 */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">The Club</h4>
-            <ul className="space-y-2 text-xs text-slate-400">
-              <li><span className="hover:text-white cursor-pointer transition">Santiago Bernabéu Stadium</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">Ciudad Real Madrid</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">Real Madrid Foundation</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">History & Honors</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">RMTV Live Stream</span></li>
-            </ul>
-          </div>
-
-          {/* Links Column 3 */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Madridistas</h4>
-            <ul className="space-y-2 text-xs text-slate-400">
-              <li><span className="hover:text-white cursor-pointer transition">Madridista Card</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">Tickets & Hospitality</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">Bernabéu Tour</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">Official Online Store</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">Member Services</span></li>
-            </ul>
+          <div className="shrink-0">
+            <div className="inline-block px-4 py-2 rounded-full bg-[#3E31FA]/20 border border-[#3E31FA]/40 text-[#8FA0F5] text-xs font-bold uppercase tracking-wider">
+              ¡Hala Madrid! ...y nada más
+            </div>
           </div>
 
         </div>
 
         {/* Copyright & Legal Bar */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
             Real Madrid © 2026 All rights reserved
           </div>
-          <div className="flex flex-wrap items-center gap-6 text-[11px] text-slate-400">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-[11px] text-slate-400">
             <span className="hover:text-white cursor-pointer transition">Legal Notice</span>
             <span className="hover:text-white cursor-pointer transition">Privacy Policy</span>
             <span className="hover:text-white cursor-pointer transition">Cookies Policy</span>
