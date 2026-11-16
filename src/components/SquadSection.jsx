@@ -140,7 +140,7 @@ export default function SquadSection({ initialLimit = null }) {
                   <img
                     src={player.avatar}
                     alt={player.name}
-                    className="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                    className="h-full w-full object-contain object-bottom group-hover:scale-105 transition-transform duration-300 drop-shadow-sm pt-2"
                     loading="lazy"
                   />
                 </div>
@@ -211,11 +211,11 @@ export default function SquadSection({ initialLimit = null }) {
 
               {/* Modal Top Header with Real Portrait Photo */}
               <div className="flex items-center gap-5 pb-6 border-b border-[#E1E5EA]">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-[#3E31FA] shrink-0 shadow-md bg-[#EEF2FD]">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-[#3E31FA] shrink-0 shadow-md bg-[#EEF2FD] flex items-end justify-center">
                   <img
                     src={activePlayer.avatar}
                     alt={activePlayer.name}
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-contain object-bottom"
                   />
                 </div>
                 <div>

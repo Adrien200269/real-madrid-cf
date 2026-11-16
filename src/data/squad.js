@@ -12,7 +12,7 @@ export const squadData = [
     age: 34,
     height: "2.00 m",
     joinedYear: 2018,
-    avatar: "/images/players/courtois.jpg",
+    avatar: "/images/players/courtois.png",
     stats: {
       appearances: 312,
       cleanSheets: 132,
@@ -35,7 +35,7 @@ export const squadData = [
     age: 27,
     height: "1.91 m",
     joinedYear: 2018,
-    avatar: "/images/players/lunin.jpg",
+    avatar: "/images/players/lunin.png",
     stats: {
       appearances: 74,
       cleanSheets: 31,
@@ -49,26 +49,26 @@ export const squadData = [
 
   // DEFENDERS
   {
-    id: "carvajal",
+    id: "asencio",
     number: 2,
-    name: "Dani Carvajal",
-    nickname: "El Pitbull",
-    position: "Right Back",
+    name: "Raúl Asencio",
+    nickname: "La Fábrica Rock",
+    position: "Centre Back",
     category: "defenders",
     nationality: "Spain",
     flag: "🇪🇸",
-    age: 34,
-    height: "1.73 m",
-    joinedYear: 2013,
-    avatar: "/images/players/carvajal.jpg",
+    age: 23,
+    height: "1.84 m",
+    joinedYear: 2024,
+    avatar: "/images/players/asencio.png",
     stats: {
-      appearances: 452,
-      goals: 15,
-      assists: 70,
-      trophies: 28
+      appearances: 38,
+      goals: 2,
+      assists: 3,
+      trophies: 3
     },
-    quote: "I laid the first stone at Valdebebas. Real Madrid is my life.",
-    highlights: ["6x UEFA Champions League Winner", "2024 UCL Final Goalscorer & MVP", "Club Captain"],
+    quote: "Stepping out from La Fábrica to the first team is a dream for any boy in Madrid.",
+    highlights: ["Debut assist against Osasuna", "Academy Homegrown Star", "Spanish Super Cup Winner"],
     gradient: "from-amber-600 to-slate-900"
   },
   {
@@ -83,7 +83,7 @@ export const squadData = [
     age: 28,
     height: "1.86 m",
     joinedYear: 2019,
-    avatar: "/images/players/militao.jpg",
+    avatar: "/images/players/militao.png",
     stats: {
       appearances: 185,
       goals: 14,
@@ -95,27 +95,119 @@ export const squadData = [
     gradient: "from-blue-700 to-slate-950"
   },
   {
-    id: "alaba",
+    id: "huijsen",
     number: 4,
-    name: "David Alaba",
-    nickname: "The Chair Raiser",
-    position: "Centre Back / Left Back",
+    name: "Dean Huijsen",
+    nickname: "The Ball-Playing Giant",
+    position: "Centre Back",
     category: "defenders",
-    nationality: "Austria",
-    flag: "🇦🇹",
-    age: 34,
-    height: "1.80 m",
-    joinedYear: 2021,
-    avatar: "/images/players/alaba.jpg",
+    nationality: "Spain",
+    flag: "🇪🇸",
+    age: 21,
+    height: "1.97 m",
+    joinedYear: 2025,
+    avatar: "/images/players/huijsen.png",
     stats: {
-      appearances: 130,
-      goals: 6,
-      assists: 11,
-      trophies: 8
+      appearances: 32,
+      goals: 3,
+      assists: 2,
+      trophies: 2
     },
-    quote: "The chair celebration showed that we never give up at the Bernabéu.",
-    highlights: ["4x UEFA Champions League Winner", "3x La Liga Champion", "Austrian Footballer of the Year 10x"],
+    quote: "Defending with composure and initiating the attack from deep is my craft.",
+    highlights: ["Elite ball-playing central defender", "Spain International", "Supercopa Champion"],
     gradient: "from-red-600 to-blue-900"
+  },
+  {
+    id: "trent",
+    number: 12,
+    name: "Trent Alexander-Arnold",
+    nickname: "The Playmaker",
+    position: "Right Back",
+    category: "defenders",
+    nationality: "England",
+    flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    age: 28,
+    height: "1.75 m",
+    joinedYear: 2025,
+    avatar: "/images/players/trent.png",
+    stats: {
+      appearances: 45,
+      goals: 5,
+      assists: 19,
+      trophies: 3
+    },
+    quote: "Real Madrid is the greatest stage in world football. Creating goals from deep is what I live for.",
+    highlights: ["World-class passing & set-piece maestro", "Champions League Winner", "Premier League & La Liga Champion"],
+    gradient: "from-red-500 via-amber-500 to-blue-900"
+  },
+  {
+    id: "konate",
+    number: 16,
+    name: "Ibrahima Konaté",
+    nickname: "The Colossus",
+    position: "Centre Back",
+    category: "defenders",
+    nationality: "France",
+    flag: "🇫🇷",
+    age: 27,
+    height: "1.94 m",
+    joinedYear: 2025,
+    avatar: "/images/players/konate.png",
+    stats: {
+      appearances: 40,
+      goals: 3,
+      assists: 1,
+      trophies: 2
+    },
+    quote: "Dominating the air and physical battles is what I bring to this legendary backline.",
+    highlights: ["World Cup Finalist", "Champions League Finalist", "Dominant Aerial Duelist"],
+    gradient: "from-blue-600 to-slate-900"
+  },
+  {
+    id: "cucurella",
+    number: 17,
+    name: "Marc Cucurella",
+    nickname: "Cucu",
+    position: "Left Back",
+    category: "defenders",
+    nationality: "Spain",
+    flag: "🇪🇸",
+    age: 28,
+    height: "1.73 m",
+    joinedYear: 2025,
+    avatar: "/images/players/cucurella.png",
+    stats: {
+      appearances: 36,
+      goals: 2,
+      assists: 6,
+      trophies: 2
+    },
+    quote: "Energy, pressing, and relentless determination on every single blade of grass.",
+    highlights: ["UEFA Euro 2024 Champion with Spain", "Euro 2024 Team of the Tournament", "Tireless Full Back"],
+    gradient: "from-amber-600 to-red-900"
+  },
+  {
+    id: "carreras",
+    number: 18,
+    name: "Álvaro Carreras",
+    nickname: "The Express",
+    position: "Left Back",
+    category: "defenders",
+    nationality: "Spain",
+    flag: "🇪🇸",
+    age: 23,
+    height: "1.86 m",
+    joinedYear: 2025,
+    avatar: "/images/players/carreras.png",
+    stats: {
+      appearances: 28,
+      goals: 2,
+      assists: 5,
+      trophies: 2
+    },
+    quote: "Coming back home to Madrid to wear this white kit is the pinnacle of my career.",
+    highlights: ["Former Real Madrid academy prospect", "Explosive flank runner", "Spain U21 standout"],
+    gradient: "from-sky-600 to-slate-900"
   },
   {
     id: "rudiger",
@@ -129,12 +221,12 @@ export const squadData = [
     age: 33,
     height: "1.90 m",
     joinedYear: 2022,
-    avatar: "/images/players/rudiger.jpg",
+    avatar: "/images/players/rudiger.png",
     stats: {
-      appearances: 148,
-      goals: 8,
-      assists: 4,
-      trophies: 9
+      appearances: 172,
+      goals: 10,
+      assists: 5,
+      trophies: 10
     },
     quote: "You have to match madness with passion when defending this crest.",
     highlights: ["2024 UEFA Champions League Winner", "2024 La Liga Champion", "UCL Team of the Season"],
@@ -152,16 +244,39 @@ export const squadData = [
     age: 31,
     height: "1.80 m",
     joinedYear: 2019,
-    avatar: "/images/players/mendy.jpg",
+    avatar: "/images/players/mendy.png",
     stats: {
-      appearances: 210,
+      appearances: 228,
       goals: 7,
-      assists: 12,
-      trophies: 12
+      assists: 13,
+      trophies: 13
     },
     quote: "Nobody gets past our flank easily in European nights.",
     highlights: ["2x UEFA Champions League Winner", "3x La Liga Champion", "Defensive Masterclass Specialist"],
     gradient: "from-blue-600 to-indigo-950"
+  },
+  {
+    id: "dumfries",
+    number: 24,
+    name: "Denzel Dumfries",
+    nickname: "The Locomotive",
+    position: "Right Back",
+    category: "defenders",
+    nationality: "Netherlands",
+    flag: "🇳🇱",
+    age: 30,
+    height: "1.88 m",
+    joinedYear: 2025,
+    avatar: "/images/players/dumfries.png",
+    stats: {
+      appearances: 35,
+      goals: 4,
+      assists: 7,
+      trophies: 2
+    },
+    quote: "Power, pace, and nonstop vertical running down the entire right wing.",
+    highlights: ["Serie A Champion", "Netherlands International", "Physically Dominant Wing Back"],
+    gradient: "from-orange-500 to-blue-900"
   },
 
   // MIDFIELDERS
@@ -177,62 +292,16 @@ export const squadData = [
     age: 23,
     height: "1.86 m",
     joinedYear: 2023,
-    avatar: "/images/players/bellingham.jpg",
+    avatar: "/images/players/bellingham.png",
     stats: {
-      appearances: 124,
-      goals: 48,
-      assists: 31,
-      trophies: 6
+      appearances: 145,
+      goals: 56,
+      assists: 38,
+      trophies: 7
     },
     quote: "Walking out at the Bernabéu and hearing 'Hey Jude' gives me goosebumps every time.",
     highlights: ["2024 La Liga Player of the Season", "Golden Boy & Kopa Trophy Winner", "2024 Champions League Winner"],
     gradient: "from-amber-500 via-purple-600 to-blue-900"
-  },
-  {
-    id: "valverde",
-    number: 8,
-    name: "Federico Valverde",
-    nickname: "El Halcón",
-    position: "Central Midfielder",
-    category: "midfielders",
-    nationality: "Uruguay",
-    flag: "🇺🇾",
-    age: 28,
-    height: "1.82 m",
-    joinedYear: 2018,
-    avatar: "/images/players/valverde.jpg",
-    stats: {
-      appearances: 320,
-      goals: 32,
-      assists: 38,
-      trophies: 15
-    },
-    quote: "I run until my legs stop, and then I run with my heart for Madrid.",
-    highlights: ["Inheritor of Toni Kroos' Number 8", "2x Champions League Winner", "3x La Liga Champion"],
-    gradient: "from-sky-500 to-blue-900"
-  },
-  {
-    id: "modric",
-    number: 10,
-    name: "Luka Modrić",
-    nickname: "The Maestro",
-    position: "Central Midfielder",
-    category: "midfielders",
-    nationality: "Croatia",
-    flag: "🇭🇷",
-    age: 41,
-    height: "1.72 m",
-    joinedYear: 2012,
-    avatar: "/images/players/modric.jpg",
-    stats: {
-      appearances: 565,
-      goals: 42,
-      assists: 91,
-      trophies: 28
-    },
-    quote: "Age is just a number. My passion for football and Real Madrid is infinite.",
-    highlights: ["2018 Ballon d'Or Winner", "Most decorated player in Real Madrid history (28 titles)", "6x UEFA Champions League Winner"],
-    gradient: "from-amber-400 via-rose-600 to-blue-950"
   },
   {
     id: "camavinga",
@@ -246,16 +315,39 @@ export const squadData = [
     age: 24,
     height: "1.82 m",
     joinedYear: 2021,
-    avatar: "/images/players/camavinga.jpg",
+    avatar: "/images/players/camavinga.png",
     stats: {
-      appearances: 195,
-      goals: 6,
-      assists: 14,
-      trophies: 11
+      appearances: 215,
+      goals: 8,
+      assists: 18,
+      trophies: 12
     },
     quote: "Wherever the coach needs me, I will give 200%.",
     highlights: ["Won every club trophy available by age 20", "2x Champions League Winner"],
     gradient: "from-emerald-500 to-blue-900"
+  },
+  {
+    id: "valverde",
+    number: 8,
+    name: "Federico Valverde",
+    nickname: "El Halcón",
+    position: "Central Midfielder",
+    category: "midfielders",
+    nationality: "Uruguay",
+    flag: "🇺🇾",
+    age: 28,
+    height: "1.82 m",
+    joinedYear: 2018,
+    avatar: "/images/players/valverde.png",
+    stats: {
+      appearances: 345,
+      goals: 38,
+      assists: 45,
+      trophies: 16
+    },
+    quote: "I run until my legs stop, and then I run with my heart for Madrid.",
+    highlights: ["Inheritor of Toni Kroos' Number 8", "2x Champions League Winner", "3x La Liga Champion"],
+    gradient: "from-sky-500 to-blue-900"
   },
   {
     id: "tchouameni",
@@ -269,12 +361,12 @@ export const squadData = [
     age: 26,
     height: "1.87 m",
     joinedYear: 2022,
-    avatar: "/images/players/tchouameni.jpg",
+    avatar: "/images/players/tchouameni.png",
     stats: {
-      appearances: 152,
-      goals: 7,
-      assists: 11,
-      trophies: 8
+      appearances: 172,
+      goals: 9,
+      assists: 13,
+      trophies: 9
     },
     quote: "Real Madrid is the pinnacle of football. We control the game from the middle.",
     highlights: ["2024 Champions League Winner", "2024 La Liga Champion", "France National Team Anchor"],
@@ -292,42 +384,88 @@ export const squadData = [
     age: 21,
     height: "1.75 m",
     joinedYear: 2023,
-    avatar: "/images/players/guler.jpg",
+    avatar: "/images/players/guler.png",
     stats: {
-      appearances: 65,
-      goals: 18,
-      assists: 14,
-      trophies: 5
+      appearances: 85,
+      goals: 26,
+      assists: 22,
+      trophies: 6
     },
     quote: "I came here to create history with the best club in the world.",
-    highlights: ["Highest minutes-per-goal ratio in debut La Liga season", "2024 Champions League Winner"],
+    highlights: ["Highest minutes-per-goal ratio in debut La Liga season", "2024 Champions League Winner", "Euro 2024 Prodigy"],
     gradient: "from-red-500 via-amber-500 to-blue-900"
+  },
+  {
+    id: "bernardo",
+    number: 20,
+    name: "Bernardo Silva",
+    nickname: "The Magician of Lisbon",
+    position: "Attacking Midfielder",
+    category: "midfielders",
+    nationality: "Portugal",
+    flag: "🇵🇹",
+    age: 32,
+    height: "1.73 m",
+    joinedYear: 2025,
+    avatar: "/images/players/bernardo.png",
+    stats: {
+      appearances: 42,
+      goals: 9,
+      assists: 16,
+      trophies: 3
+    },
+    quote: "To orchestrate the game in the white shirt of Real Madrid is an immense honor.",
+    highlights: ["UEFA Champions League Winner", "6x Premier League Champion", "World-class playmaker"],
+    gradient: "from-red-600 via-emerald-600 to-blue-900"
+  },
+  {
+    id: "brahim",
+    number: 21,
+    name: "Brahim Díaz",
+    nickname: "The Magician",
+    position: "Attacking Midfielder",
+    category: "midfielders",
+    nationality: "Morocco",
+    flag: "🇲🇦",
+    age: 27,
+    height: "1.71 m",
+    joinedYear: 2019,
+    avatar: "/images/players/brahim.png",
+    stats: {
+      appearances: 135,
+      goals: 31,
+      assists: 25,
+      trophies: 9
+    },
+    quote: "Every second with this badge on my chest is a privilege.",
+    highlights: ["2024 Champions League Winner", "Solo stunner vs RB Leipzig", "La Liga Champion"],
+    gradient: "from-rose-600 via-amber-600 to-blue-900"
+  },
+  {
+    id: "thiago",
+    number: 27,
+    name: "Thiago Pitarch",
+    nickname: "Cantera Maestro",
+    position: "Central Midfielder",
+    category: "midfielders",
+    nationality: "Spain",
+    flag: "🇪🇸",
+    age: 19,
+    height: "1.78 m",
+    joinedYear: 2026,
+    avatar: "/images/players/thiago.png",
+    stats: {
+      appearances: 14,
+      goals: 2,
+      assists: 4,
+      trophies: 1
+    },
+    quote: "Growing up in Valdebebas and now sharing the pitch with idols is surreal.",
+    highlights: ["La Fábrica U19 Captain", "Spain U19 Star", "First team breakthrough"],
+    gradient: "from-yellow-500 to-blue-900"
   },
 
   // FORWARDS
-  {
-    id: "mbappe",
-    number: 9,
-    name: "Kylian Mbappé",
-    nickname: "Kyks / Donatello",
-    position: "Centre Forward",
-    category: "forwards",
-    nationality: "France",
-    flag: "🇫🇷",
-    age: 27,
-    height: "1.78 m",
-    joinedYear: 2024,
-    avatar: "/images/players/mbappe.jpg",
-    stats: {
-      appearances: 115,
-      goals: 84,
-      assists: 26,
-      trophies: 5
-    },
-    quote: "A dream come true. For years I dreamed of wearing this shirt and today I am here.",
-    highlights: ["UEFA Super Cup Goalscorer on Debut", "2018 World Cup Winner", "7x Ligue 1 Top Scorer"],
-    gradient: "from-amber-400 via-indigo-600 to-slate-950"
-  },
   {
     id: "vinicius",
     number: 7,
@@ -340,16 +478,62 @@ export const squadData = [
     age: 26,
     height: "1.76 m",
     joinedYear: 2018,
-    avatar: "/images/players/vinicius.jpg",
+    avatar: "/images/players/vinicius.png",
     stats: {
-      appearances: 335,
-      goals: 114,
-      assists: 92,
-      trophies: 15
+      appearances: 355,
+      goals: 126,
+      assists: 104,
+      trophies: 16
     },
     quote: "Baila Vini! Football is joy, boldness, and conquering the impossible.",
     highlights: ["Scorer in two Champions League Finals (2022 & 2024)", "2024 UCL Player of the Season", "Socrates Award Winner"],
     gradient: "from-yellow-500 via-amber-600 to-blue-900"
+  },
+  {
+    id: "endrick",
+    number: 9,
+    name: "Endrick Felipe",
+    nickname: "The Prodigy",
+    position: "Centre Forward",
+    category: "forwards",
+    nationality: "Brazil",
+    flag: "🇧🇷",
+    age: 20,
+    height: "1.73 m",
+    joinedYear: 2024,
+    avatar: "/images/players/endrick.png",
+    stats: {
+      appearances: 85,
+      goals: 34,
+      assists: 12,
+      trophies: 5
+    },
+    quote: "I want to be part of the greatest history of the biggest club in the world.",
+    highlights: ["Real Madrid's new #9", "Youngest Real Madrid scorer in UCL history", "Debut goalscorer in La Liga and UCL"],
+    gradient: "from-emerald-600 via-blue-700 to-slate-950"
+  },
+  {
+    id: "mbappe",
+    number: 10,
+    name: "Kylian Mbappé",
+    nickname: "Kyks / Donatello",
+    position: "Forward",
+    category: "forwards",
+    nationality: "France",
+    flag: "🇫🇷",
+    age: 27,
+    height: "1.78 m",
+    joinedYear: 2024,
+    avatar: "/images/players/mbappe.png",
+    stats: {
+      appearances: 135,
+      goals: 108,
+      assists: 36,
+      trophies: 6
+    },
+    quote: "A dream come true. For years I dreamed of wearing this shirt and today I am here.",
+    highlights: ["Real Madrid's iconic #10", "UEFA Super Cup Goalscorer on Debut", "2018 World Cup Winner", "7x Ligue 1 Top Scorer"],
+    gradient: "from-amber-400 via-indigo-600 to-slate-950"
   },
   {
     id: "rodrygo",
@@ -363,61 +547,61 @@ export const squadData = [
     age: 25,
     height: "1.74 m",
     joinedYear: 2019,
-    avatar: "/images/players/rodrygo.jpg",
+    avatar: "/images/players/rodrygo.png",
     stats: {
-      appearances: 270,
-      goals: 72,
-      assists: 54,
-      trophies: 14
+      appearances: 295,
+      goals: 82,
+      assists: 62,
+      trophies: 15
     },
     quote: "When the Champions League anthem plays, something magical takes over us.",
     highlights: ["Iconic 2-goal comeback vs Man City (2022)", "2x UEFA Champions League Winner", "3x La Liga Champion"],
     gradient: "from-amber-500 to-indigo-950"
   },
   {
-    id: "endrick",
-    number: 16,
-    name: "Endrick Felipe",
-    nickname: "Bobby",
-    position: "Striker",
+    id: "espi",
+    number: 19,
+    name: "Carlos Espí",
+    nickname: "El Ariete",
+    position: "Centre Forward",
     category: "forwards",
-    nationality: "Brazil",
-    flag: "🇧🇷",
+    nationality: "Spain",
+    flag: "🇪🇸",
     age: 20,
-    height: "1.73 m",
-    joinedYear: 2024,
-    avatar: "/images/players/endrick.jpg",
+    height: "1.94 m",
+    joinedYear: 2026,
+    avatar: "/images/players/espi.png",
     stats: {
-      appearances: 68,
-      goals: 22,
-      assists: 9,
-      trophies: 4
+      appearances: 18,
+      goals: 7,
+      assists: 3,
+      trophies: 1
     },
-    quote: "I want to be part of the greatest history of the biggest club in the world.",
-    highlights: ["Youngest Real Madrid scorer in UCL history", "Debut goalscorer in La Liga and UCL"],
-    gradient: "from-emerald-600 via-blue-700 to-slate-950"
+    quote: "Giving everything inside the penalty box for Madridistas worldwide.",
+    highlights: ["Tall, physical target forward", "Spain youth international", "Breakthrough goalscorer"],
+    gradient: "from-red-600 to-slate-900"
   },
   {
-    id: "brahim",
-    number: 21,
-    name: "Brahim Díaz",
-    nickname: "The Magician",
-    position: "Attacking Midfielder",
+    id: "diomande",
+    number: 25,
+    name: "Yan Diomande",
+    nickname: "The Lightning",
+    position: "Winger",
     category: "forwards",
-    nationality: "Morocco / Spain",
-    flag: "🇲🇦",
-    age: 27,
-    height: "1.71 m",
-    joinedYear: 2019,
-    avatar: "/images/players/brahim.jpg",
+    nationality: "Ivory Coast",
+    flag: "🇨🇮",
+    age: 20,
+    height: "1.80 m",
+    joinedYear: 2026,
+    avatar: "/images/players/diomande.png",
     stats: {
-      appearances: 112,
-      goals: 24,
-      assists: 19,
-      trophies: 8
+      appearances: 16,
+      goals: 4,
+      assists: 5,
+      trophies: 1
     },
-    quote: "Every second with this badge on my chest is a privilege.",
-    highlights: ["2024 Champions League Winner", "Solo stunner vs RB Leipzig", "La Liga Champion"],
-    gradient: "from-rose-600 via-amber-600 to-blue-900"
+    quote: "Pace, dribbling, and bravery to attack defenders in every minute.",
+    highlights: ["Electrifying young winger", "La Fábrica standout", "Senior team debutant"],
+    gradient: "from-orange-500 via-emerald-600 to-blue-900"
   }
 ];
