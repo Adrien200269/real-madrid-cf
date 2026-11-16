@@ -1,26 +1,26 @@
 import InteractiveMatchCenter from "@/components/InteractiveMatchCenter";
 import StandingsSection from "@/components/StandingsSection";
-import { Radio } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 export const metadata = {
-  title: "Matches, Live Center & Table | Real Madrid C.F.",
-  description: "Real Madrid live match center, fixtures, recent results, and official La Liga standings."
+  title: "Schedule, Results & Standings | Real Madrid CF",
+  description: "Official schedule of upcoming matches, latest results and league standings of Real Madrid."
 };
 
 export default function MatchesPage() {
   return (
-    <div className="pt-8 pb-16 space-y-0 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#faf8f5] via-white to-[#faf6ec] border border-[#c5a059]/40 shadow-sm">
-          <div className="flex items-center gap-2 text-xs font-bold text-red-700 uppercase tracking-widest mb-3">
-            <Radio className="w-4 h-4 text-red-600 animate-pulse" />
-            Official Match Center & Schedule
+    <div className="pt-6 pb-16 space-y-0 bg-[#F3F5F8]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
+        <div className="rm-card p-6 sm:p-8 bg-white">
+          <div className="flex items-center gap-2 text-xs font-bold text-[#3E31FA] uppercase tracking-wider mb-2">
+            <Calendar className="w-4 h-4" />
+            Football · Schedule & Standings
           </div>
-          <h1 className="font-royal text-3xl sm:text-5xl font-black text-[#0a1428]">
-            MATCHES & <span className="gold-gradient-text">LEAGUE STANDINGS</span>
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-[#0F2145]">
+            Próximos Partidos & Clasificación
           </h1>
-          <p className="text-[#475569] text-sm sm:text-base max-w-2xl mt-3 leading-relaxed">
-            Follow Real Madrid across all competitions: UEFA Champions League, La Liga EA Sports, Copa del Rey, and FIFA Club World Cup.
+          <p className="text-[#788398] text-xs sm:text-sm max-w-2xl mt-1.5 leading-relaxed">
+            Follow Real Madrid across all competitions: UEFA Champions League, LaLiga EA Sports, Copa del Rey, and FIFA Club World Cup.
           </p>
         </div>
       </div>

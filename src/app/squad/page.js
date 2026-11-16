@@ -1,25 +1,25 @@
 import SquadSection from "@/components/SquadSection";
-import { Crown } from "lucide-react";
+import { Users } from "lucide-react";
 
 export const metadata = {
-  title: "First Team Squad | Real Madrid C.F.",
-  description: "Explore the complete Real Madrid first team squad including Kylian Mbappé, Vinícius Jr., Jude Bellingham, Luka Modrić and manager Carlo Ancelotti."
+  title: "First Team Players | Real Madrid CF",
+  description: "Official squad of Real Madrid First Team with player profiles, stats, bio and photos."
 };
 
 export default function SquadPage() {
   return (
-    <div className="pt-8 pb-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#faf8f5] via-white to-[#faf6ec] border border-[#c5a059]/40 shadow-sm">
-          <div className="flex items-center gap-2 text-xs font-bold text-[#7a5813] uppercase tracking-widest mb-3">
-            <Crown className="w-4 h-4 text-[#c5a059]" />
-            Season 2024 / 2025 First Team
+    <div className="pt-6 pb-16 bg-[#F3F5F8]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
+        <div className="rm-card p-6 sm:p-8 bg-white">
+          <div className="flex items-center gap-2 text-xs font-bold text-[#3E31FA] uppercase tracking-wider mb-2">
+            <Users className="w-4 h-4" />
+            Football · First Team
           </div>
-          <h1 className="font-royal text-3xl sm:text-5xl font-black text-[#0a1428]">
-            REAL MADRID <span className="gold-gradient-text">FIRST TEAM SQUAD</span>
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-[#0F2145]">
+            Plantilla Primer Equipo
           </h1>
-          <p className="text-[#475569] text-sm sm:text-base max-w-2xl mt-3 leading-relaxed">
-            The world&apos;s most talented footballers united under one royal crest. Browse by position, check official career honours, match statistics, and quotes.
+          <p className="text-[#788398] text-xs sm:text-sm max-w-2xl mt-1.5 leading-relaxed">
+            Official roster of Real Madrid Club de Fútbol 2024–25. Browse by position, check career statistics, personal details and honours.
           </p>
         </div>
       </div>

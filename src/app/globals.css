@@ -1,92 +1,97 @@
 @import "tailwindcss";
 
 :root {
-  --madrid-white: #ffffff;
-  --madrid-cream: #faf8f5;
-  --madrid-pearl: #f3f4f8;
-  --madrid-gold: #c5a059;
-  --madrid-gold-dark: #997328;
-  --madrid-gold-light: #f7eed8;
-  --madrid-navy: #0a1428;
-  --madrid-navy-muted: #1e293b;
-  --madrid-slate: #64748b;
-  --madrid-border: rgba(197, 160, 89, 0.25);
+  /* Real Madrid Official Design System Tokens */
+  --rm-primary: #3E31FA;
+  --rm-primary-dark: #2115AB;
+  --rm-primary-medium: #8FA0F5;
+  --rm-primary-light: #DEE5FD;
+  --rm-primary-bg: #EEF2FD;
   
-  --background: #ffffff;
-  --foreground: #0a1428;
+  --rm-secondary: #8760F6;
+  --rm-secondary-dark: #3F18B0;
+  --rm-secondary-bg: #EDEBFA;
+  
+  --rm-navy: #0F2145;
+  --rm-off-black: #14142B;
+  --rm-slate-dark: #29395A;
+  --rm-body: #43526E;
+  --rm-hint: #788398;
+  
+  --rm-white: #FFFFFF;
+  --rm-canvas: #F3F5F8;
+  --rm-off-white: #FBFDFF;
+  --rm-line: #E1E5EA;
+  --rm-line-light: #C7CCD6;
+  
+  --rm-gold: #947138;
+  --rm-gold-bg: #FFD48F;
+  
+  --background: var(--rm-canvas);
+  --foreground: var(--rm-navy);
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  letter-spacing: -0.015em;
   overflow-x: hidden;
 }
 
-/* Classic Royal Typography */
-.font-royal {
-  font-family: var(--font-cinzel), "Playfair Display", "Times New Roman", Georgia, serif;
+/* Official Real Madrid Card Styling */
+.rm-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--rm-line);
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px 0 rgba(84, 77, 183, 0.06);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.gold-gradient-text {
-  background: linear-gradient(135deg, #997328 0%, #c5a059 50%, #73531b 100%);
+.rm-card:hover {
+  box-shadow: 0 16px 40px -8px rgba(84, 77, 183, 0.14);
+  border-color: rgba(62, 49, 250, 0.25);
+}
+
+/* Primary Real Madrid Gradient */
+.rm-gradient-primary {
+  background: linear-gradient(8deg, #3E31FA 15.1%, #8760F6 100%);
+}
+
+.rm-gradient-dark {
+  background: linear-gradient(198deg, #3E31FA 0%, #2115AB 100%);
+}
+
+.rm-gradient-gold {
+  background: linear-gradient(62.54deg, #BCA48F 42.67%, rgba(234, 199, 169, 0.76) 89.87%), #BCA48F;
+}
+
+/* Text Gradients */
+.rm-text-gradient {
+  background: linear-gradient(8deg, #3E31FA 15%, #8760F6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gold-gradient-text-light {
-  background: linear-gradient(135deg, #ffffff 0%, #fae8b2 60%, #c5a059 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Interactive Pill Button */
+.rm-pill {
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 
-/* Classic Royal Cards */
-.classic-card {
-  background: #ffffff;
-  border: 1px solid rgba(197, 160, 89, 0.28);
-  box-shadow: 0 4px 20px -2px rgba(10, 20, 40, 0.05);
-  transition: all 0.3s ease;
-}
-
-.classic-card:hover {
-  border-color: rgba(197, 160, 89, 0.6);
-  box-shadow: 0 12px 30px -4px rgba(197, 160, 89, 0.15);
-}
-
-.gold-foil-badge {
-  background: linear-gradient(135deg, #fffdf8 0%, #faecd0 50%, #f3dbab 100%);
-  border: 1px solid rgba(197, 160, 89, 0.5);
-  color: #7a5813;
-  box-shadow: 0 2px 6px -1px rgba(197, 160, 89, 0.2);
-}
-
-/* Watermark crest background */
-.crest-watermark {
-  background-image: radial-gradient(circle at center, rgba(197, 160, 89, 0.04) 0%, transparent 70%);
-}
-
-/* Black & White to Gold/Color hover effect */
-.bw-to-color {
-  filter: grayscale(100%) contrast(105%);
-  transition: filter 0.5s ease, transform 0.5s ease;
-}
-
-.group:hover .bw-to-color {
-  filter: grayscale(0%) contrast(100%);
-}
-
-/* Custom classic scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #f8f9fa;
+  background: #EDEFF2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d6d9e0;
+  background: #C7CCD6;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c5a059;
+  background: #8FA0F5;
 }

@@ -1,66 +1,61 @@
 "use client";
 
 import Link from "next/link";
-import { Trophy, Users, Play, Shield, ChevronRight, Sparkles, Star, Crown } from "lucide-react";
+import { Trophy, Users, Play, Shield, ChevronRight, Sparkles, Star } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-gradient-to-b from-white via-[#faf9f5] to-[#f4f5f8] border-b border-[#c5a059]/25">
+    <section className="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24 bg-[#F3F5F8] border-b border-[#E1E5EA]">
       
-      {/* Decorative Watermark Crest in background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] pointer-events-none opacity-[0.035] flex items-center justify-center select-none">
-        <Crown className="w-full h-full text-[#c5a059]" />
-      </div>
-
-      {/* Subtle warm light glow */}
-      <div className="absolute -top-24 right-1/4 w-[500px] h-[300px] bg-gradient-to-r from-[#faecd0]/30 to-[#c5a059]/10 blur-[120px] pointer-events-none rounded-full" />
+      {/* Background Soft Ambient Light */}
+      <div className="absolute top-0 right-1/4 w-[600px] h-[350px] bg-gradient-to-r from-[#EEF2FD] to-[#EDEBFA] blur-[120px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+        <div className="grid lg:grid-cols-12 gap-10 items-center">
           
-          {/* Left Column: Heading & Royal Branding */}
+          {/* Left Column: Heading & Official CTAs */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            {/* Royal Crest pill badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#faf6ec] border border-[#c5a059]/40 text-[#7a5813] text-xs font-bold tracking-widest uppercase shadow-xs">
-              <Sparkles className="w-4 h-4 text-[#c5a059]" />
-              <span>LOS BLANCOS • 15 CHAMPIONS LEAGUE CROWNS</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#c5a059]" />
-              <span className="text-[#0a1428] font-bold">1902–2026</span>
+            {/* Pill Tag */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E1E5EA] text-[#3E31FA] text-xs font-bold tracking-wide shadow-2xs">
+              <span className="w-2 h-2 rounded-full bg-[#3E31FA]" />
+              <span>Official Real Madrid Portal</span>
+              <span className="text-[#C7CCD6]">•</span>
+              <span className="text-[#0F2145]">Season 2024–25</span>
             </div>
 
-            {/* Main Royal Title */}
-            <h1 className="font-royal text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-[#0a1428] leading-[1.08]">
-              THE ROYAL <br />
-              <span className="gold-gradient-text">DYNASTY</span> OF MADRID
+            {/* Display Headline */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0F2145] leading-[1.08]">
+              REYES DE <br />
+              <span className="rm-text-gradient">EUROPA</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-[#475569] max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0">
-              Welcome to the digital sanctuary of Real Madrid Club de Fútbol. 122 years of royal distinction, the world&apos;s greatest footballing kings, and the unmatched 15 European crowns.
+            <p className="text-base sm:text-lg text-[#43526E] max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0">
+              Welcome to the official digital portal of Real Madrid C.F. Relive 122 years of football glory, follow the first team squad, live match statistics, and the record 15 European crowns.
             </p>
 
-            {/* Classic Badges Summary */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
-              <div className="flex items-center gap-2 text-xs font-bold text-[#0a1428] bg-white px-3.5 py-2 rounded-xl border border-[#c5a059]/30 shadow-xs">
-                <Trophy className="w-4 h-4 text-[#c5a059]" />
+            {/* Stats Summary Pills */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-1">
+              <div className="flex items-center gap-2 text-xs font-bold text-[#0F2145] bg-white px-3.5 py-2 rounded-xl border border-[#E1E5EA] shadow-2xs">
+                <Trophy className="w-4 h-4 text-[#8760F6]" />
                 <span>15 European Cups</span>
               </div>
-              <div className="flex items-center gap-2 text-xs font-bold text-[#0a1428] bg-white px-3.5 py-2 rounded-xl border border-[#c5a059]/30 shadow-xs">
-                <Shield className="w-4 h-4 text-[#0a1428]" />
-                <span>36 La Liga Crowns</span>
+              <div className="flex items-center gap-2 text-xs font-bold text-[#0F2145] bg-white px-3.5 py-2 rounded-xl border border-[#E1E5EA] shadow-2xs">
+                <Shield className="w-4 h-4 text-[#3E31FA]" />
+                <span>36 LaLiga Titles</span>
               </div>
-              <div className="flex items-center gap-2 text-xs font-bold text-[#0a1428] bg-white px-3.5 py-2 rounded-xl border border-[#c5a059]/30 shadow-xs">
-                <Star className="w-4 h-4 text-[#c5a059] fill-[#c5a059]" />
-                <span>FIFA Club of the Century</span>
+              <div className="flex items-center gap-2 text-xs font-bold text-[#0F2145] bg-white px-3.5 py-2 rounded-xl border border-[#E1E5EA] shadow-2xs">
+                <Star className="w-4 h-4 text-[#947138] fill-[#947138]" />
+                <span>Best Club of 20th Century</span>
               </div>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-3">
               <Link
                 href="/squad"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#c5a059] via-[#d4af37] to-[#b38728] text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:brightness-105 active:scale-95 transition-all"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-full rm-gradient-primary text-white font-bold text-sm shadow-[0_4px_16px_0_rgba(62,49,250,0.25)] hover:opacity-95 active:scale-95 transition-all"
               >
                 <Users className="w-4 h-4" />
                 First Team Squad
@@ -68,105 +63,101 @@ export default function HeroSection() {
 
               <Link
                 href="/matches"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white hover:bg-[#faf8f5] border border-[#c5a059]/40 text-[#0a1428] font-bold text-xs uppercase tracking-wider shadow-xs hover:border-[#c5a059] transition-all"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white hover:bg-[#F3F5F8] border border-[#E1E5EA] text-[#0F2145] font-bold text-sm shadow-2xs transition-all"
               >
-                <Play className="w-4 h-4 text-[#c5a059] fill-[#c5a059]" />
+                <Play className="w-4 h-4 text-[#3E31FA] fill-[#3E31FA]" />
                 Live Match Center
               </Link>
 
               <Link
                 href="/trophies"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-[#64748b] hover:text-[#0a1428] font-bold text-xs uppercase tracking-wider transition-all"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3.5 rounded-full text-[#43526E] hover:text-[#0F2145] font-semibold text-sm transition-all"
               >
                 Trophy Cabinet
-                <ChevronRight className="w-4 h-4 text-[#c5a059]" />
+                <ChevronRight className="w-4 h-4 text-[#3E31FA]" />
               </Link>
             </div>
           </div>
 
-          {/* Right Column: Classic White Spotlight Card */}
+          {/* Right Column: Featured Trio Card */}
           <div className="lg:col-span-5">
-            <div className="relative rounded-3xl p-1 bg-gradient-to-b from-[#c5a059]/30 via-[#c5a059]/10 to-transparent shadow-xl">
-              <div className="rounded-3xl bg-white p-6 sm:p-8 space-y-6 border border-[#c5a059]/30">
-                
-                {/* Header inside card */}
-                <div className="flex items-center justify-between pb-4 border-b border-[#e2e8f0]">
-                  <div>
-                    <span className="text-[11px] font-black tracking-widest uppercase text-[#997328]">
-                      First Team Spearhead
-                    </span>
-                    <h3 className="font-royal text-xl font-black text-[#0a1428]">
-                      The Royal Attack
-                    </h3>
-                  </div>
-                  <div className="px-3 py-1 rounded-full bg-[#faf6ec] border border-[#c5a059]/40 text-[#7a5813] font-black text-xs">
-                    BMV TRIO
-                  </div>
+            <div className="rm-card p-6 sm:p-7 space-y-6">
+              
+              {/* Card Header */}
+              <div className="flex items-center justify-between pb-4 border-b border-[#E1E5EA]">
+                <div>
+                  <span className="text-[11px] font-bold tracking-wider uppercase text-[#3E31FA]">
+                    First Team Feature
+                  </span>
+                  <h3 className="text-xl font-extrabold text-[#0F2145]">
+                    The Galáctico Attack
+                  </h3>
                 </div>
-
-                {/* Star player showcase with B&W to color hover */}
-                <div className="grid grid-cols-3 gap-3">
-                  
-                  {/* Bellingham */}
-                  <div className="group text-center p-3.5 rounded-2xl bg-[#faf8f5] hover:bg-white border border-[#e2e8f0] hover:border-[#c5a059]/50 transition shadow-xs">
-                    <div className="font-royal text-2xl font-black text-[#0a1428] group-hover:text-[#997328] transition-colors">
-                      5
-                    </div>
-                    <div className="text-xs font-bold text-[#0a1428] mt-1">Bellingham</div>
-                    <div className="text-[10px] text-[#64748b] uppercase">Midfield</div>
-                    <div className="mt-2 text-[11px] font-black text-[#7a5813] bg-[#faecd0] rounded py-0.5">
-                      28 Goals
-                    </div>
-                  </div>
-
-                  {/* Mbappé */}
-                  <div className="group text-center p-3.5 rounded-2xl bg-gradient-to-b from-[#faf6ec] to-white border border-[#c5a059]/50 transition shadow-sm">
-                    <div className="font-royal text-2xl font-black text-[#997328] group-hover:scale-110 transition-transform">
-                      9
-                    </div>
-                    <div className="text-xs font-bold text-[#0a1428] mt-1">Mbappé</div>
-                    <div className="text-[10px] text-[#64748b] uppercase">Striker</div>
-                    <div className="mt-2 text-[11px] font-black text-[#7a5813] bg-[#faecd0] rounded py-0.5">
-                      17 Goals
-                    </div>
-                  </div>
-
-                  {/* Vinícius */}
-                  <div className="group text-center p-3.5 rounded-2xl bg-[#faf8f5] hover:bg-white border border-[#e2e8f0] hover:border-[#c5a059]/50 transition shadow-xs">
-                    <div className="font-royal text-2xl font-black text-[#0a1428] group-hover:text-[#997328] transition-colors">
-                      7
-                    </div>
-                    <div className="text-xs font-bold text-[#0a1428] mt-1">Vini Jr.</div>
-                    <div className="text-[10px] text-[#64748b] uppercase">Winger</div>
-                    <div className="mt-2 text-[11px] font-black text-[#7a5813] bg-[#faecd0] rounded py-0.5">
-                      88 Goals
-                    </div>
-                  </div>
-
-                </div>
-
-                {/* Classic Juanito Quote */}
-                <div className="p-4 rounded-2xl bg-[#faf6ec] border border-[#c5a059]/30 flex items-center gap-3.5">
-                  <div className="w-10 h-10 rounded-full bg-white border border-[#c5a059]/40 flex items-center justify-center shrink-0 text-[#997328] font-black shadow-xs">
-                    👑
-                  </div>
-                  <div>
-                    <p className="text-xs italic text-[#334155] leading-relaxed">
-                      &quot;90 minuti en el Bernabéu son molto longo.&quot;
-                    </p>
-                    <p className="text-[10px] text-[#7a5813] font-bold uppercase tracking-wider mt-1">
-                      — Juanito Gómez • Real Madrid Legend
-                    </p>
-                  </div>
-                </div>
-
-                {/* Stadium details */}
-                <div className="flex items-center justify-between text-xs pt-1 border-t border-[#e2e8f0] text-[#64748b]">
-                  <span>Estadio Santiago Bernabéu</span>
-                  <span className="text-[#0a1428] font-bold">85,000 Madridistas</span>
-                </div>
-
+                <span className="px-3 py-1 rounded-full bg-[#EDEBFA] text-[#8760F6] font-bold text-xs">
+                  BMV TRIO
+                </span>
               </div>
+
+              {/* Trio Grid */}
+              <div className="grid grid-cols-3 gap-3">
+                {/* Bellingham */}
+                <div className="group text-center p-3.5 rounded-xl bg-[#F8F9FA] hover:bg-white border border-[#E1E5EA] hover:border-[#3E31FA]/40 transition shadow-2xs">
+                  <div className="text-2xl font-black text-[#0F2145] group-hover:text-[#3E31FA] transition-colors">
+                    5
+                  </div>
+                  <div className="text-xs font-bold text-[#0F2145] mt-1">Bellingham</div>
+                  <div className="text-[10px] text-[#788398] uppercase">Midfielder</div>
+                  <div className="mt-2 text-[11px] font-bold text-[#3E31FA] bg-[#EEF2FD] rounded py-0.5">
+                    28 Goals
+                  </div>
+                </div>
+
+                {/* Mbappé */}
+                <div className="group text-center p-3.5 rounded-xl bg-[#EEF2FD] border border-[#DEE5FD] shadow-2xs">
+                  <div className="text-2xl font-black text-[#3E31FA] group-hover:scale-105 transition-transform">
+                    9
+                  </div>
+                  <div className="text-xs font-bold text-[#0F2145] mt-1">Mbappé</div>
+                  <div className="text-[10px] text-[#788398] uppercase">Forward</div>
+                  <div className="mt-2 text-[11px] font-bold text-[#3E31FA] bg-white rounded py-0.5 shadow-2xs">
+                    17 Goals
+                  </div>
+                </div>
+
+                {/* Vinícius */}
+                <div className="group text-center p-3.5 rounded-xl bg-[#F8F9FA] hover:bg-white border border-[#E1E5EA] hover:border-[#3E31FA]/40 transition shadow-2xs">
+                  <div className="text-2xl font-black text-[#0F2145] group-hover:text-[#3E31FA] transition-colors">
+                    7
+                  </div>
+                  <div className="text-xs font-bold text-[#0F2145] mt-1">Vini Jr.</div>
+                  <div className="text-[10px] text-[#788398] uppercase">Forward</div>
+                  <div className="mt-2 text-[11px] font-bold text-[#3E31FA] bg-[#EEF2FD] rounded py-0.5">
+                    88 Goals
+                  </div>
+                </div>
+              </div>
+
+              {/* Quote Block */}
+              <div className="p-4 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA] flex items-center gap-3.5">
+                <div className="w-9 h-9 rounded-full bg-[#EDEBFA] flex items-center justify-center shrink-0 text-[#8760F6] font-bold text-xs">
+                  ★
+                </div>
+                <div>
+                  <p className="text-xs italic text-[#43526E] leading-relaxed">
+                    &quot;90 minutes at the Santiago Bernabéu is a very long time.&quot;
+                  </p>
+                  <p className="text-[10px] text-[#788398] font-bold uppercase tracking-wider mt-1">
+                    — Juanito Gómez
+                  </p>
+                </div>
+              </div>
+
+              {/* Footer row inside card */}
+              <div className="flex items-center justify-between text-xs pt-1 border-t border-[#E1E5EA] text-[#788398]">
+                <span>Estadio Santiago Bernabéu</span>
+                <span className="text-[#0F2145] font-bold">85,000 Capacity</span>
+              </div>
+
             </div>
           </div>
 

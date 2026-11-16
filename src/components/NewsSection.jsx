@@ -16,38 +16,39 @@ export default function NewsSection({ initialLimit = null }) {
   const displayedNews = initialLimit ? filteredNews.slice(0, initialLimit) : filteredNews;
 
   return (
-    <section className="py-16 lg:py-24 bg-white text-[#0a1428] border-b border-[#c5a059]/20">
+    <section className="py-14 lg:py-20 bg-[#F3F5F8] text-[#0F2145]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#faf6ec] border border-[#c5a059]/40 text-[#7a5813] text-xs font-bold tracking-widest uppercase shadow-xs">
-            <Newspaper className="w-3.5 h-3.5 text-[#c5a059]" />
-            Official Club Dispatches
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#3E31FA]">
+              Media & Communications
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#0F2145] mt-1">
+              Últimas Noticias
+            </h2>
+            <p className="text-[#788398] text-xs sm:text-sm mt-1">
+              Official match reports, training analysis, and club announcements.
+            </p>
           </div>
-          <h2 className="font-royal text-3xl sm:text-5xl font-black tracking-tight text-[#0a1428]">
-            LATEST <span className="gold-gradient-text">MADRIDISTA NEWS</span>
-          </h2>
-          <p className="text-[#64748b] text-sm sm:text-base">
-            Stay up to date with match reactions, tactical reports, Santiago Bernabéu upgrades, and official statements.
-          </p>
-        </div>
 
-        {/* Category Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
-                selectedCategory === cat
-                  ? "bg-[#faf6ec] text-[#7a5813] border border-[#c5a059]/60 shadow-xs"
-                  : "bg-white text-[#64748b] hover:text-[#0a1428] border border-[#e2e8f0]"
-              }`}
-            >
-              {cat === "all" ? "All Updates" : cat}
-            </button>
-          ))}
+          {/* Category Filter Pills */}
+          <div className="flex flex-wrap items-center gap-2">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all ${
+                  selectedCategory === cat
+                    ? "bg-[#3E31FA] text-white shadow-xs"
+                    : "bg-white text-[#43526E] hover:text-[#0F2145] border border-[#E1E5EA]"
+                }`}
+              >
+                {cat === "all" ? "All News" : cat}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* News Grid */}
@@ -55,15 +56,15 @@ export default function NewsSection({ initialLimit = null }) {
           {displayedNews.map((news) => (
             <article
               key={news.id}
-              className="rounded-3xl bg-white border border-[#c5a059]/25 hover:border-[#c5a059] transition overflow-hidden flex flex-col justify-between group shadow-xs hover:shadow-md"
+              className="rm-card overflow-hidden flex flex-col justify-between group"
             >
-              {/* Image banner area */}
-              <div className="relative h-48 w-full bg-gradient-to-tr from-[#faf6ec] via-[#f8f9fa] to-white overflow-hidden flex items-center justify-center border-b border-[#e2e8f0]">
-                <div className="text-5xl opacity-40 group-hover:scale-110 transition-transform duration-500">
-                  👑
+              {/* Media banner area */}
+              <div className="relative h-48 w-full bg-gradient-to-tr from-[#EEF2FD] to-[#EDEBFA] overflow-hidden flex items-center justify-center border-b border-[#E1E5EA]">
+                <div className="text-5xl opacity-40 group-hover:scale-105 transition-transform duration-500">
+                  ⚽
                 </div>
-                <div className="absolute top-4 left-4 z-20">
-                  <span className="px-3 py-1 rounded-md bg-white border border-[#c5a059]/40 text-[#7a5813] font-bold text-[10px] uppercase tracking-wider shadow-xs">
+                <div className="absolute top-3.5 left-3.5 z-10">
+                  <span className="px-2.5 py-1 rounded-md bg-white border border-[#E1E5EA] text-[#3E31FA] font-bold text-[10px] uppercase tracking-wider shadow-2xs">
                     {news.category}
                   </span>
                 </div>
@@ -72,28 +73,28 @@ export default function NewsSection({ initialLimit = null }) {
               {/* News Content */}
               <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
                 <div className="space-y-2">
-                  <div className="flex items-center gap-3 text-xs text-[#64748b]">
+                  <div className="flex items-center gap-3 text-xs text-[#788398]">
                     <span>{news.date}</span>
                     <span>•</span>
                     <span className="flex items-center gap-1 font-medium">
-                      <Clock className="w-3 h-3 text-[#c5a059]" />
+                      <Clock className="w-3 h-3 text-[#3E31FA]" />
                       {news.readTime}
                     </span>
                   </div>
 
-                  <h3 className="font-royal text-base sm:text-lg font-bold text-[#0a1428] group-hover:text-[#997328] transition-colors leading-snug">
+                  <h3 className="text-base sm:text-lg font-bold text-[#0F2145] group-hover:text-[#3E31FA] transition-colors leading-snug">
                     {news.title}
                   </h3>
 
-                  <p className="text-xs text-[#475569] leading-relaxed line-clamp-3">
+                  <p className="text-xs text-[#43526E] leading-relaxed line-clamp-3">
                     {news.summary}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#f1f5f9] flex items-center justify-between text-xs">
-                  <span className="text-[11px] text-[#64748b]">{news.author}</span>
-                  <span className="text-[#997328] font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                    Read Story <ArrowRight className="w-3.5 h-3.5 text-[#c5a059]" />
+                <div className="pt-4 border-t border-[#E1E5EA] flex items-center justify-between text-xs">
+                  <span className="text-[11px] text-[#788398]">{news.author}</span>
+                  <span className="text-[#3E31FA] font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    Read Story <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
               </div>

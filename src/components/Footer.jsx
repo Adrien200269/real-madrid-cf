@@ -1,93 +1,125 @@
 import Link from "next/link";
-import { Heart, Crown } from "lucide-react";
+import { Crown } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a1428] border-t border-[#c5a059]/30 text-white">
+    <footer className="bg-[#0F2145] text-white border-t border-[#E1E5EA]">
       
-      {/* Official Sponsors Bar */}
-      <div className="border-b border-white/10 py-6 px-4 bg-[#070e1d]">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-6 text-xs text-slate-400">
-          <span className="font-bold uppercase tracking-wider text-[11px] text-[#c5a059]">
-            Main Global Sponsors:
+      {/* Tier 1 Main Sponsors Bar */}
+      <div className="bg-[#14142B] border-b border-white/10 py-7 px-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          <span className="text-[11px] font-bold uppercase tracking-widest text-slate-400">
+            Main Global Partners
           </span>
-          <div className="flex items-center gap-8 sm:gap-12 font-bold tracking-widest text-slate-300">
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 font-black tracking-widest text-sm text-slate-200">
             <span className="hover:text-white transition">FLY EMIRATES</span>
             <span className="hover:text-white transition">ADIDAS</span>
             <span className="hover:text-white transition">HP</span>
-            <span className="hover:text-white transition">MAHOU</span>
-            <span className="hover:text-white transition">BMW</span>
           </div>
+          <span className="text-xs text-[#8FA0F5] hover:underline cursor-pointer">
+            See all partners &gt;
+          </span>
         </div>
       </div>
 
-      {/* Main Footer Content */}
+      {/* Tier 2 Global Sponsors */}
+      <div className="border-b border-white/5 py-4 px-4 bg-[#0F2145]">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+          <span className="hover:text-white transition">Mahou</span>
+          <span>•</span>
+          <span className="hover:text-white transition">BMW</span>
+          <span>•</span>
+          <span className="hover:text-white transition">EA Sports</span>
+          <span>•</span>
+          <span className="hover:text-white transition">Louis Vuitton</span>
+          <span>•</span>
+          <span className="hover:text-white transition">Adobe</span>
+          <span>•</span>
+          <span className="hover:text-white transition">Cisco</span>
+          <span>•</span>
+          <span className="hover:text-white transition">Nivea Men</span>
+          <span>•</span>
+          <span className="hover:text-white transition">Abbott</span>
+        </div>
+      </div>
+
+      {/* Main Footer Links */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#c5a059] to-[#faecd0] flex items-center justify-center shadow-md">
-                <Crown className="w-5 h-5 text-[#0a1428]" />
+              <div className="w-10 h-10 rounded-full bg-[#3E31FA] flex items-center justify-center shadow-md">
+                <Crown className="w-5 h-5 text-[#FFD48F]" />
               </div>
-              <span className="font-royal text-xl font-black tracking-wider text-white">REAL MADRID C.F.</span>
+              <div>
+                <span className="text-lg font-extrabold tracking-tight text-white block">
+                  REAL MADRID C.F.
+                </span>
+                <span className="text-[10px] text-slate-400 uppercase tracking-wider">
+                  Club de Fútbol • 1902
+                </span>
+              </div>
             </div>
-            <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
-              Real Madrid Club de Fútbol is the most decorated club in football history, recognized by FIFA as the Best Club of the 20th Century and holder of a record 15 European Cups.
+            <p className="text-xs text-slate-300 max-w-sm leading-relaxed">
+              Official digital portal of Real Madrid Club de Fútbol, recipient of the FIFA Trophy for Best Club of the 20th Century and holder of 15 European Cups.
             </p>
             <div className="pt-2">
-              <div className="inline-block px-3.5 py-1.5 rounded-xl bg-white/5 border border-[#c5a059]/40 text-[#faecd0] text-xs font-black tracking-widest uppercase">
+              <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#3E31FA]/20 border border-[#3E31FA]/40 text-[#8FA0F5] text-xs font-bold uppercase tracking-wider">
                 ¡Hala Madrid! ...y nada más
               </div>
             </div>
           </div>
 
-          {/* Nav Column 1 */}
+          {/* Links Column 1 */}
           <div className="space-y-3">
-            <h4 className="font-royal text-xs font-bold uppercase tracking-wider text-[#c5a059]">Explore</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Sections</h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li><Link href="/" className="hover:text-white transition">Home</Link></li>
-              <li><Link href="/squad" className="hover:text-white transition">First Team Squad</Link></li>
-              <li><Link href="/matches" className="hover:text-white transition">Matches & Results</Link></li>
+              <li><Link href="/squad" className="hover:text-white transition">First Team</Link></li>
+              <li><Link href="/matches" className="hover:text-white transition">Matches & Table</Link></li>
               <li><Link href="/trophies" className="hover:text-white transition">Trophy Room</Link></li>
-              <li><Link href="/news" className="hover:text-white transition">Latest News</Link></li>
+              <li><Link href="/news" className="hover:text-white transition">News & Media</Link></li>
             </ul>
           </div>
 
-          {/* Nav Column 2 */}
+          {/* Links Column 2 */}
           <div className="space-y-3">
-            <h4 className="font-royal text-xs font-bold uppercase tracking-wider text-[#c5a059]">Competitions</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">The Club</h4>
             <ul className="space-y-2 text-xs text-slate-400">
-              <li><span className="hover:text-white cursor-pointer transition">UEFA Champions League</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">La Liga EA Sports</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">Copa del Rey</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">Supercopa de España</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">FIFA Club World Cup</span></li>
-            </ul>
-          </div>
-
-          {/* Nav Column 3 */}
-          <div className="space-y-3">
-            <h4 className="font-royal text-xs font-bold uppercase tracking-wider text-[#c5a059]">Madridistas</h4>
-            <ul className="space-y-2 text-xs text-slate-400">
-              <li><span className="hover:text-white cursor-pointer transition">Madridista Premium Card</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">Bernabéu Tour & Tickets</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">Official Online Store</span></li>
-              <li><span className="hover:text-white cursor-pointer transition">Real Madrid Foundation</span></li>
+              <li><span className="hover:text-white cursor-pointer transition">Santiago Bernabéu Stadium</span></li>
               <li><span className="hover:text-white cursor-pointer transition">Ciudad Real Madrid</span></li>
+              <li><span className="hover:text-white cursor-pointer transition">Real Madrid Foundation</span></li>
+              <li><span className="hover:text-white cursor-pointer transition">History & Honors</span></li>
+              <li><span className="hover:text-white cursor-pointer transition">RMTV Live Stream</span></li>
+            </ul>
+          </div>
+
+          {/* Links Column 3 */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Madridistas</h4>
+            <ul className="space-y-2 text-xs text-slate-400">
+              <li><span className="hover:text-white cursor-pointer transition">Madridista Card</span></li>
+              <li><span className="hover:text-white cursor-pointer transition">Tickets & Hospitality</span></li>
+              <li><span className="hover:text-white cursor-pointer transition">Bernabéu Tour</span></li>
+              <li><span className="hover:text-white cursor-pointer transition">Official Online Store</span></li>
+              <li><span className="hover:text-white cursor-pointer transition">Member Services</span></li>
             </ul>
           </div>
 
         </div>
 
+        {/* Copyright & Legal Bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            © 2026 Real Madrid Club de Fútbol. All rights reserved.
+            Real Madrid © 2026 All rights reserved
           </div>
-          <div className="flex items-center gap-1 text-slate-400">
-            <span>Built with passion for Madridistas worldwide</span>
-            <Heart className="w-3.5 h-3.5 text-[#c5a059] fill-[#c5a059] inline" />
+          <div className="flex flex-wrap items-center gap-6 text-[11px] text-slate-400">
+            <span className="hover:text-white cursor-pointer transition">Legal Notice</span>
+            <span className="hover:text-white cursor-pointer transition">Privacy Policy</span>
+            <span className="hover:text-white cursor-pointer transition">Cookies Policy</span>
+            <span className="hover:text-white cursor-pointer transition">Sitemap</span>
           </div>
         </div>
 
