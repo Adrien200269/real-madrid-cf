@@ -8,103 +8,125 @@ export const matchCenterData = {
     homeTeam: {
       name: "Real Madrid",
       shortName: "RMA",
-      logo: "/images/club/crest.svg",
+      logo: "/images/clubs/realmadrid.png",
       score: 3
     },
     awayTeam: {
-      name: "Borussia Dortmund",
-      shortName: "BVB",
-      logo: "/images/clubs/dortmund.svg",
+      name: "PSV Eindhoven",
+      shortName: "PSV",
+      logo: "/images/clubs/psv.png",
       score: 1
     },
     minute: "78'",
     status: "LIVE · Second Half",
     scorers: [
-      { minute: "34'", player: "Kylian Mbappé", team: "RMA", assist: "Vini Jr." },
-      { minute: "52'", player: "Serhou Guirassy", team: "BVB", assist: "Julian Brandt" },
-      { minute: "63'", player: "Vinícius Júnior", team: "RMA", assist: "Jude Bellingham" },
-      { minute: "75'", player: "Jude Bellingham", team: "RMA", assist: "Luka Modrić" }
+      { minute: "24'", player: "Kylian Mbappé", team: "RMA", assist: "Trent Alexander-Arnold" },
+      { minute: "41'", player: "Luuk de Jong", team: "PSV", assist: "Joey Veerman" },
+      { minute: "62'", player: "Vinícius Júnior", team: "RMA", assist: "Jude Bellingham" },
+      { minute: "75'", player: "Arda Güler", team: "RMA", assist: "Kylian Mbappé" }
     ],
     stats: {
-      possession: { home: 61, away: 39 },
-      shots: { home: 18, away: 7 },
-      shotsOnTarget: { home: 9, away: 3 },
-      corners: { home: 7, away: 2 },
-      fouls: { home: 8, away: 11 },
+      possession: { home: 64, away: 36 },
+      shots: { home: 19, away: 6 },
+      shotsOnTarget: { home: 10, away: 2 },
+      corners: { home: 8, away: 2 },
+      fouls: { home: 7, away: 12 },
       yellowCards: { home: 1, away: 3 },
-      expectedGoals: { home: 2.84, away: 0.92 }
+      expectedGoals: { home: 3.12, away: 0.74 }
     },
     lineup: {
       formation: "4-3-3",
       startingXI: [
         { num: 1, name: "Courtois", pos: "GK" },
-        { num: 2, name: "Carvajal", pos: "RB" },
+        { num: 12, name: "Trent", pos: "RB" },
         { num: 3, name: "Militão", pos: "CB" },
         { num: 22, name: "Rüdiger", pos: "CB" },
-        { num: 23, name: "Mendy", pos: "LB" },
+        { num: 17, name: "Cucurella", pos: "LB" },
         { num: 14, name: "Tchouaméni", pos: "DM" },
         { num: 8, name: "Valverde", pos: "CM" },
         { num: 5, name: "Bellingham", pos: "AM" },
         { num: 11, name: "Rodrygo", pos: "RW" },
-        { num: 9, name: "Mbappé", pos: "ST" },
+        { num: 10, name: "Mbappé", pos: "ST" },
         { num: 7, name: "Vini Jr.", pos: "LW" }
       ],
-      bench: ["Lunin", "Modrić", "Camavinga", "Güler", "Endrick", "Brahim", "Lucas V.", "Fran García"]
+      bench: ["Lunin", "Asencio", "Huijsen", "Camavinga", "Güler", "Bernardo", "Endrick", "Brahim", "Mendy"]
     },
     timeline: [
-      { min: "75'", type: "goal", text: "⚽ GOAAAAL! Jude Bellingham fires into the top corner from Modrić's lofted pass! (3-1)" },
-      { min: "71'", type: "substitution", text: "🔄 Substitution: Luka Modrić comes on for Aurélien Tchouaméni." },
-      { min: "63'", type: "goal", text: "⚽ GOAAAAL! Vinícius Jr. dances past two defenders and finishes clinical into bottom-right! (2-1)" },
-      { min: "58'", type: "yellow", text: "🟨 Yellow Card: Schlotterbeck (BVB) fouls Mbappé on the counter." },
-      { min: "52'", type: "goal", text: "⚽ Goal Dortmund: Guirassy taps in from close range. (1-1)" },
-      { min: "45+2'", type: "whistle", text: "⏱️ Half Time at the Bernabéu. Real Madrid leading 1-0." },
-      { min: "34'", type: "goal", text: "⚽ GOAAAAL! Kylian Mbappé chips the keeper with composure after a laser ball from Vini Jr.! (1-0)" }
+      { min: "75'", type: "goal", text: "⚽ GOAAAAL! Arda Güler curls a magical left-footed strike into the top corner! (3-1)" },
+      { min: "70'", type: "substitution", text: "🔄 Substitution: Arda Güler and Endrick replace Rodrygo and Tchouaméni." },
+      { min: "62'", type: "goal", text: "⚽ GOAAAAL! Vinícius Jr. cuts inside from the left wing and slots home! (2-1)" },
+      { min: "55'", type: "yellow", text: "🟨 Yellow Card: Boscagli (PSV) booked for pulling down Bellingham." },
+      { min: "41'", type: "goal", text: "⚽ Goal PSV: Luuk de Jong heads in from a corner kick. (1-1)" },
+      { min: "45+2'", type: "whistle", text: "⏱️ Half Time at the Santiago Bernabéu. Real Madrid 1 - 1 PSV." },
+      { min: "24'", type: "goal", text: "⚽ GOAAAAL! Kylian Mbappé fires in after a pinpoint cross from Trent Alexander-Arnold! (1-0)" }
     ]
   },
 
   upcomingFixtures: [
     {
       id: "fix-1",
-      competition: "LaLiga EA Sports",
+      competition: "LaLiga EA Sports · Round 13",
       badge: "🇪🇸",
-      date: "Nov 22, 2026",
+      date: "Sun, Nov 22, 2026",
       time: "21:00 CET",
       venue: "Estadio Santiago Bernabéu, Madrid",
-      homeTeam: { name: "Real Madrid", logo: "/images/club/crest.svg" },
-      awayTeam: { name: "Sevilla FC", logo: "/images/clubs/sevilla.png" },
+      homeTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png" },
+      awayTeam: { name: "RC Celta de Vigo", logo: "/images/clubs/celta.png" },
       ticketsUrl: "#"
     },
     {
       id: "fix-2",
-      competition: "UEFA Champions League",
+      competition: "UEFA Champions League · Matchday 5",
       badge: "⭐",
-      date: "Nov 26, 2026",
+      date: "Wed, Nov 25, 2026",
       time: "21:00 CET",
-      venue: "Anfield, Liverpool",
-      homeTeam: { name: "Liverpool FC", logo: "/images/clubs/liverpool.svg" },
-      awayTeam: { name: "Real Madrid", logo: "/images/club/crest.svg" },
+      venue: "Estadio Santiago Bernabéu, Madrid",
+      homeTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png" },
+      awayTeam: { name: "PSV Eindhoven", logo: "/images/clubs/psv.png" },
       ticketsUrl: "#"
     },
     {
       id: "fix-3",
-      competition: "LaLiga EA Sports · Madrid Derby",
-      badge: "🛡️",
-      date: "Dec 05, 2026",
+      competition: "LaLiga EA Sports · Round 14",
+      badge: "🇪🇸",
+      date: "Sun, Nov 29, 2026",
       time: "21:00 CET",
       venue: "Estadio Santiago Bernabéu, Madrid",
-      homeTeam: { name: "Real Madrid", logo: "/images/club/crest.svg" },
-      awayTeam: { name: "Atlético Madrid", logo: "/images/clubs/atletico.svg" },
+      homeTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png" },
+      awayTeam: { name: "Deportivo Alavés", logo: "/images/clubs/alaves.png" },
       ticketsUrl: "#"
     },
     {
       id: "fix-4",
-      competition: "El Clásico · Supercopa",
-      badge: "🔥",
-      date: "Jan 10, 2027",
-      time: "20:00 CET",
-      venue: "King Fahd Stadium",
-      homeTeam: { name: "Real Madrid", logo: "/images/club/crest.svg" },
-      awayTeam: { name: "FC Barcelona", logo: "/images/clubs/barcelona.svg" },
+      competition: "LaLiga EA Sports · Round 15",
+      badge: "🇪🇸",
+      date: "Wed, Dec 02, 2026",
+      time: "19:00 CET",
+      venue: "Reale Arena, San Sebastián",
+      homeTeam: { name: "Real Sociedad", logo: "/images/clubs/sociedad.png" },
+      awayTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png" },
+      ticketsUrl: "#"
+    },
+    {
+      id: "fix-5",
+      competition: "LaLiga EA Sports · Round 16",
+      badge: "🇪🇸",
+      date: "Sun, Dec 06, 2026",
+      time: "16:15 CET",
+      venue: "San Mamés, Bilbao",
+      homeTeam: { name: "Athletic Club", logo: "/images/clubs/athletic.png" },
+      awayTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png" },
+      ticketsUrl: "#"
+    },
+    {
+      id: "fix-6",
+      competition: "UEFA Champions League · Matchday 6",
+      badge: "⭐",
+      date: "Thu, Dec 10, 2026",
+      time: "21:00 CET",
+      venue: "Emirates Stadium, London",
+      homeTeam: { name: "Arsenal FC", logo: "/images/clubs/arsenal.png" },
+      awayTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png" },
       ticketsUrl: "#"
     }
   ],
@@ -112,53 +134,63 @@ export const matchCenterData = {
   recentResults: [
     {
       id: "res-1",
-      competition: "LaLiga EA Sports",
-      date: "Nov 09, 2026",
-      venue: "Estadi Montilivi",
-      homeTeam: { name: "Girona FC", logo: "/images/clubs/girona.svg", score: 0 },
-      awayTeam: { name: "Real Madrid", logo: "/images/club/crest.svg", score: 3 },
-      scorers: "Bellingham (36'), Güler (55'), Mbappé (62')",
-      highlight: "Clinical away performance with Güler and Mbappé scoring second-half goals."
+      competition: "LaLiga EA Sports · Round 12",
+      date: "Sun, Nov 08, 2026",
+      venue: "Mestalla, Valencia",
+      homeTeam: { name: "Valencia CF", logo: "/images/clubs/valencia.png", score: 0 },
+      awayTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png", score: 3 },
+      scorers: "Mbappé (23', 68'), Bellingham (54')",
+      highlight: "Dominant away display at Mestalla extending the league winning streak to 5 matches."
     },
     {
       id: "res-2",
-      competition: "LaLiga EA Sports",
-      date: "Nov 02, 2026",
-      venue: "Santiago Bernabéu",
-      homeTeam: { name: "Real Madrid", logo: "/images/club/crest.svg", score: 2 },
-      awayTeam: { name: "Getafe CF", logo: "/images/club/crest.svg", score: 0 },
-      scorers: "Bellingham (30' pen), Mbappé (38')",
-      highlight: "First-half masterclass from Bellingham and Mbappé secures all three points."
+      competition: "UEFA Champions League · MD 4",
+      date: "Wed, Nov 04, 2026",
+      venue: "OPAP Arena, Athens",
+      homeTeam: { name: "AEK Athens", logo: "/images/clubs/realmadrid.png", score: 2 },
+      awayTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png", score: 3 },
+      scorers: "Mbappé (12', 77'), Endrick (85')",
+      highlight: "Endrick strikes late in Athens to secure all three points for Los Blancos."
     },
     {
       id: "res-3",
-      competition: "LaLiga EA Sports",
-      date: "Oct 26, 2026",
-      venue: "Estadio Municipal de Butarque",
-      homeTeam: { name: "CD Leganés", logo: "/images/club/crest.svg", score: 0 },
-      awayTeam: { name: "Real Madrid", logo: "/images/club/crest.svg", score: 3 },
-      scorers: "Mbappé (43'), Valverde (66'), Bellingham (85')",
-      highlight: "Valverde fires an unstoppable 25-yard free kick into the bottom corner."
+      competition: "LaLiga EA Sports · Round 11",
+      date: "Sun, Nov 01, 2026",
+      venue: "El Sardinero, Santander",
+      homeTeam: { name: "Racing Santander", logo: "/images/clubs/racing.png", score: 0 },
+      awayTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png", score: 3 },
+      scorers: "Vini Jr. (19'), Mbappé (44'), Güler (82')",
+      highlight: "Clinical counter-attacks and a sumptuous Güler free kick seal an emphatic away victory."
     },
     {
       id: "res-4",
-      competition: "LaLiga EA Sports",
-      date: "Oct 22, 2026",
-      venue: "Santiago Bernabéu",
-      homeTeam: { name: "Real Madrid", logo: "/images/club/crest.svg", score: 4 },
-      awayTeam: { name: "CA Osasuna", logo: "/images/clubs/osasuna.svg", score: 0 },
-      scorers: "Vinícius Jr. (34', 61', 69' hat-trick), Bellingham (42')",
-      highlight: "Vinícius Jr. shines with a spectacular hat-trick in front of 78,000 Madridistas."
+      competition: "LaLiga EA Sports · El Clásico",
+      date: "Mon, Oct 26, 2026",
+      venue: "Spotify Camp Nou, Barcelona",
+      homeTeam: { name: "FC Barcelona", logo: "/images/clubs/barcelona.png", score: 1 },
+      awayTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png", score: 2 },
+      scorers: "Bellingham (32'), Mbappé (84')",
+      highlight: "Mbappé scores the late El Clásico winner in the 84th minute to stun the home crowd."
     },
     {
       id: "res-5",
-      competition: "UEFA Champions League",
-      date: "Oct 15, 2026",
-      venue: "Santiago Bernabéu",
-      homeTeam: { name: "Real Madrid", logo: "/images/club/crest.svg", score: 5 },
-      awayTeam: { name: "Borussia Dortmund", logo: "/images/clubs/dortmund.svg", score: 2 },
-      scorers: "Rüdiger (60'), Vini Jr. (62', 86', 90+3'), Lucas V. (83')",
-      highlight: "Legendary second-half Bernabéu comeback from 0-2 to 5-2."
+      competition: "UEFA Champions League · MD 3",
+      date: "Thu, Oct 22, 2026",
+      venue: "Santiago Bernabéu, Madrid",
+      homeTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png", score: 4 },
+      awayTeam: { name: "RB Leipzig", logo: "/images/clubs/realmadrid.png", score: 1 },
+      scorers: "Vini Jr. (18', 65'), Mbappé (51'), Rodrygo (88')",
+      highlight: "Four-star European performance led by Vinícius Júnior and Kylian Mbappé."
+    },
+    {
+      id: "res-6",
+      competition: "LaLiga EA Sports · Round 9",
+      date: "Mon, Oct 19, 2026",
+      venue: "Santiago Bernabéu, Madrid",
+      homeTeam: { name: "Real Madrid", logo: "/images/clubs/realmadrid.png", score: 4 },
+      awayTeam: { name: "Sevilla FC", logo: "/images/clubs/sevilla.png", score: 1 },
+      scorers: "Mbappé (15', 73'), Valverde (41'), Vini Jr. (60')",
+      highlight: "Valverde's 30-yard thunderbolt and a Mbappé brace spark a rampant home win."
     }
   ]
 };

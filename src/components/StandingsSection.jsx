@@ -1,10 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { standingsData } from "@/data/standings";
-import { TableProperties, Flame, ShieldCheck } from "lucide-react";
+import { Flame, ShieldCheck, Sparkles, Award } from "lucide-react";
 
 export default function StandingsSection() {
-  const { competition, season, table, topScorers } = standingsData;
+  const [statsTab, setStatsTab] = useState("scorers"); // "scorers" | "assists" | "advanced"
+  const { competition, season, table, topScorers, topAssists, advancedStats } = standingsData;
 
   return (
     <section className="py-14 lg:py-20 bg-[#F3F5F8] text-[#0F2145] border-b border-[#E1E5EA]">
@@ -20,13 +22,18 @@ export default function StandingsSection() {
               Clasificación LaLiga EA Sports
             </h2>
             <p className="text-[#788398] text-xs sm:text-sm mt-1">
-              Official Primera División standings • Season {season}
+              Official Primera División standings • Season {season} • FotMob Live Data
             </p>
           </div>
 
-          <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-[#EEF2FD] text-[#3E31FA] border border-[#DEE5FD]">
-            1st Position: {table[0]?.team} ({table[0]?.points} pts)
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-white text-[#43526E] border border-[#E1E5EA]">
+              1st: {table[0]?.team} ({table[0]?.points} pts)
+            </span>
+            <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-[#EEF2FD] text-[#3E31FA] border border-[#DEE5FD]">
+              2nd: {table[1]?.team} ({table[1]?.points} pts)
+            </span>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8 items-start">
@@ -35,7 +42,7 @@ export default function StandingsSection() {
           <div className="lg:col-span-8 rm-card overflow-hidden">
             <div className="p-4 sm:p-5 border-b border-[#E1E5EA] flex items-center justify-between bg-white">
               <h3 className="font-extrabold text-base text-[#0F2145]">{competition}</h3>
-              <span className="text-xs font-semibold text-[#788398]">{standingsData.matchday || "Matchday 18"}</span>
+              <span className="text-xs font-semibold text-[#788398]">{standingsData.matchday || "Matchday 12"}</span>
             </div>
 
             <div className="overflow-x-auto">
@@ -117,10 +124,18 @@ export default function StandingsSection() {
               </table>
             </div>
 
-            <div className="p-3 bg-[#F8F9FA] border-t border-[#E1E5EA] flex items-center gap-4 text-[11px] text-[#788398]">
+            <div className="p-3 bg-[#F8F9FA] border-t border-[#E1E5EA] flex flex-wrap items-center gap-4 text-[11px] text-[#788398]">
               <span className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#3E31FA] inline-block" />
-                Positions 1-4: UEFA Champions League
+                Positions 1–4: UEFA Champions League
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block" />
+                Position 5: UEFA Europa League
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block" />
+                Positions 18–20: Relegation
               </span>
             </div>
           </div>
@@ -128,54 +143,159 @@ export default function StandingsSection() {
           {/* Side Column: Top Scorers & Stats (4 cols on lg) */}
           <div className="lg:col-span-4 space-y-5">
             <div className="rm-card p-5 space-y-4">
+              
+              {/* Header with Selector Tabs */}
               <div className="flex items-center justify-between pb-3 border-b border-[#E1E5EA]">
-                <h4 className="font-extrabold text-sm text-[#0F2145] flex items-center gap-2">
-                  <Flame className="w-4 h-4 text-[#3E31FA]" />
-                  Goleadores (Pichichi)
-                </h4>
-                <span className="text-[10px] uppercase font-bold text-[#788398]">LaLiga</span>
+                <div className="flex items-center gap-1 bg-[#F3F5F8] p-1 rounded-lg">
+                  <button
+                    onClick={() => setStatsTab("scorers")}
+                    className={`px-2.5 py-1 text-xs font-bold rounded-md transition ${
+                      statsTab === "scorers"
+                        ? "bg-white text-[#3E31FA] shadow-xs"
+                        : "text-[#788398] hover:text-[#0F2145]"
+                    }`}
+                  >
+                    Goles
+                  </button>
+                  <button
+                    onClick={() => setStatsTab("assists")}
+                    className={`px-2.5 py-1 text-xs font-bold rounded-md transition ${
+                      statsTab === "assists"
+                        ? "bg-white text-[#3E31FA] shadow-xs"
+                        : "text-[#788398] hover:text-[#0F2145]"
+                    }`}
+                  >
+                    Asistencias
+                  </button>
+                  <button
+                    onClick={() => setStatsTab("advanced")}
+                    className={`px-2.5 py-1 text-xs font-bold rounded-md transition ${
+                      statsTab === "advanced"
+                        ? "bg-white text-[#3E31FA] shadow-xs"
+                        : "text-[#788398] hover:text-[#0F2145]"
+                    }`}
+                  >
+                    Líderes
+                  </button>
+                </div>
+                <span className="text-[10px] uppercase font-bold text-[#788398]">FotMob</span>
               </div>
 
-              <div className="space-y-2.5">
-                {topScorers.map((scorer, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center justify-between p-2.5 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA] hover:border-[#3E31FA]/40 transition"
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className="text-xs font-black text-[#3E31FA] w-4 text-center">
-                        {idx + 1}
-                      </span>
-                      {scorer.logo && (
-                        <img
-                          src={scorer.logo}
-                          alt={scorer.team}
-                          className="w-5 h-5 object-contain shrink-0"
-                          loading="lazy"
-                        />
-                      )}
-                      <div>
-                        <div className="text-xs font-bold text-[#0F2145]">{scorer.player}</div>
-                        <div className="text-[10px] text-[#788398]">{scorer.team}</div>
+              {/* Tab 1: Top Scorers */}
+              {statsTab === "scorers" && (
+                <div className="space-y-2.5">
+                  {topScorers.map((scorer, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center justify-between p-2.5 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA] hover:border-[#3E31FA]/40 transition"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="text-xs font-black text-[#3E31FA] w-4 text-center">
+                          {idx + 1}
+                        </span>
+                        {scorer.logo && (
+                          <img
+                            src={scorer.logo}
+                            alt={scorer.team}
+                            className="w-5 h-5 object-contain shrink-0"
+                            loading="lazy"
+                          />
+                        )}
+                        <div>
+                          <div className="text-xs font-bold text-[#0F2145]">{scorer.player}</div>
+                          <div className="text-[10px] text-[#788398]">{scorer.team}</div>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-xs font-black text-[#0F2145]">{scorer.goals} Goals</div>
+                        <div className="text-[10px] text-[#788398]">{scorer.assists} Assists</div>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <div className="text-xs font-black text-[#0F2145]">{scorer.goals} Goals</div>
-                      <div className="text-[10px] text-[#788398]">{scorer.assists} Assists</div>
+                  ))}
+                </div>
+              )}
+
+              {/* Tab 2: Top Assists */}
+              {statsTab === "assists" && (
+                <div className="space-y-2.5">
+                  {(topAssists || []).map((ast, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center justify-between p-2.5 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA] hover:border-[#3E31FA]/40 transition"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="text-xs font-black text-[#3E31FA] w-4 text-center">
+                          {idx + 1}
+                        </span>
+                        {ast.logo && (
+                          <img
+                            src={ast.logo}
+                            alt={ast.team}
+                            className="w-5 h-5 object-contain shrink-0"
+                            loading="lazy"
+                          />
+                        )}
+                        <div>
+                          <div className="text-xs font-bold text-[#0F2145]">{ast.player}</div>
+                          <div className="text-[10px] text-[#788398]">{ast.team}</div>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-xs font-black text-[#3E31FA]">{ast.assists} Assists</div>
+                        <div className="text-[10px] text-[#788398]">{ast.goals} Goals</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Tab 3: Advanced Stats */}
+              {statsTab === "advanced" && advancedStats && (
+                <div className="space-y-3">
+                  <div className="p-3 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA] space-y-1">
+                    <div className="text-[10px] font-bold uppercase text-[#788398] flex items-center justify-between">
+                      <span>Expected Goals (xG) Leader</span>
+                      <Sparkles className="w-3 h-3 text-[#3E31FA]" />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-bold text-[#0F2145]">{advancedStats.xG[0].player}</span>
+                      <span className="text-xs font-black text-[#3E31FA]">{advancedStats.xG[0].stat}</span>
                     </div>
                   </div>
-                ))}
-              </div>
+
+                  <div className="p-3 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA] space-y-1">
+                    <div className="text-[10px] font-bold uppercase text-[#788398] flex items-center justify-between">
+                      <span>Chances Created Leader</span>
+                      <Award className="w-3 h-3 text-[#3E31FA]" />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-bold text-[#0F2145]">{advancedStats.chancesCreated[0].player}</span>
+                      <span className="text-xs font-black text-[#3E31FA]">{advancedStats.chancesCreated[0].stat}</span>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-[#F8F9FA] border border-[#E1E5EA] space-y-1">
+                    <div className="text-[10px] font-bold uppercase text-[#788398]">
+                      Highest Match Rating
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-bold text-[#0F2145]">{advancedStats.ratings[0].player}</span>
+                      <span className="text-xs font-black text-[#3E31FA]">{advancedStats.ratings[0].stat}</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
             </div>
 
-            {/* Defensive Stat Card */}
+            {/* FotMob Form & Momentum Card */}
             <div className="p-5 rounded-2xl bg-[#EEF2FD] border border-[#DEE5FD] space-y-1.5">
               <div className="flex items-center gap-2 text-[#3E31FA] text-xs font-bold uppercase tracking-wider">
                 <ShieldCheck className="w-4 h-4" />
-                Defensive Record
+                FotMob Form & Momentum
               </div>
               <p className="text-xs text-[#0F2145] leading-relaxed">
-                Real Madrid leads LaLiga with 33 points, 32 goals scored and only 8 conceded in 13 matches with an unbeaten record and a league-best goal difference of +24.
+                Real Madrid stands 2nd in LaLiga with 30 points (10 wins in 12 matches) and a +21 goal difference, riding a 5-match winning streak. Kylian Mbappé leads the league with 14.6 xG, while Arda Güler leads with 42 chances created.
               </p>
             </div>
           </div>
